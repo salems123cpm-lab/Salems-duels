@@ -1014,7 +1014,7 @@ local function buildGui()
 	
 	local main=Instance.new("Frame",gui)
 	main.Size=UDim2.new(0,220,0,320);main.Position=UDim2.new(0,15,0,15)
-	main.BackgroundColor3=BG;main.BackgroundTransparency=0.3;main.BorderSizePixel=0;main.ClipsDescendants=false
+	main.BackgroundColor3=BG;main.BackgroundTransparency=0.05;main.BorderSizePixel=0;main.ClipsDescendants=false
 	Instance.new("UICorner",main).CornerRadius=UDim.new(0,9)
 	
 	-- 🎄 FONDO NAVIDEÑO 🎄
@@ -1023,7 +1023,7 @@ local function buildGui()
 	bgImage.Position = UDim2.new(0, 0, 0, 0)
 	bgImage.BackgroundTransparency = 1
 	bgImage.Image = "rbxassetid://5947772718"
-	bgImage.ImageTransparency = 0.3
+	bgImage.ImageTransparency = 0.15
 	bgImage.ScaleType = Enum.ScaleType.Crop
 	bgImage.ZIndex = 0
 	Instance.new("UICorner", bgImage).CornerRadius = UDim.new(0, 9)
