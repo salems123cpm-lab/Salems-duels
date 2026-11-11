@@ -1,2155 +1,1532 @@
---[[
-SpeedHubGhostHubFinder (ScreenGui)
-Grabbed by Xavi GUI Copier v1.0.0 on 2026-11-08 23:16:16
-Discord: https://discord.gg/GupHUQW7S
-230 instances
-]]
-
-local G = {}
-
--- SpeedHubsalemsHubFinder (ScreenGui)
-G.SpeedHubsalemsHubFinder = Instance.new("ScreenGui")
-G.SpeedHubsalemsHubFinder.Name = "SpeedHubGhostHubFinder"
-G.SpeedHubsalemsHubFinder.ResetOnSpawn = false
-G.SpeedHubsalemsHubFinder.DisplayOrder = 999
-G.SpeedHubsalemsHubFinder.IgnoreGuiInset = true
-G.SpeedHubsalemsHubFinder.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-G.SpeedHubsalemsHubFinder.ScreenInsets = Enum.ScreenInsets.DeviceSafeInsets
-
--- Main (Frame)
-G.Main = Instance.new("Frame")
-G.Main.Name = "Main"
-G.Main.Active = true
-G.Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-G.Main.BorderSizePixel = 0
-G.Main.ClipsDescendants = true
-G.Main.Position = UDim2.new(0.5, -132, 0.5, -132)
-G.Main.Size = UDim2.new(0, 340, 0, 400)
-G.Main.Parent = G.SpeedHubGhostHubFinder
-
--- UICorner (UICorner)
-G.UICorner = Instance.new("UICorner")
-G.UICorner.CornerRadius = UDim.new(0, 20)
-G.UICorner.Parent = G.Main
-
--- UIStroke (UIStroke)
-G.UIStroke = Instance.new("UIStroke")
-G.UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-G.UIStroke.Color = Color3.fromRGB(255, 255, 255)
-G.UIStroke.Thickness = 2
-G.UIStroke.Transparency = 0.15000000596046448
-G.UIStroke.Parent = G.Main
-
--- UIScale (UIScale)
-G.UIScale = Instance.new("UIScale")
-G.UIScale.Scale = 0.77999997138977051
-G.UIScale.Parent = G.Main
-
--- UIGradient (UIGradient)
-G.UIGradient = Instance.new("UIGradient")
-G.UIGradient.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.fromRGB(34, 2, 4)), ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 0, 0))})
-G.UIGradient.Rotation = 90
-G.UIGradient.Parent = G.Main
-
--- CustomBackground (ImageLabel)
-G.CustomBackground = Instance.new("ImageLabel")
-G.CustomBackground.Name = "CustomBackground"
-G.CustomBackground.BackgroundTransparency = 1
-G.CustomBackground.Size = UDim2.new(1, 0, 1, 0)
-G.CustomBackground.Image = "rbxassetid://126860692354524"
-G.CustomBackground.ScaleType = Enum.ScaleType.Crop
-G.CustomBackground.Parent = G.Main
-
--- UICorner_2 (UICorner)
-G.UICorner_2 = Instance.new("UICorner")
-G.UICorner_2.CornerRadius = UDim.new(0, 20)
-G.UICorner_2.Parent = G.CustomBackground
-
--- Frame (Frame)
-G.Frame = Instance.new("Frame")
-G.Frame.Active = true
-G.Frame.BackgroundTransparency = 1
-G.Frame.Size = UDim2.new(1, 0, 0, 52)
-G.Frame.ZIndex = 3
-G.Frame.Parent = G.Main
-
--- TextLabel (TextLabel)
-G.TextLabel = Instance.new("TextLabel")
-G.TextLabel.BackgroundTransparency = 1
-G.TextLabel.Position = UDim2.new(0, 14, 0, 8)
-G.TextLabel.Size = UDim2.new(1, -90, 0, 20)
-G.TextLabel.ZIndex = 4
-G.TextLabel.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextLabel.Text = "SPEEDHUB X SALEMS HUB"
-G.TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextLabel.TextSize = 13
-G.TextLabel.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel.Parent = G.Frame
-
--- TextLabel_2 (TextLabel)
-G.TextLabel_2 = Instance.new("TextLabel")
-G.TextLabel_2.BackgroundTransparency = 1
-G.TextLabel_2.Position = UDim2.new(0, 14, 0, 30)
-G.TextLabel_2.Size = UDim2.new(1, -90, 0, 14)
-G.TextLabel_2.ZIndex = 4
-G.TextLabel_2.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextLabel_2.Text = "discord.gg/speedhub • discord.gg/SALEMSHUB"
-G.TextLabel_2.TextColor3 = Color3.fromRGB(235, 20, 26)
-G.TextLabel_2.TextSize = 9
-G.TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_2.Parent = G.Frame
-
--- TextButton (TextButton)
-G.TextButton = Instance.new("TextButton")
-G.TextButton.BackgroundColor3 = Color3.fromRGB(28, 28, 32)
-G.TextButton.BorderSizePixel = 0
-G.TextButton.Position = UDim2.new(1, -60, 0, 14)
-G.TextButton.Size = UDim2.new(0, 48, 0, 24)
-G.TextButton.ZIndex = 4
-G.TextButton.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextButton.Text = "Hide"
-G.TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextButton.TextSize = 11
-G.TextButton.Parent = G.Frame
-
--- UICorner_3 (UICorner)
-G.UICorner_3 = Instance.new("UICorner")
-G.UICorner_3.CornerRadius = UDim.new(1, 0)
-G.UICorner_3.Parent = G.TextButton
-
--- Frame_2 (Frame)
-G.Frame_2 = Instance.new("Frame")
-G.Frame_2.BackgroundColor3 = Color3.fromRGB(235, 20, 26)
-G.Frame_2.BackgroundTransparency = 0.69999998807907104
-G.Frame_2.BorderSizePixel = 0
-G.Frame_2.Position = UDim2.new(0, 12, 0, 52)
-G.Frame_2.Size = UDim2.new(1, -24, 0, 1)
-G.Frame_2.ZIndex = 3
-G.Frame_2.Parent = G.Main
-
--- Frame_3 (Frame)
-G.Frame_3 = Instance.new("Frame")
-G.Frame_3.BackgroundTransparency = 1
-G.Frame_3.Position = UDim2.new(0, 8, 0, 58)
-G.Frame_3.Size = UDim2.new(1, -16, 1, -116)
-G.Frame_3.ZIndex = 3
-G.Frame_3.Parent = G.Main
-
--- Sidebar (Frame)
-G.Sidebar = Instance.new("Frame")
-G.Sidebar.Name = "Sidebar"
-G.Sidebar.BackgroundColor3 = Color3.fromRGB(12, 12, 16)
-G.Sidebar.BackgroundTransparency = 0.25
-G.Sidebar.BorderSizePixel = 0
-G.Sidebar.Size = UDim2.new(0, 72, 1, 0)
-G.Sidebar.ZIndex = 4
-G.Sidebar.Parent = G.Frame_3
-
--- UICorner_4 (UICorner)
-G.UICorner_4 = Instance.new("UICorner")
-G.UICorner_4.CornerRadius = UDim.new(0, 14)
-G.UICorner_4.Parent = G.Sidebar
-
--- TextButton_2 (TextButton)
-G.TextButton_2 = Instance.new("TextButton")
-G.TextButton_2.BackgroundColor3 = Color3.fromRGB(235, 20, 26)
-G.TextButton_2.BorderSizePixel = 0
-G.TextButton_2.Position = UDim2.new(0, 5, 0, 8)
-G.TextButton_2.Size = UDim2.new(1, -10, 0, 48)
-G.TextButton_2.ZIndex = 5
-G.TextButton_2.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextButton_2.Text = "DUELS"
-G.TextButton_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextButton_2.TextSize = 10
-G.TextButton_2.TextWrapped = true
-G.TextButton_2.Parent = G.Sidebar
-
--- UICorner_5 (UICorner)
-G.UICorner_5 = Instance.new("UICorner")
-G.UICorner_5.CornerRadius = UDim.new(0, 12)
-G.UICorner_5.Parent = G.TextButton_2
-
--- TextLabel_3 (TextLabel)
-G.TextLabel_3 = Instance.new("TextLabel")
-G.TextLabel_3.BackgroundColor3 = Color3.fromRGB(235, 20, 26)
-G.TextLabel_3.BackgroundTransparency = 0.10000000149011612
-G.TextLabel_3.Position = UDim2.new(1, -18, 0, 4)
-G.TextLabel_3.Size = UDim2.new(0, 16, 0, 14)
-G.TextLabel_3.ZIndex = 6
-G.TextLabel_3.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextLabel_3.Text = "4"
-G.TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextLabel_3.TextSize = 9
-G.TextLabel_3.Parent = G.TextButton_2
-
--- UICorner_6 (UICorner)
-G.UICorner_6 = Instance.new("UICorner")
-G.UICorner_6.CornerRadius = UDim.new(1, 0)
-G.UICorner_6.Parent = G.TextLabel_3
-
--- TextButton_3 (TextButton)
-G.TextButton_3 = Instance.new("TextButton")
-G.TextButton_3.BackgroundColor3 = Color3.fromRGB(28, 28, 32)
-G.TextButton_3.BackgroundTransparency = 0.30000001192092896
-G.TextButton_3.BorderSizePixel = 0
-G.TextButton_3.Position = UDim2.new(0, 5, 0, 64)
-G.TextButton_3.Size = UDim2.new(1, -10, 0, 48)
-G.TextButton_3.ZIndex = 5
-G.TextButton_3.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextButton_3.Text = "TRADES"
-G.TextButton_3.TextColor3 = Color3.fromRGB(155, 155, 166)
-G.TextButton_3.TextSize = 10
-G.TextButton_3.TextWrapped = true
-G.TextButton_3.Parent = G.Sidebar
-
--- UICorner_7 (UICorner)
-G.UICorner_7 = Instance.new("UICorner")
-G.UICorner_7.CornerRadius = UDim.new(0, 12)
-G.UICorner_7.Parent = G.TextButton_3
-
--- TextLabel_4 (TextLabel)
-G.TextLabel_4 = Instance.new("TextLabel")
-G.TextLabel_4.BackgroundColor3 = Color3.fromRGB(235, 20, 26)
-G.TextLabel_4.BackgroundTransparency = 0.10000000149011612
-G.TextLabel_4.Position = UDim2.new(1, -18, 0, 4)
-G.TextLabel_4.Size = UDim2.new(0, 16, 0, 14)
-G.TextLabel_4.ZIndex = 6
-G.TextLabel_4.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextLabel_4.Text = "3"
-G.TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextLabel_4.TextSize = 9
-G.TextLabel_4.Parent = G.TextButton_3
-
--- UICorner_8 (UICorner)
-G.UICorner_8 = Instance.new("UICorner")
-G.UICorner_8.CornerRadius = UDim.new(1, 0)
-G.UICorner_8.Parent = G.TextLabel_4
-
--- Content (Frame)
-G.Content = Instance.new("Frame")
-G.Content.Name = "Content"
-G.Content.BackgroundTransparency = 1
-G.Content.Position = UDim2.new(0, 80, 0, 0)
-G.Content.Size = UDim2.new(1, -80, 1, 0)
-G.Content.ZIndex = 4
-G.Content.Parent = G.Frame_3
-
--- TextBox (TextBox)
-G.TextBox = Instance.new("TextBox")
-G.TextBox.BackgroundColor3 = Color3.fromRGB(22, 22, 26)
-G.TextBox.BorderSizePixel = 0
-G.TextBox.Size = UDim2.new(1, 0, 0, 28)
-G.TextBox.ZIndex = 5
-G.TextBox.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-G.TextBox.Text = ""
-G.TextBox.TextColor3 = Color3.fromRGB(233, 233, 240)
-G.TextBox.TextSize = 12
-G.TextBox.ClearTextOnFocus = false
-G.TextBox.PlaceholderColor3 = Color3.fromRGB(155, 155, 166)
-G.TextBox.PlaceholderText = "Search..."
-G.TextBox.Parent = G.Content
-
--- UICorner_9 (UICorner)
-G.UICorner_9 = Instance.new("UICorner")
-G.UICorner_9.CornerRadius = UDim.new(1, 0)
-G.UICorner_9.Parent = G.TextBox
-
--- UIPadding (UIPadding)
-G.UIPadding = Instance.new("UIPadding")
-G.UIPadding.PaddingLeft = UDim.new(0, 12)
-G.UIPadding.Parent = G.TextBox
-
--- DUELSList (ScrollingFrame)
-G.DUELSList = Instance.new("ScrollingFrame")
-G.DUELSList.Name = "DUELSList"
-G.DUELSList.BackgroundTransparency = 1
-G.DUELSList.BorderSizePixel = 0
-G.DUELSList.Position = UDim2.new(0, 0, 0, 34)
-G.DUELSList.Size = UDim2.new(1, 0, 1, -36)
-G.DUELSList.ZIndex = 5
-G.DUELSList.AutomaticCanvasSize = Enum.AutomaticSize.Y
-G.DUELSList.CanvasSize = UDim2.new(0, 0, 0, 0)
-G.DUELSList.ScrollBarThickness = 3
-G.DUELSList.Parent = G.Content
-
--- UIListLayout (UIListLayout)
-G.UIListLayout = Instance.new("UIListLayout")
-G.UIListLayout.Padding = UDim.new(0, 6)
-G.UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-G.UIListLayout.Parent = G.DUELSList
-
--- TextLabel_5 (TextLabel)
-G.TextLabel_5 = Instance.new("TextLabel")
-G.TextLabel_5.BackgroundTransparency = 1
-G.TextLabel_5.Size = UDim2.new(1, 0, 0, 40)
-G.TextLabel_5.Visible = false
-G.TextLabel_5.ZIndex = 5
-G.TextLabel_5.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextLabel_5.Text = "No duel listings yet"
-G.TextLabel_5.TextColor3 = Color3.fromRGB(155, 155, 166)
-G.TextLabel_5.TextSize = 12
-G.TextLabel_5.Parent = G.DUELSList
-
--- Frame_4 (Frame)
-G.Frame_4 = Instance.new("Frame")
-G.Frame_4.AutomaticSize = Enum.AutomaticSize.Y
-G.Frame_4.BackgroundTransparency = 1
-G.Frame_4.LayoutOrder = -1000
-G.Frame_4.Size = UDim2.new(1, 0, 0, 0)
-G.Frame_4.ZIndex = 5
-G.Frame_4.Parent = G.DUELSList
-
--- UIListLayout_2 (UIListLayout)
-G.UIListLayout_2 = Instance.new("UIListLayout")
-G.UIListLayout_2.Padding = UDim.new(0, 5)
-G.UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
-G.UIListLayout_2.Parent = G.Frame_4
-
--- TextButton_4 (TextButton)
-G.TextButton_4 = Instance.new("TextButton")
-G.TextButton_4.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-G.TextButton_4.BackgroundTransparency = 0.34999999403953552
-G.TextButton_4.BorderSizePixel = 0
-G.TextButton_4.Size = UDim2.new(1, 0, 0, 30)
-G.TextButton_4.ZIndex = 6
-G.TextButton_4.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextButton_4.Text = "+ POST DUEL"
-G.TextButton_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextButton_4.TextSize = 11
-G.TextButton_4.Parent = G.Frame_4
-
--- UICorner_10 (UICorner)
-G.UICorner_10 = Instance.new("UICorner")
-G.UICorner_10.CornerRadius = UDim.new(1, 0)
-G.UICorner_10.Parent = G.TextButton_4
-
--- Card_a190c2299c6e4d858ead9aeecee202b8 (Frame)
-G.Card_a190c2299c6e4d858ead9aeecee202b8 = Instance.new("Frame")
-G.Card_a190c2299c6e4d858ead9aeecee202b8.Name = "Card_a190c229-9c6e-4d85-8ead-9aeecee202b8"
-G.Card_a190c2299c6e4d858ead9aeecee202b8.BackgroundColor3 = Color3.fromRGB(18, 18, 22)
-G.Card_a190c2299c6e4d858ead9aeecee202b8.BackgroundTransparency = 0.11999999731779099
-G.Card_a190c2299c6e4d858ead9aeecee202b8.BorderSizePixel = 0
-G.Card_a190c2299c6e4d858ead9aeecee202b8.ClipsDescendants = true
-G.Card_a190c2299c6e4d858ead9aeecee202b8.Size = UDim2.new(1, 0, 0, 96)
-G.Card_a190c2299c6e4d858ead9aeecee202b8.ZIndex = 5
-G.Card_a190c2299c6e4d858ead9aeecee202b8:SetAttribute("Search", "noob1358304 noob1358304 los bombinitos cyber south america")
-G.Card_a190c2299c6e4d858ead9aeecee202b8.Parent = G.DUELSList
-
--- UICorner_11 (UICorner)
-G.UICorner_11 = Instance.new("UICorner")
-G.UICorner_11.CornerRadius = UDim.new(0, 16)
-G.UICorner_11.Parent = G.Card_a190c2299c6e4d858ead9aeecee202b8
-
--- UIStroke_2 (UIStroke)
-G.UIStroke_2 = Instance.new("UIStroke")
-G.UIStroke_2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-G.UIStroke_2.Color = Color3.fromRGB(255, 255, 255)
-G.UIStroke_2.Transparency = 0.85000002384185791
-G.UIStroke_2.Parent = G.Card_a190c2299c6e4d858ead9aeecee202b8
-
--- BrainrotPreview (Frame)
-G.BrainrotPreview = Instance.new("Frame")
-G.BrainrotPreview.Name = "BrainrotPreview"
-G.BrainrotPreview.BackgroundColor3 = Color3.fromRGB(12, 12, 14)
-G.BrainrotPreview.BackgroundTransparency = 0.20000000298023224
-G.BrainrotPreview.BorderSizePixel = 0
-G.BrainrotPreview.ClipsDescendants = true
-G.BrainrotPreview.Position = UDim2.new(0, 10, 0.5, -32)
-G.BrainrotPreview.Size = UDim2.new(0, 64, 0, 64)
-G.BrainrotPreview.ZIndex = 6
-G.BrainrotPreview.Parent = G.Card_a190c2299c6e4d858ead9aeecee202b8
-
--- UICorner_12 (UICorner)
-G.UICorner_12 = Instance.new("UICorner")
-G.UICorner_12.CornerRadius = UDim.new(0, 12)
-G.UICorner_12.Parent = G.BrainrotPreview
-
--- ViewportFrame (ViewportFrame)
-G.ViewportFrame = Instance.new("ViewportFrame")
-G.ViewportFrame.BackgroundTransparency = 1
-G.ViewportFrame.BorderSizePixel = 0
-G.ViewportFrame.Size = UDim2.new(1, 0, 1, 0)
-G.ViewportFrame.ZIndex = 7
-G.ViewportFrame.Ambient = Color3.fromRGB(200, 200, 210)
-G.ViewportFrame.LightColor = Color3.fromRGB(255, 255, 255)
-G.ViewportFrame.Parent = G.BrainrotPreview
-
--- WorldModel (WorldModel)
-G.WorldModel = Instance.new("WorldModel")
-G.WorldModel.Parent = G.ViewportFrame
-
--- TextLabel_6 (TextLabel)
-G.TextLabel_6 = Instance.new("TextLabel")
-G.TextLabel_6.BackgroundTransparency = 1
-G.TextLabel_6.Size = UDim2.new(1, 0, 1, 0)
-G.TextLabel_6.ZIndex = 8
-G.TextLabel_6.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextLabel_6.Text = "?"
-G.TextLabel_6.TextColor3 = Color3.fromRGB(155, 155, 166)
-G.TextLabel_6.TextSize = 20
-G.TextLabel_6.Parent = G.BrainrotPreview
-
--- TextLabel_7 (TextLabel)
-G.TextLabel_7 = Instance.new("TextLabel")
-G.TextLabel_7.BackgroundTransparency = 1
-G.TextLabel_7.Position = UDim2.new(0, 82, 0, 10)
-G.TextLabel_7.Size = UDim2.new(1, -180, 0, 16)
-G.TextLabel_7.ZIndex = 6
-G.TextLabel_7.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextLabel_7.Text = "Los Bombinitos"
-G.TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextLabel_7.TextSize = 12
-G.TextLabel_7.TextTruncate = Enum.TextTruncate.AtEnd
-G.TextLabel_7.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_7.Parent = G.Card_a190c2299c6e4d858ead9aeecee202b8
-
--- TextLabel_8 (TextLabel)
-G.TextLabel_8 = Instance.new("TextLabel")
-G.TextLabel_8.BackgroundTransparency = 1
-G.TextLabel_8.Position = UDim2.new(1, -90, 0, 10)
-G.TextLabel_8.Size = UDim2.new(0, 80, 0, 16)
-G.TextLabel_8.ZIndex = 6
-G.TextLabel_8.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextLabel_8.Text = "$`2.4M/s"
-G.TextLabel_8.TextColor3 = Color3.fromRGB(235, 20, 26)
-G.TextLabel_8.TextSize = 12
-G.TextLabel_8.TextXAlignment = Enum.TextXAlignment.Right
-G.TextLabel_8.Parent = G.Card_a190c2299c6e4d858ead9aeecee202b8
-
--- TextLabel_9 (TextLabel)
-G.TextLabel_9 = Instance.new("TextLabel")
-G.TextLabel_9.BackgroundTransparency = 1
-G.TextLabel_9.Position = UDim2.new(0, 82, 0, 32)
-G.TextLabel_9.Size = UDim2.new(1, -180, 0, 16)
-G.TextLabel_9.ZIndex = 6
-G.TextLabel_9.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
-G.TextLabel_9.Text = "@noob1358304"
-G.TextLabel_9.TextColor3 = Color3.fromRGB(235, 20, 26)
-G.TextLabel_9.TextSize = 11
-G.TextLabel_9.TextTruncate = Enum.TextTruncate.AtEnd
-G.TextLabel_9.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_9.Parent = G.Card_a190c2299c6e4d858ead9aeecee202b8
-
--- TextLabel_10 (TextLabel)
-G.TextLabel_10 = Instance.new("TextLabel")
-G.TextLabel_10.BackgroundTransparency = 1
-G.TextLabel_10.Position = UDim2.new(0, 82, 0, 52)
-G.TextLabel_10.Size = UDim2.new(1, -180, 0, 14)
-G.TextLabel_10.ZIndex = 6
-G.TextLabel_10.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
-G.TextLabel_10.Text = "South America · ~117ms"
-G.TextLabel_10.TextColor3 = Color3.fromRGB(155, 155, 166)
-G.TextLabel_10.TextSize = 10
-G.TextLabel_10.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_10.Parent = G.Card_a190c2299c6e4d858ead9aeecee202b8
-
--- TextButton_5 (TextButton)
-G.TextButton_5 = Instance.new("TextButton")
-G.TextButton_5.BackgroundColor3 = Color3.fromRGB(235, 20, 26)
-G.TextButton_5.BorderSizePixel = 0
-G.TextButton_5.Position = UDim2.new(1, -74, 1, -34)
-G.TextButton_5.Size = UDim2.new(0, 64, 0, 26)
-G.TextButton_5.ZIndex = 7
-G.TextButton_5.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextButton_5.Text = "DUEL"
-G.TextButton_5.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextButton_5.TextSize = 12
-G.TextButton_5.Parent = G.Card_a190c2299c6e4d858ead9aeecee202b8
-
--- UICorner_13 (UICorner)
-G.UICorner_13 = Instance.new("UICorner")
-G.UICorner_13.CornerRadius = UDim.new(1, 0)
-G.UICorner_13.Parent = G.TextButton_5
-
--- Card_b4c3bc38cdde4a2fb1eaf5089171c41c (Frame)
-G.Card_b4c3bc38cdde4a2fb1eaf5089171c41c = Instance.new("Frame")
-G.Card_b4c3bc38cdde4a2fb1eaf5089171c41c.Name = "Card_b4c3bc38-cdde-4a2f-b1ea-f5089171c41c"
-G.Card_b4c3bc38cdde4a2fb1eaf5089171c41c.BackgroundColor3 = Color3.fromRGB(18, 18, 22)
-G.Card_b4c3bc38cdde4a2fb1eaf5089171c41c.BackgroundTransparency = 0.11999999731779099
-G.Card_b4c3bc38cdde4a2fb1eaf5089171c41c.BorderSizePixel = 0
-G.Card_b4c3bc38cdde4a2fb1eaf5089171c41c.ClipsDescendants = true
-G.Card_b4c3bc38cdde4a2fb1eaf5089171c41c.Size = UDim2.new(1, 0, 0, 96)
-G.Card_b4c3bc38cdde4a2fb1eaf5089171c41c.ZIndex = 5
-G.Card_b4c3bc38cdde4a2fb1eaf5089171c41c:SetAttribute("Search", "ezspeedrunbloxfruitf ⁣⁣verity garama and madundung cursed zombie northern europe")
-G.Card_b4c3bc38cdde4a2fb1eaf5089171c41c.Parent = G.DUELSList
-
--- UICorner_14 (UICorner)
-G.UICorner_14 = Instance.new("UICorner")
-G.UICorner_14.CornerRadius = UDim.new(0, 16)
-G.UICorner_14.Parent = G.Card_b4c3bc38cdde4a2fb1eaf5089171c41c
-
--- UIStroke_3 (UIStroke)
-G.UIStroke_3 = Instance.new("UIStroke")
-G.UIStroke_3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-G.UIStroke_3.Color = Color3.fromRGB(255, 255, 255)
-G.UIStroke_3.Transparency = 0.85000002384185791
-G.UIStroke_3.Parent = G.Card_b4c3bc38cdde4a2fb1eaf5089171c41c
-
--- BrainrotPreview_2 (Frame)
-G.BrainrotPreview_2 = Instance.new("Frame")
-G.BrainrotPreview_2.Name = "BrainrotPreview"
-G.BrainrotPreview_2.BackgroundColor3 = Color3.fromRGB(12, 12, 14)
-G.BrainrotPreview_2.BackgroundTransparency = 0.20000000298023224
-G.BrainrotPreview_2.BorderSizePixel = 0
-G.BrainrotPreview_2.ClipsDescendants = true
-G.BrainrotPreview_2.Position = UDim2.new(0, 10, 0.5, -32)
-G.BrainrotPreview_2.Size = UDim2.new(0, 64, 0, 64)
-G.BrainrotPreview_2.ZIndex = 6
-G.BrainrotPreview_2.Parent = G.Card_b4c3bc38cdde4a2fb1eaf5089171c41c
-
--- UICorner_15 (UICorner)
-G.UICorner_15 = Instance.new("UICorner")
-G.UICorner_15.CornerRadius = UDim.new(0, 12)
-G.UICorner_15.Parent = G.BrainrotPreview_2
-
--- ViewportFrame_2 (ViewportFrame)
-G.ViewportFrame_2 = Instance.new("ViewportFrame")
-G.ViewportFrame_2.BackgroundTransparency = 1
-G.ViewportFrame_2.BorderSizePixel = 0
-G.ViewportFrame_2.Size = UDim2.new(1, 0, 1, 0)
-G.ViewportFrame_2.ZIndex = 7
-G.ViewportFrame_2.Ambient = Color3.fromRGB(200, 200, 210)
-G.ViewportFrame_2.LightColor = Color3.fromRGB(255, 255, 255)
-G.ViewportFrame_2.Parent = G.BrainrotPreview_2
-
--- WorldModel_2 (WorldModel)
-G.WorldModel_2 = Instance.new("WorldModel")
-G.WorldModel_2.Parent = G.ViewportFrame_2
-
--- TextLabel_11 (TextLabel)
-G.TextLabel_11 = Instance.new("TextLabel")
-G.TextLabel_11.BackgroundTransparency = 1
-G.TextLabel_11.Size = UDim2.new(1, 0, 1, 0)
-G.TextLabel_11.ZIndex = 8
-G.TextLabel_11.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextLabel_11.Text = "?"
-G.TextLabel_11.TextColor3 = Color3.fromRGB(155, 155, 166)
-G.TextLabel_11.TextSize = 20
-G.TextLabel_11.Parent = G.BrainrotPreview_2
-
--- TextLabel_12 (TextLabel)
-G.TextLabel_12 = Instance.new("TextLabel")
-G.TextLabel_12.BackgroundTransparency = 1
-G.TextLabel_12.Position = UDim2.new(0, 82, 0, 10)
-G.TextLabel_12.Size = UDim2.new(1, -180, 0, 16)
-G.TextLabel_12.ZIndex = 6
-G.TextLabel_12.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextLabel_12.Text = "Garama and Madundung"
-G.TextLabel_12.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextLabel_12.TextSize = 12
-G.TextLabel_12.TextTruncate = Enum.TextTruncate.AtEnd
-G.TextLabel_12.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_12.Parent = G.Card_b4c3bc38cdde4a2fb1eaf5089171c41c
-
--- TextLabel_13 (TextLabel)
-G.TextLabel_13 = Instance.new("TextLabel")
-G.TextLabel_13.BackgroundTransparency = 1
-G.TextLabel_13.Position = UDim2.new(1, -90, 0, 10)
-G.TextLabel_13.Size = UDim2.new(0, 80, 0, 16)
-G.TextLabel_13.ZIndex = 6
-G.TextLabel_13.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextLabel_13.Text = "`$450M/s"
-G.TextLabel_13.TextColor3 = Color3.fromRGB(235, 20, 26)
-G.TextLabel_13.TextSize = 12
-G.TextLabel_13.TextXAlignment = Enum.TextXAlignment.Right
-G.TextLabel_13.Parent = G.Card_b4c3bc38cdde4a2fb1eaf5089171c41c
-
--- TextLabel_14 (TextLabel)
-G.TextLabel_14 = Instance.new("TextLabel")
-G.TextLabel_14.BackgroundTransparency = 1
-G.TextLabel_14.Position = UDim2.new(0, 82, 0, 32)
-G.TextLabel_14.Size = UDim2.new(1, -180, 0, 16)
-G.TextLabel_14.ZIndex = 6
-G.TextLabel_14.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
-G.TextLabel_14.Text = "@ezspeedrunbloxfruitf"
-G.TextLabel_14.TextColor3 = Color3.fromRGB(235, 20, 26)
-G.TextLabel_14.TextSize = 11
-G.TextLabel_14.TextTruncate = Enum.TextTruncate.AtEnd
-G.TextLabel_14.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_14.Parent = G.Card_b4c3bc38cdde4a2fb1eaf5089171c41c
-
--- TextLabel_15 (TextLabel)
-G.TextLabel_15 = Instance.new("TextLabel")
-G.TextLabel_15.BackgroundTransparency = 1
-G.TextLabel_15.Position = UDim2.new(0, 82, 0, 52)
-G.TextLabel_15.Size = UDim2.new(1, -180, 0, 14)
-G.TextLabel_15.ZIndex = 6
-G.TextLabel_15.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
-G.TextLabel_15.Text = "Northern Europe · ~140ms"
-G.TextLabel_15.TextColor3 = Color3.fromRGB(155, 155, 166)
-G.TextLabel_15.TextSize = 10
-G.TextLabel_15.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_15.Parent = G.Card_b4c3bc38cdde4a2fb1eaf5089171c41c
-
--- TextButton_6 (TextButton)
-G.TextButton_6 = Instance.new("TextButton")
-G.TextButton_6.BackgroundColor3 = Color3.fromRGB(235, 20, 26)
-G.TextButton_6.BorderSizePixel = 0
-G.TextButton_6.Position = UDim2.new(1, -74, 1, -34)
-G.TextButton_6.Size = UDim2.new(0, 64, 0, 26)
-G.TextButton_6.ZIndex = 7
-G.TextButton_6.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextButton_6.Text = "DUEL"
-G.TextButton_6.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextButton_6.TextSize = 12
-G.TextButton_6.Parent = G.Card_b4c3bc38cdde4a2fb1eaf5089171c41c
-
--- UICorner_16 (UICorner)
-G.UICorner_16 = Instance.new("UICorner")
-G.UICorner_16.CornerRadius = UDim.new(1, 0)
-G.UICorner_16.Parent = G.TextButton_6
-
--- Card_5a1a23afa0ce450d81af94d9e8911327 (Frame)
-G.Card_5a1a23afa0ce450d81af94d9e8911327 = Instance.new("Frame")
-G.Card_5a1a23afa0ce450d81af94d9e8911327.Name = "Card_5a1a23af-a0ce-450d-81af-94d9e8911327"
-G.Card_5a1a23afa0ce450d81af94d9e8911327.BackgroundColor3 = Color3.fromRGB(18, 18, 22)
-G.Card_5a1a23afa0ce450d81af94d9e8911327.BackgroundTransparency = 0.11999999731779099
-G.Card_5a1a23afa0ce450d81af94d9e8911327.BorderSizePixel = 0
-G.Card_5a1a23afa0ce450d81af94d9e8911327.ClipsDescendants = true
-G.Card_5a1a23afa0ce450d81af94d9e8911327.Size = UDim2.new(1, 0, 0, 96)
-G.Card_5a1a23afa0ce450d81af94d9e8911327.ZIndex = 5
-G.Card_5a1a23afa0ce450d81af94d9e8911327:SetAttribute("Search", "jacksonxx1239 jack garama and madundung radioactive north america")
-G.Card_5a1a23afa0ce450d81af94d9e8911327.Parent = G.DUELSList
-
--- UICorner_17 (UICorner)
-G.UICorner_17 = Instance.new("UICorner")
-G.UICorner_17.CornerRadius = UDim.new(0, 16)
-G.UICorner_17.Parent = G.Card_5a1a23afa0ce450d81af94d9e8911327
-
--- UIStroke_4 (UIStroke)
-G.UIStroke_4 = Instance.new("UIStroke")
-G.UIStroke_4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-G.UIStroke_4.Color = Color3.fromRGB(255, 255, 255)
-G.UIStroke_4.Transparency = 0.85000002384185791
-G.UIStroke_4.Parent = G.Card_5a1a23afa0ce450d81af94d9e8911327
-
--- BrainrotPreview_3 (Frame)
-G.BrainrotPreview_3 = Instance.new("Frame")
-G.BrainrotPreview_3.Name = "BrainrotPreview"
-G.BrainrotPreview_3.BackgroundColor3 = Color3.fromRGB(12, 12, 14)
-G.BrainrotPreview_3.BackgroundTransparency = 0.20000000298023224
-G.BrainrotPreview_3.BorderSizePixel = 0
-G.BrainrotPreview_3.ClipsDescendants = true
-G.BrainrotPreview_3.Position = UDim2.new(0, 10, 0.5, -32)
-G.BrainrotPreview_3.Size = UDim2.new(0, 64, 0, 64)
-G.BrainrotPreview_3.ZIndex = 6
-G.BrainrotPreview_3.Parent = G.Card_5a1a23afa0ce450d81af94d9e8911327
-
--- UICorner_18 (UICorner)
-G.UICorner_18 = Instance.new("UICorner")
-G.UICorner_18.CornerRadius = UDim.new(0, 12)
-G.UICorner_18.Parent = G.BrainrotPreview_3
-
--- ViewportFrame_3 (ViewportFrame)
-G.ViewportFrame_3 = Instance.new("ViewportFrame")
-G.ViewportFrame_3.BackgroundTransparency = 1
-G.ViewportFrame_3.BorderSizePixel = 0
-G.ViewportFrame_3.Size = UDim2.new(1, 0, 1, 0)
-G.ViewportFrame_3.ZIndex = 7
-G.ViewportFrame_3.Ambient = Color3.fromRGB(200, 200, 210)
-G.ViewportFrame_3.LightColor = Color3.fromRGB(255, 255, 255)
-G.ViewportFrame_3.Parent = G.BrainrotPreview_3
-
--- WorldModel_3 (WorldModel)
-G.WorldModel_3 = Instance.new("WorldModel")
-G.WorldModel_3.Parent = G.ViewportFrame_3
-
--- TextLabel_16 (TextLabel)
-G.TextLabel_16 = Instance.new("TextLabel")
-G.TextLabel_16.BackgroundTransparency = 1
-G.TextLabel_16.Size = UDim2.new(1, 0, 1, 0)
-G.TextLabel_16.ZIndex = 8
-G.TextLabel_16.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextLabel_16.Text = "?"
-G.TextLabel_16.TextColor3 = Color3.fromRGB(155, 155, 166)
-G.TextLabel_16.TextSize = 20
-G.TextLabel_16.Parent = G.BrainrotPreview_3
-
--- TextLabel_17 (TextLabel)
-G.TextLabel_17 = Instance.new("TextLabel")
-G.TextLabel_17.BackgroundTransparency = 1
-G.TextLabel_17.Position = UDim2.new(0, 82, 0, 10)
-G.TextLabel_17.Size = UDim2.new(1, -180, 0, 16)
-G.TextLabel_17.ZIndex = 6
-G.TextLabel_17.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextLabel_17.Text = "Garama and Madundung"
-G.TextLabel_17.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextLabel_17.TextSize = 12
-G.TextLabel_17.TextTruncate = Enum.TextTruncate.AtEnd
-G.TextLabel_17.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_17.Parent = G.Card_5a1a23afa0ce450d81af94d9e8911327
-
--- TextLabel_18 (TextLabel)
-G.TextLabel_18 = Instance.new("TextLabel")
-G.TextLabel_18.BackgroundTransparency = 1
-G.TextLabel_18.Position = UDim2.new(1, -90, 0, 10)
-G.TextLabel_18.Size = UDim2.new(0, 80, 0, 16)
-G.TextLabel_18.ZIndex = 6
-G.TextLabel_18.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextLabel_18.Text = "$`675M/s"
-G.TextLabel_18.TextColor3 = Color3.fromRGB(235, 20, 26)
-G.TextLabel_18.TextSize = 12
-G.TextLabel_18.TextXAlignment = Enum.TextXAlignment.Right
-G.TextLabel_18.Parent = G.Card_5a1a23afa0ce450d81af94d9e8911327
-
--- TextLabel_19 (TextLabel)
-G.TextLabel_19 = Instance.new("TextLabel")
-G.TextLabel_19.BackgroundTransparency = 1
-G.TextLabel_19.Position = UDim2.new(0, 82, 0, 32)
-G.TextLabel_19.Size = UDim2.new(1, -180, 0, 16)
-G.TextLabel_19.ZIndex = 6
-G.TextLabel_19.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
-G.TextLabel_19.Text = "@jacksonxx1239"
-G.TextLabel_19.TextColor3 = Color3.fromRGB(235, 20, 26)
-G.TextLabel_19.TextSize = 11
-G.TextLabel_19.TextTruncate = Enum.TextTruncate.AtEnd
-G.TextLabel_19.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_19.Parent = G.Card_5a1a23afa0ce450d81af94d9e8911327
-
--- TextLabel_20 (TextLabel)
-G.TextLabel_20 = Instance.new("TextLabel")
-G.TextLabel_20.BackgroundTransparency = 1
-G.TextLabel_20.Position = UDim2.new(0, 82, 0, 52)
-G.TextLabel_20.Size = UDim2.new(1, -180, 0, 14)
-G.TextLabel_20.ZIndex = 6
-G.TextLabel_20.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
-G.TextLabel_20.Text = "North America · ~62ms"
-G.TextLabel_20.TextColor3 = Color3.fromRGB(155, 155, 166)
-G.TextLabel_20.TextSize = 10
-G.TextLabel_20.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_20.Parent = G.Card_5a1a23afa0ce450d81af94d9e8911327
-
--- TextButton_7 (TextButton)
-G.TextButton_7 = Instance.new("TextButton")
-G.TextButton_7.BackgroundColor3 = Color3.fromRGB(235, 20, 26)
-G.TextButton_7.BorderSizePixel = 0
-G.TextButton_7.Position = UDim2.new(1, -74, 1, -34)
-G.TextButton_7.Size = UDim2.new(0, 64, 0, 26)
-G.TextButton_7.ZIndex = 7
-G.TextButton_7.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextButton_7.Text = "DUEL"
-G.TextButton_7.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextButton_7.TextSize = 12
-G.TextButton_7.Parent = G.Card_5a1a23afa0ce450d81af94d9e8911327
-
--- UICorner_19 (UICorner)
-G.UICorner_19 = Instance.new("UICorner")
-G.UICorner_19.CornerRadius = UDim.new(1, 0)
-G.UICorner_19.Parent = G.TextButton_7
-
--- Card_69ee4fdac1a04122939aa40c85f6f672 (Frame)
-G.Card_69ee4fdac1a04122939aa40c85f6f672 = Instance.new("Frame")
-G.Card_69ee4fdac1a04122939aa40c85f6f672.Name = "Card_69ee4fda-c1a0-4122-939a-a40c85f6f672"
-G.Card_69ee4fdac1a04122939aa40c85f6f672.BackgroundColor3 = Color3.fromRGB(18, 18, 22)
-G.Card_69ee4fdac1a04122939aa40c85f6f672.BackgroundTransparency = 0.11999999731779099
-G.Card_69ee4fdac1a04122939aa40c85f6f672.BorderSizePixel = 0
-G.Card_69ee4fdac1a04122939aa40c85f6f672.ClipsDescendants = true
-G.Card_69ee4fdac1a04122939aa40c85f6f672.Size = UDim2.new(1, 0, 0, 96)
-G.Card_69ee4fdac1a04122939aa40c85f6f672.ZIndex = 5
-G.Card_69ee4fdac1a04122939aa40c85f6f672:SetAttribute("Search", "rmya12rm rmya12rm chicleteira bicicleteira gold jo")
-G.Card_69ee4fdac1a04122939aa40c85f6f672.Parent = G.DUELSList
-
--- UICorner_20 (UICorner)
-G.UICorner_20 = Instance.new("UICorner")
-G.UICorner_20.CornerRadius = UDim.new(0, 16)
-G.UICorner_20.Parent = G.Card_69ee4fdac1a04122939aa40c85f6f672
-
--- UIStroke_5 (UIStroke)
-G.UIStroke_5 = Instance.new("UIStroke")
-G.UIStroke_5.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-G.UIStroke_5.Color = Color3.fromRGB(255, 255, 255)
-G.UIStroke_5.Transparency = 0.85000002384185791
-G.UIStroke_5.Parent = G.Card_69ee4fdac1a04122939aa40c85f6f672
-
--- BrainrotPreview_4 (Frame)
-G.BrainrotPreview_4 = Instance.new("Frame")
-G.BrainrotPreview_4.Name = "BrainrotPreview"
-G.BrainrotPreview_4.BackgroundColor3 = Color3.fromRGB(12, 12, 14)
-G.BrainrotPreview_4.BackgroundTransparency = 0.20000000298023224
-G.BrainrotPreview_4.BorderSizePixel = 0
-G.BrainrotPreview_4.ClipsDescendants = true
-G.BrainrotPreview_4.Position = UDim2.new(0, 10, 0.5, -32)
-G.BrainrotPreview_4.Size = UDim2.new(0, 64, 0, 64)
-G.BrainrotPreview_4.ZIndex = 6
-G.BrainrotPreview_4.Parent = G.Card_69ee4fdac1a04122939aa40c85f6f672
-
--- UICorner_21 (UICorner)
-G.UICorner_21 = Instance.new("UICorner")
-G.UICorner_21.CornerRadius = UDim.new(0, 12)
-G.UICorner_21.Parent = G.BrainrotPreview_4
-
--- ViewportFrame_4 (ViewportFrame)
-G.ViewportFrame_4 = Instance.new("ViewportFrame")
-G.ViewportFrame_4.BackgroundTransparency = 1
-G.ViewportFrame_4.BorderSizePixel = 0
-G.ViewportFrame_4.Size = UDim2.new(1, 0, 1, 0)
-G.ViewportFrame_4.ZIndex = 7
-G.ViewportFrame_4.Ambient = Color3.fromRGB(200, 200, 210)
-G.ViewportFrame_4.LightColor = Color3.fromRGB(255, 255, 255)
-G.ViewportFrame_4.Parent = G.BrainrotPreview_4
-
--- WorldModel_4 (WorldModel)
-G.WorldModel_4 = Instance.new("WorldModel")
-G.WorldModel_4.Parent = G.ViewportFrame_4
-
--- TextLabel_21 (TextLabel)
-G.TextLabel_21 = Instance.new("TextLabel")
-G.TextLabel_21.BackgroundTransparency = 1
-G.TextLabel_21.Size = UDim2.new(1, 0, 1, 0)
-G.TextLabel_21.ZIndex = 8
-G.TextLabel_21.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextLabel_21.Text = "?"
-G.TextLabel_21.TextColor3 = Color3.fromRGB(155, 155, 166)
-G.TextLabel_21.TextSize = 20
-G.TextLabel_21.Parent = G.BrainrotPreview_4
-
--- TextLabel_22 (TextLabel)
-G.TextLabel_22 = Instance.new("TextLabel")
-G.TextLabel_22.BackgroundTransparency = 1
-G.TextLabel_22.Position = UDim2.new(0, 82, 0, 10)
-G.TextLabel_22.Size = UDim2.new(1, -180, 0, 16)
-G.TextLabel_22.ZIndex = 6
-G.TextLabel_22.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextLabel_22.Text = "Chicleteira Bicicleteira"
-G.TextLabel_22.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextLabel_22.TextSize = 12
-G.TextLabel_22.TextTruncate = Enum.TextTruncate.AtEnd
-G.TextLabel_22.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_22.Parent = G.Card_69ee4fdac1a04122939aa40c85f6f672
-
--- TextLabel_23 (TextLabel)
-G.TextLabel_23 = Instance.new("TextLabel")
-G.TextLabel_23.BackgroundTransparency = 1
-G.TextLabel_23.Position = UDim2.new(1, -90, 0, 10)
-G.TextLabel_23.Size = UDim2.new(0, 80, 0, 16)
-G.TextLabel_23.ZIndex = 6
-G.TextLabel_23.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextLabel_23.Text = "`$4.3M/s"
-G.TextLabel_23.TextColor3 = Color3.fromRGB(235, 20, 26)
-G.TextLabel_23.TextSize = 12
-G.TextLabel_23.TextXAlignment = Enum.TextXAlignment.Right
-G.TextLabel_23.Parent = G.Card_69ee4fdac1a04122939aa40c85f6f672
-
--- TextLabel_24 (TextLabel)
-G.TextLabel_24 = Instance.new("TextLabel")
-G.TextLabel_24.BackgroundTransparency = 1
-G.TextLabel_24.Position = UDim2.new(0, 82, 0, 32)
-G.TextLabel_24.Size = UDim2.new(1, -180, 0, 16)
-G.TextLabel_24.ZIndex = 6
-G.TextLabel_24.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
-G.TextLabel_24.Text = "@rmya12rm"
-G.TextLabel_24.TextColor3 = Color3.fromRGB(235, 20, 26)
-G.TextLabel_24.TextSize = 11
-G.TextLabel_24.TextTruncate = Enum.TextTruncate.AtEnd
-G.TextLabel_24.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_24.Parent = G.Card_69ee4fdac1a04122939aa40c85f6f672
-
--- TextLabel_25 (TextLabel)
-G.TextLabel_25 = Instance.new("TextLabel")
-G.TextLabel_25.BackgroundTransparency = 1
-G.TextLabel_25.Position = UDim2.new(0, 82, 0, 52)
-G.TextLabel_25.Size = UDim2.new(1, -180, 0, 14)
-G.TextLabel_25.ZIndex = 6
-G.TextLabel_25.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
-G.TextLabel_25.Text = "JO · ~192ms"
-G.TextLabel_25.TextColor3 = Color3.fromRGB(155, 155, 166)
-G.TextLabel_25.TextSize = 10
-G.TextLabel_25.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_25.Parent = G.Card_69ee4fdac1a04122939aa40c85f6f672
-
--- TextButton_8 (TextButton)
-G.TextButton_8 = Instance.new("TextButton")
-G.TextButton_8.BackgroundColor3 = Color3.fromRGB(235, 20, 26)
-G.TextButton_8.BorderSizePixel = 0
-G.TextButton_8.Position = UDim2.new(1, -74, 1, -34)
-G.TextButton_8.Size = UDim2.new(0, 64, 0, 26)
-G.TextButton_8.ZIndex = 7
-G.TextButton_8.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextButton_8.Text = "DUEL"
-G.TextButton_8.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextButton_8.TextSize = 12
-G.TextButton_8.Parent = G.Card_69ee4fdac1a04122939aa40c85f6f672
-
--- UICorner_22 (UICorner)
-G.UICorner_22 = Instance.new("UICorner")
-G.UICorner_22.CornerRadius = UDim.new(1, 0)
-G.UICorner_22.Parent = G.TextButton_8
-
--- TradesPanel (Frame)
-G.TradesPanel = Instance.new("Frame")
-G.TradesPanel.Name = "TradesPanel"
-G.TradesPanel.BackgroundTransparency = 1
-G.TradesPanel.Size = UDim2.new(1, 0, 1, 0)
-G.TradesPanel.Visible = false
-G.TradesPanel.ZIndex = 5
-G.TradesPanel.Parent = G.Content
-
--- Frame_5 (Frame)
-G.Frame_5 = Instance.new("Frame")
-G.Frame_5.BackgroundTransparency = 1
-G.Frame_5.Size = UDim2.new(1, 0, 0, 28)
-G.Frame_5.ZIndex = 6
-G.Frame_5.Parent = G.TradesPanel
-
--- TextButton_9 (TextButton)
-G.TextButton_9 = Instance.new("TextButton")
-G.TextButton_9.BackgroundColor3 = Color3.fromRGB(28, 28, 32)
-G.TextButton_9.BorderSizePixel = 0
-G.TextButton_9.Size = UDim2.new(0.5, -3, 1, 0)
-G.TextButton_9.ZIndex = 7
-G.TextButton_9.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextButton_9.Text = "LISTINGS"
-G.TextButton_9.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextButton_9.TextSize = 10
-G.TextButton_9.Parent = G.Frame_5
-
--- UICorner_23 (UICorner)
-G.UICorner_23 = Instance.new("UICorner")
-G.UICorner_23.CornerRadius = UDim.new(1, 0)
-G.UICorner_23.Parent = G.TextButton_9
-
--- TextButton_10 (TextButton)
-G.TextButton_10 = Instance.new("TextButton")
-G.TextButton_10.BackgroundColor3 = Color3.fromRGB(28, 28, 32)
-G.TextButton_10.BackgroundTransparency = 0.30000001192092896
-G.TextButton_10.BorderSizePixel = 0
-G.TextButton_10.Position = UDim2.new(0.5, 3, 0, 0)
-G.TextButton_10.Size = UDim2.new(0.5, -3, 1, 0)
-G.TextButton_10.ZIndex = 7
-G.TextButton_10.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextButton_10.Text = "BACKGROUNDS"
-G.TextButton_10.TextColor3 = Color3.fromRGB(155, 155, 166)
-G.TextButton_10.TextSize = 10
-G.TextButton_10.Parent = G.Frame_5
-
--- UICorner_24 (UICorner)
-G.UICorner_24 = Instance.new("UICorner")
-G.UICorner_24.CornerRadius = UDim.new(1, 0)
-G.UICorner_24.Parent = G.TextButton_10
-
--- TRADESList (ScrollingFrame)
-G.TRADESList = Instance.new("ScrollingFrame")
-G.TRADESList.Name = "TRADESList"
-G.TRADESList.BackgroundTransparency = 1
-G.TRADESList.BorderSizePixel = 0
-G.TRADESList.Position = UDim2.new(0, 0, 0, 34)
-G.TRADESList.Size = UDim2.new(1, 0, 1, -36)
-G.TRADESList.ZIndex = 5
-G.TRADESList.AutomaticCanvasSize = Enum.AutomaticSize.Y
-G.TRADESList.CanvasSize = UDim2.new(0, 0, 0, 0)
-G.TRADESList.ScrollBarThickness = 3
-G.TRADESList.Parent = G.TradesPanel
-
--- UIListLayout_3 (UIListLayout)
-G.UIListLayout_3 = Instance.new("UIListLayout")
-G.UIListLayout_3.Padding = UDim.new(0, 6)
-G.UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
-G.UIListLayout_3.Parent = G.TRADESList
-
--- TextLabel_26 (TextLabel)
-G.TextLabel_26 = Instance.new("TextLabel")
-G.TextLabel_26.BackgroundTransparency = 1
-G.TextLabel_26.Size = UDim2.new(1, 0, 0, 40)
-G.TextLabel_26.Visible = false
-G.TextLabel_26.ZIndex = 5
-G.TextLabel_26.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextLabel_26.Text = "No trade listings yet"
-G.TextLabel_26.TextColor3 = Color3.fromRGB(155, 155, 166)
-G.TextLabel_26.TextSize = 12
-G.TextLabel_26.Parent = G.TRADESList
-
--- Frame_6 (Frame)
-G.Frame_6 = Instance.new("Frame")
-G.Frame_6.AutomaticSize = Enum.AutomaticSize.Y
-G.Frame_6.BackgroundTransparency = 1
-G.Frame_6.LayoutOrder = -1000
-G.Frame_6.Size = UDim2.new(1, 0, 0, 0)
-G.Frame_6.ZIndex = 5
-G.Frame_6.Parent = G.TRADESList
-
--- UIListLayout_4 (UIListLayout)
-G.UIListLayout_4 = Instance.new("UIListLayout")
-G.UIListLayout_4.Padding = UDim.new(0, 5)
-G.UIListLayout_4.SortOrder = Enum.SortOrder.LayoutOrder
-G.UIListLayout_4.Parent = G.Frame_6
-
--- TextButton_11 (TextButton)
-G.TextButton_11 = Instance.new("TextButton")
-G.TextButton_11.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-G.TextButton_11.BackgroundTransparency = 0.34999999403953552
-G.TextButton_11.BorderSizePixel = 0
-G.TextButton_11.Size = UDim2.new(1, 0, 0, 30)
-G.TextButton_11.ZIndex = 6
-G.TextButton_11.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextButton_11.Text = "+ POST TRADE"
-G.TextButton_11.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextButton_11.TextSize = 11
-G.TextButton_11.Parent = G.Frame_6
-
--- UICorner_25 (UICorner)
-G.UICorner_25 = Instance.new("UICorner")
-G.UICorner_25.CornerRadius = UDim.new(1, 0)
-G.UICorner_25.Parent = G.TextButton_11
-
--- Card_429ac589b7e94e608c4361606be22109 (Frame)
-G.Card_429ac589b7e94e608c4361606be22109 = Instance.new("Frame")
-G.Card_429ac589b7e94e608c4361606be22109.Name = "Card_429ac589-b7e9-4e60-8c43-61606be22109"
-G.Card_429ac589b7e94e608c4361606be22109.BackgroundColor3 = Color3.fromRGB(18, 18, 22)
-G.Card_429ac589b7e94e608c4361606be22109.BackgroundTransparency = 0.11999999731779099
-G.Card_429ac589b7e94e608c4361606be22109.BorderSizePixel = 0
-G.Card_429ac589b7e94e608c4361606be22109.ClipsDescendants = true
-G.Card_429ac589b7e94e608c4361606be22109.Size = UDim2.new(1, 0, 0, 96)
-G.Card_429ac589b7e94e608c4361606be22109.ZIndex = 5
-G.Card_429ac589b7e94e608c4361606be22109:SetAttribute("Search", "ultra4s_131 ⁣⁣auraofgiuse garama and madundung southern europe")
-G.Card_429ac589b7e94e608c4361606be22109.Parent = G.TRADESList
-
--- UICorner_26 (UICorner)
-G.UICorner_26 = Instance.new("UICorner")
-G.UICorner_26.CornerRadius = UDim.new(0, 16)
-G.UICorner_26.Parent = G.Card_429ac589b7e94e608c4361606be22109
-
--- UIStroke_6 (UIStroke)
-G.UIStroke_6 = Instance.new("UIStroke")
-G.UIStroke_6.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-G.UIStroke_6.Color = Color3.fromRGB(255, 255, 255)
-G.UIStroke_6.Transparency = 0.85000002384185791
-G.UIStroke_6.Parent = G.Card_429ac589b7e94e608c4361606be22109
-
--- BrainrotPreview_5 (Frame)
-G.BrainrotPreview_5 = Instance.new("Frame")
-G.BrainrotPreview_5.Name = "BrainrotPreview"
-G.BrainrotPreview_5.BackgroundColor3 = Color3.fromRGB(12, 12, 14)
-G.BrainrotPreview_5.BackgroundTransparency = 0.20000000298023224
-G.BrainrotPreview_5.BorderSizePixel = 0
-G.BrainrotPreview_5.ClipsDescendants = true
-G.BrainrotPreview_5.Position = UDim2.new(0, 10, 0.5, -32)
-G.BrainrotPreview_5.Size = UDim2.new(0, 64, 0, 64)
-G.BrainrotPreview_5.ZIndex = 6
-G.BrainrotPreview_5.Parent = G.Card_429ac589b7e94e608c4361606be22109
-
--- UICorner_27 (UICorner)
-G.UICorner_27 = Instance.new("UICorner")
-G.UICorner_27.CornerRadius = UDim.new(0, 12)
-G.UICorner_27.Parent = G.BrainrotPreview_5
-
--- ViewportFrame_5 (ViewportFrame)
-G.ViewportFrame_5 = Instance.new("ViewportFrame")
-G.ViewportFrame_5.BackgroundTransparency = 1
-G.ViewportFrame_5.BorderSizePixel = 0
-G.ViewportFrame_5.Size = UDim2.new(1, 0, 1, 0)
-G.ViewportFrame_5.ZIndex = 7
-G.ViewportFrame_5.Ambient = Color3.fromRGB(200, 200, 210)
-G.ViewportFrame_5.LightColor = Color3.fromRGB(255, 255, 255)
-G.ViewportFrame_5.Parent = G.BrainrotPreview_5
-
--- WorldModel_5 (WorldModel)
-G.WorldModel_5 = Instance.new("WorldModel")
-G.WorldModel_5.Parent = G.ViewportFrame_5
-
--- TextLabel_27 (TextLabel)
-G.TextLabel_27 = Instance.new("TextLabel")
-G.TextLabel_27.BackgroundTransparency = 1
-G.TextLabel_27.Size = UDim2.new(1, 0, 1, 0)
-G.TextLabel_27.ZIndex = 8
-G.TextLabel_27.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextLabel_27.Text = "?"
-G.TextLabel_27.TextColor3 = Color3.fromRGB(155, 155, 166)
-G.TextLabel_27.TextSize = 20
-G.TextLabel_27.Parent = G.BrainrotPreview_5
-
--- TextLabel_28 (TextLabel)
-G.TextLabel_28 = Instance.new("TextLabel")
-G.TextLabel_28.BackgroundTransparency = 1
-G.TextLabel_28.Position = UDim2.new(0, 82, 0, 10)
-G.TextLabel_28.Size = UDim2.new(1, -180, 0, 16)
-G.TextLabel_28.ZIndex = 6
-G.TextLabel_28.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextLabel_28.Text = "Garama and Madundung"
-G.TextLabel_28.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextLabel_28.TextSize = 12
-G.TextLabel_28.TextTruncate = Enum.TextTruncate.AtEnd
-G.TextLabel_28.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_28.Parent = G.Card_429ac589b7e94e608c4361606be22109
-
--- TextLabel_29 (TextLabel)
-G.TextLabel_29 = Instance.new("TextLabel")
-G.TextLabel_29.BackgroundTransparency = 1
-G.TextLabel_29.Position = UDim2.new(1, -90, 0, 10)
-G.TextLabel_29.Size = UDim2.new(0, 80, 0, 16)
-G.TextLabel_29.ZIndex = 6
-G.TextLabel_29.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextLabel_29.Text = "$`50M/s"
-G.TextLabel_29.TextColor3 = Color3.fromRGB(235, 20, 26)
-G.TextLabel_29.TextSize = 12
-G.TextLabel_29.TextXAlignment = Enum.TextXAlignment.Right
-G.TextLabel_29.Parent = G.Card_429ac589b7e94e608c4361606be22109
-
--- TextLabel_30 (TextLabel)
-G.TextLabel_30 = Instance.new("TextLabel")
-G.TextLabel_30.BackgroundTransparency = 1
-G.TextLabel_30.Position = UDim2.new(0, 82, 0, 32)
-G.TextLabel_30.Size = UDim2.new(1, -180, 0, 16)
-G.TextLabel_30.ZIndex = 6
-G.TextLabel_30.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
-G.TextLabel_30.Text = "@ultra4s_131"
-G.TextLabel_30.TextColor3 = Color3.fromRGB(235, 20, 26)
-G.TextLabel_30.TextSize = 11
-G.TextLabel_30.TextTruncate = Enum.TextTruncate.AtEnd
-G.TextLabel_30.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_30.Parent = G.Card_429ac589b7e94e608c4361606be22109
-
--- TextLabel_31 (TextLabel)
-G.TextLabel_31 = Instance.new("TextLabel")
-G.TextLabel_31.BackgroundTransparency = 1
-G.TextLabel_31.Position = UDim2.new(0, 82, 0, 52)
-G.TextLabel_31.Size = UDim2.new(1, -180, 0, 14)
-G.TextLabel_31.ZIndex = 6
-G.TextLabel_31.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
-G.TextLabel_31.Text = "Southern Europe · ~235ms"
-G.TextLabel_31.TextColor3 = Color3.fromRGB(155, 155, 166)
-G.TextLabel_31.TextSize = 10
-G.TextLabel_31.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_31.Parent = G.Card_429ac589b7e94e608c4361606be22109
-
--- TextButton_12 (TextButton)
-G.TextButton_12 = Instance.new("TextButton")
-G.TextButton_12.BackgroundColor3 = Color3.fromRGB(235, 20, 26)
-G.TextButton_12.BorderSizePixel = 0
-G.TextButton_12.Position = UDim2.new(1, -74, 1, -34)
-G.TextButton_12.Size = UDim2.new(0, 64, 0, 26)
-G.TextButton_12.ZIndex = 7
-G.TextButton_12.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextButton_12.Text = "TRADE"
-G.TextButton_12.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextButton_12.TextSize = 12
-G.TextButton_12.Parent = G.Card_429ac589b7e94e608c4361606be22109
-
--- UICorner_28 (UICorner)
-G.UICorner_28 = Instance.new("UICorner")
-G.UICorner_28.CornerRadius = UDim.new(1, 0)
-G.UICorner_28.Parent = G.TextButton_12
-
--- Card_4313fa2a818d40e08245e896333505b9 (Frame)
-G.Card_4313fa2a818d40e08245e896333505b9 = Instance.new("Frame")
-G.Card_4313fa2a818d40e08245e896333505b9.Name = "Card_4313fa2a-818d-40e0-8245-e896333505b9"
-G.Card_4313fa2a818d40e08245e896333505b9.BackgroundColor3 = Color3.fromRGB(18, 18, 22)
-G.Card_4313fa2a818d40e08245e896333505b9.BackgroundTransparency = 0.11999999731779099
-G.Card_4313fa2a818d40e08245e896333505b9.BorderSizePixel = 0
-G.Card_4313fa2a818d40e08245e896333505b9.ClipsDescendants = true
-G.Card_4313fa2a818d40e08245e896333505b9.Size = UDim2.new(1, 0, 0, 96)
-G.Card_4313fa2a818d40e08245e896333505b9.ZIndex = 5
-G.Card_4313fa2a818d40e08245e896333505b9:SetAttribute("Search", "blasssxddd migizin noobini pizzanini gold 10b, bubblegum, claws, lightning, matteo hat, shark fin, sleepy, spider, strawberry, ufo, zombie south america")
-G.Card_4313fa2a818d40e08245e896333505b9.Parent = G.TRADESList
-
--- UICorner_29 (UICorner)
-G.UICorner_29 = Instance.new("UICorner")
-G.UICorner_29.CornerRadius = UDim.new(0, 16)
-G.UICorner_29.Parent = G.Card_4313fa2a818d40e08245e896333505b9
-
--- UIStroke_7 (UIStroke)
-G.UIStroke_7 = Instance.new("UIStroke")
-G.UIStroke_7.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-G.UIStroke_7.Color = Color3.fromRGB(255, 255, 255)
-G.UIStroke_7.Transparency = 0.85000002384185791
-G.UIStroke_7.Parent = G.Card_4313fa2a818d40e08245e896333505b9
-
--- BrainrotPreview_6 (Frame)
-G.BrainrotPreview_6 = Instance.new("Frame")
-G.BrainrotPreview_6.Name = "BrainrotPreview"
-G.BrainrotPreview_6.BackgroundColor3 = Color3.fromRGB(12, 12, 14)
-G.BrainrotPreview_6.BackgroundTransparency = 0.20000000298023224
-G.BrainrotPreview_6.BorderSizePixel = 0
-G.BrainrotPreview_6.ClipsDescendants = true
-G.BrainrotPreview_6.Position = UDim2.new(0, 10, 0.5, -32)
-G.BrainrotPreview_6.Size = UDim2.new(0, 64, 0, 64)
-G.BrainrotPreview_6.ZIndex = 6
-G.BrainrotPreview_6.Parent = G.Card_4313fa2a818d40e08245e896333505b9
-
--- UICorner_30 (UICorner)
-G.UICorner_30 = Instance.new("UICorner")
-G.UICorner_30.CornerRadius = UDim.new(0, 12)
-G.UICorner_30.Parent = G.BrainrotPreview_6
-
--- ViewportFrame_6 (ViewportFrame)
-G.ViewportFrame_6 = Instance.new("ViewportFrame")
-G.ViewportFrame_6.BackgroundTransparency = 1
-G.ViewportFrame_6.BorderSizePixel = 0
-G.ViewportFrame_6.Size = UDim2.new(1, 0, 1, 0)
-G.ViewportFrame_6.ZIndex = 7
-G.ViewportFrame_6.Ambient = Color3.fromRGB(200, 200, 210)
-G.ViewportFrame_6.LightColor = Color3.fromRGB(255, 255, 255)
-G.ViewportFrame_6.Parent = G.BrainrotPreview_6
-
--- WorldModel_6 (WorldModel)
-G.WorldModel_6 = Instance.new("WorldModel")
-G.WorldModel_6.Parent = G.ViewportFrame_6
-
--- TextLabel_32 (TextLabel)
-G.TextLabel_32 = Instance.new("TextLabel")
-G.TextLabel_32.BackgroundTransparency = 1
-G.TextLabel_32.Size = UDim2.new(1, 0, 1, 0)
-G.TextLabel_32.ZIndex = 8
-G.TextLabel_32.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextLabel_32.Text = "?"
-G.TextLabel_32.TextColor3 = Color3.fromRGB(155, 155, 166)
-G.TextLabel_32.TextSize = 20
-G.TextLabel_32.Parent = G.BrainrotPreview_6
-
--- TextLabel_33 (TextLabel)
-G.TextLabel_33 = Instance.new("TextLabel")
-G.TextLabel_33.BackgroundTransparency = 1
-G.TextLabel_33.Position = UDim2.new(0, 82, 0, 10)
-G.TextLabel_33.Size = UDim2.new(1, -180, 0, 16)
-G.TextLabel_33.ZIndex = 6
-G.TextLabel_33.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextLabel_33.Text = "Noobini Pizzanini"
-G.TextLabel_33.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextLabel_33.TextSize = 12
-G.TextLabel_33.TextTruncate = Enum.TextTruncate.AtEnd
-G.TextLabel_33.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_33.Parent = G.Card_4313fa2a818d40e08245e896333505b9
-
--- TextLabel_34 (TextLabel)
-G.TextLabel_34 = Instance.new("TextLabel")
-G.TextLabel_34.BackgroundTransparency = 1
-G.TextLabel_34.Position = UDim2.new(1, -90, 0, 10)
-G.TextLabel_34.Size = UDim2.new(0, 80, 0, 16)
-G.TextLabel_34.ZIndex = 6
-G.TextLabel_34.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextLabel_34.Text = "`$42/s"
-G.TextLabel_34.TextColor3 = Color3.fromRGB(235, 20, 26)
-G.TextLabel_34.TextSize = 12
-G.TextLabel_34.TextXAlignment = Enum.TextXAlignment.Right
-G.TextLabel_34.Parent = G.Card_4313fa2a818d40e08245e896333505b9
-
--- TextLabel_35 (TextLabel)
-G.TextLabel_35 = Instance.new("TextLabel")
-G.TextLabel_35.BackgroundTransparency = 1
-G.TextLabel_35.Position = UDim2.new(0, 82, 0, 32)
-G.TextLabel_35.Size = UDim2.new(1, -180, 0, 16)
-G.TextLabel_35.ZIndex = 6
-G.TextLabel_35.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
-G.TextLabel_35.Text = "@blasssxddd"
-G.TextLabel_35.TextColor3 = Color3.fromRGB(235, 20, 26)
-G.TextLabel_35.TextSize = 11
-G.TextLabel_35.TextTruncate = Enum.TextTruncate.AtEnd
-G.TextLabel_35.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_35.Parent = G.Card_4313fa2a818d40e08245e896333505b9
-
--- TextLabel_36 (TextLabel)
-G.TextLabel_36 = Instance.new("TextLabel")
-G.TextLabel_36.BackgroundTransparency = 1
-G.TextLabel_36.Position = UDim2.new(0, 82, 0, 52)
-G.TextLabel_36.Size = UDim2.new(1, -180, 0, 14)
-G.TextLabel_36.ZIndex = 6
-G.TextLabel_36.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
-G.TextLabel_36.Text = "South America · ~278ms"
-G.TextLabel_36.TextColor3 = Color3.fromRGB(155, 155, 166)
-G.TextLabel_36.TextSize = 10
-G.TextLabel_36.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_36.Parent = G.Card_4313fa2a818d40e08245e896333505b9
-
--- TextButton_13 (TextButton)
-G.TextButton_13 = Instance.new("TextButton")
-G.TextButton_13.BackgroundColor3 = Color3.fromRGB(235, 20, 26)
-G.TextButton_13.BorderSizePixel = 0
-G.TextButton_13.Position = UDim2.new(1, -74, 1, -34)
-G.TextButton_13.Size = UDim2.new(0, 64, 0, 26)
-G.TextButton_13.ZIndex = 7
-G.TextButton_13.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextButton_13.Text = "TRADE"
-G.TextButton_13.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextButton_13.TextSize = 12
-G.TextButton_13.Parent = G.Card_4313fa2a818d40e08245e896333505b9
-
--- UICorner_31 (UICorner)
-G.UICorner_31 = Instance.new("UICorner")
-G.UICorner_31.CornerRadius = UDim.new(1, 0)
-G.UICorner_31.Parent = G.TextButton_13
-
--- Card_2c55bb6be2b14363bee56039899b0ddc (Frame)
-G.Card_2c55bb6be2b14363bee56039899b0ddc = Instance.new("Frame")
-G.Card_2c55bb6be2b14363bee56039899b0ddc.Name = "Card_2c55bb6b-e2b1-4363-bee5-6039899b0ddc"
-G.Card_2c55bb6be2b14363bee56039899b0ddc.BackgroundColor3 = Color3.fromRGB(18, 18, 22)
-G.Card_2c55bb6be2b14363bee56039899b0ddc.BackgroundTransparency = 0.11999999731779099
-G.Card_2c55bb6be2b14363bee56039899b0ddc.BorderSizePixel = 0
-G.Card_2c55bb6be2b14363bee56039899b0ddc.ClipsDescendants = true
-G.Card_2c55bb6be2b14363bee56039899b0ddc.Size = UDim2.new(1, 0, 0, 96)
-G.Card_2c55bb6be2b14363bee56039899b0ddc.ZIndex = 5
-G.Card_2c55bb6be2b14363bee56039899b0ddc:SetAttribute("Search", "rmya12rm rmya12rm chicleteira bicicleteira gold jo")
-G.Card_2c55bb6be2b14363bee56039899b0ddc.Parent = G.TRADESList
-
--- UICorner_32 (UICorner)
-G.UICorner_32 = Instance.new("UICorner")
-G.UICorner_32.CornerRadius = UDim.new(0, 16)
-G.UICorner_32.Parent = G.Card_2c55bb6be2b14363bee56039899b0ddc
-
--- UIStroke_8 (UIStroke)
-G.UIStroke_8 = Instance.new("UIStroke")
-G.UIStroke_8.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-G.UIStroke_8.Color = Color3.fromRGB(255, 255, 255)
-G.UIStroke_8.Transparency = 0.85000002384185791
-G.UIStroke_8.Parent = G.Card_2c55bb6be2b14363bee56039899b0ddc
-
--- BrainrotPreview_7 (Frame)
-G.BrainrotPreview_7 = Instance.new("Frame")
-G.BrainrotPreview_7.Name = "BrainrotPreview"
-G.BrainrotPreview_7.BackgroundColor3 = Color3.fromRGB(12, 12, 14)
-G.BrainrotPreview_7.BackgroundTransparency = 0.20000000298023224
-G.BrainrotPreview_7.BorderSizePixel = 0
-G.BrainrotPreview_7.ClipsDescendants = true
-G.BrainrotPreview_7.Position = UDim2.new(0, 10, 0.5, -32)
-G.BrainrotPreview_7.Size = UDim2.new(0, 64, 0, 64)
-G.BrainrotPreview_7.ZIndex = 6
-G.BrainrotPreview_7.Parent = G.Card_2c55bb6be2b14363bee56039899b0ddc
-
--- UICorner_33 (UICorner)
-G.UICorner_33 = Instance.new("UICorner")
-G.UICorner_33.CornerRadius = UDim.new(0, 12)
-G.UICorner_33.Parent = G.BrainrotPreview_7
-
--- ViewportFrame_7 (ViewportFrame)
-G.ViewportFrame_7 = Instance.new("ViewportFrame")
-G.ViewportFrame_7.BackgroundTransparency = 1
-G.ViewportFrame_7.BorderSizePixel = 0
-G.ViewportFrame_7.Size = UDim2.new(1, 0, 1, 0)
-G.ViewportFrame_7.ZIndex = 7
-G.ViewportFrame_7.Ambient = Color3.fromRGB(200, 200, 210)
-G.ViewportFrame_7.LightColor = Color3.fromRGB(255, 255, 255)
-G.ViewportFrame_7.Parent = G.BrainrotPreview_7
-
--- WorldModel_7 (WorldModel)
-G.WorldModel_7 = Instance.new("WorldModel")
-G.WorldModel_7.Parent = G.ViewportFrame_7
-
--- TextLabel_37 (TextLabel)
-G.TextLabel_37 = Instance.new("TextLabel")
-G.TextLabel_37.BackgroundTransparency = 1
-G.TextLabel_37.Size = UDim2.new(1, 0, 1, 0)
-G.TextLabel_37.ZIndex = 8
-G.TextLabel_37.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextLabel_37.Text = "?"
-G.TextLabel_37.TextColor3 = Color3.fromRGB(155, 155, 166)
-G.TextLabel_37.TextSize = 20
-G.TextLabel_37.Parent = G.BrainrotPreview_7
-
--- TextLabel_38 (TextLabel)
-G.TextLabel_38 = Instance.new("TextLabel")
-G.TextLabel_38.BackgroundTransparency = 1
-G.TextLabel_38.Position = UDim2.new(0, 82, 0, 10)
-G.TextLabel_38.Size = UDim2.new(1, -180, 0, 16)
-G.TextLabel_38.ZIndex = 6
-G.TextLabel_38.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextLabel_38.Text = "Chicleteira Bicicleteira"
-G.TextLabel_38.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextLabel_38.TextSize = 12
-G.TextLabel_38.TextTruncate = Enum.TextTruncate.AtEnd
-G.TextLabel_38.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_38.Parent = G.Card_2c55bb6be2b14363bee56039899b0ddc
-
--- TextLabel_39 (TextLabel)
-G.TextLabel_39 = Instance.new("TextLabel")
-G.TextLabel_39.BackgroundTransparency = 1
-G.TextLabel_39.Position = UDim2.new(1, -90, 0, 10)
-G.TextLabel_39.Size = UDim2.new(0, 80, 0, 16)
-G.TextLabel_39.ZIndex = 6
-G.TextLabel_39.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextLabel_39.Text = "$4.3M/s"
-G.TextLabel_39.TextColor3 = Color3.fromRGB(235, 20, 26)
-G.TextLabel_39.TextSize = 12
-G.TextLabel_39.TextXAlignment = Enum.TextXAlignment.Right
-G.TextLabel_39.Parent = G.Card_2c55bb6be2b14363bee56039899b0ddc
-
--- TextLabel_40 (TextLabel)
-G.TextLabel_40 = Instance.new("TextLabel")
-G.TextLabel_40.BackgroundTransparency = 1
-G.TextLabel_40.Position = UDim2.new(0, 82, 0, 32)
-G.TextLabel_40.Size = UDim2.new(1, -180, 0, 16)
-G.TextLabel_40.ZIndex = 6
-G.TextLabel_40.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
-G.TextLabel_40.Text = "@rmya12rm"
-G.TextLabel_40.TextColor3 = Color3.fromRGB(235, 20, 26)
-G.TextLabel_40.TextSize = 11
-G.TextLabel_40.TextTruncate = Enum.TextTruncate.AtEnd
-G.TextLabel_40.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_40.Parent = G.Card_2c55bb6be2b14363bee56039899b0ddc
-
--- TextLabel_41 (TextLabel)
-G.TextLabel_41 = Instance.new("TextLabel")
-G.TextLabel_41.BackgroundTransparency = 1
-G.TextLabel_41.Position = UDim2.new(0, 82, 0, 52)
-G.TextLabel_41.Size = UDim2.new(1, -180, 0, 14)
-G.TextLabel_41.ZIndex = 6
-G.TextLabel_41.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium, Enum.FontStyle.Normal)
-G.TextLabel_41.Text = "JO · ~192ms"
-G.TextLabel_41.TextColor3 = Color3.fromRGB(155, 155, 166)
-G.TextLabel_41.TextSize = 10
-G.TextLabel_41.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_41.Parent = G.Card_2c55bb6be2b14363bee56039899b0ddc
-
--- TextButton_14 (TextButton)
-G.TextButton_14 = Instance.new("TextButton")
-G.TextButton_14.BackgroundColor3 = Color3.fromRGB(235, 20, 26)
-G.TextButton_14.BorderSizePixel = 0
-G.TextButton_14.Position = UDim2.new(1, -74, 1, -34)
-G.TextButton_14.Size = UDim2.new(0, 64, 0, 26)
-G.TextButton_14.ZIndex = 7
-G.TextButton_14.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextButton_14.Text = "TRADE"
-G.TextButton_14.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextButton_14.TextSize = 12
-G.TextButton_14.Parent = G.Card_2c55bb6be2b14363bee56039899b0ddc
-
--- UICorner_34 (UICorner)
-G.UICorner_34 = Instance.new("UICorner")
-G.UICorner_34.CornerRadius = UDim.new(1, 0)
-G.UICorner_34.Parent = G.TextButton_14
-
--- BackgroundsPanel (ScrollingFrame)
-G.BackgroundsPanel = Instance.new("ScrollingFrame")
-G.BackgroundsPanel.Name = "BackgroundsPanel"
-G.BackgroundsPanel.BackgroundTransparency = 1
-G.BackgroundsPanel.BorderSizePixel = 0
-G.BackgroundsPanel.Position = UDim2.new(0, 0, 0, 34)
-G.BackgroundsPanel.Size = UDim2.new(1, 0, 1, -36)
-G.BackgroundsPanel.Visible = false
-G.BackgroundsPanel.ZIndex = 5
-G.BackgroundsPanel.AutomaticCanvasSize = Enum.AutomaticSize.Y
-G.BackgroundsPanel.CanvasSize = UDim2.new(0, 0, 0, 0)
-G.BackgroundsPanel.ScrollBarThickness = 3
-G.BackgroundsPanel.Parent = G.TradesPanel
-
--- UIListLayout_5 (UIListLayout)
-G.UIListLayout_5 = Instance.new("UIListLayout")
-G.UIListLayout_5.Padding = UDim.new(0, 8)
-G.UIListLayout_5.SortOrder = Enum.SortOrder.LayoutOrder
-G.UIListLayout_5.Parent = G.BackgroundsPanel
-
--- TextLabel_42 (TextLabel)
-G.TextLabel_42 = Instance.new("TextLabel")
-G.TextLabel_42.BackgroundTransparency = 1
-G.TextLabel_42.LayoutOrder = 1
-G.TextLabel_42.Size = UDim2.new(1, 0, 0, 16)
-G.TextLabel_42.ZIndex = 6
-G.TextLabel_42.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextLabel_42.Text = "CHOOSE BACKGROUND"
-G.TextLabel_42.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextLabel_42.TextSize = 11
-G.TextLabel_42.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_42.Parent = G.BackgroundsPanel
-
--- TextLabel_43 (TextLabel)
-G.TextLabel_43 = Instance.new("TextLabel")
-G.TextLabel_43.BackgroundTransparency = 1
-G.TextLabel_43.LayoutOrder = 2
-G.TextLabel_43.Size = UDim2.new(1, 0, 0, 14)
-G.TextLabel_43.ZIndex = 6
-G.TextLabel_43.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular, Enum.FontStyle.Normal)
-G.TextLabel_43.Text = "Tap an image to apply it to the menu"
-G.TextLabel_43.TextColor3 = Color3.fromRGB(155, 155, 166)
-G.TextLabel_43.TextSize = 10
-G.TextLabel_43.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_43.Parent = G.BackgroundsPanel
-
--- TextButton_15 (TextButton)
-G.TextButton_15 = Instance.new("TextButton")
-G.TextButton_15.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-G.TextButton_15.BackgroundTransparency = 0.25
-G.TextButton_15.BorderSizePixel = 0
-G.TextButton_15.LayoutOrder = 3
-G.TextButton_15.Size = UDim2.new(1, 0, 0, 30)
-G.TextButton_15.ZIndex = 6
-G.TextButton_15.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextButton_15.Text = "NONE (theme only)"
-G.TextButton_15.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextButton_15.TextSize = 11
-G.TextButton_15.Parent = G.BackgroundsPanel
-
--- UICorner_35 (UICorner)
-G.UICorner_35 = Instance.new("UICorner")
-G.UICorner_35.CornerRadius = UDim.new(1, 0)
-G.UICorner_35.Parent = G.TextButton_15
-
--- Frame_7 (Frame)
-G.Frame_7 = Instance.new("Frame")
-G.Frame_7.AutomaticSize = Enum.AutomaticSize.Y
-G.Frame_7.BackgroundTransparency = 1
-G.Frame_7.LayoutOrder = 4
-G.Frame_7.Size = UDim2.new(1, 0, 0, 0)
-G.Frame_7.ZIndex = 6
-G.Frame_7.Parent = G.BackgroundsPanel
-
--- UIGridLayout (UIGridLayout)
-G.UIGridLayout = Instance.new("UIGridLayout")
-G.UIGridLayout.CellPadding = UDim2.new(0, 8, 0, 8)
-G.UIGridLayout.CellSize = UDim2.new(0.5, -5, 0, 78)
-G.UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
-G.UIGridLayout.Parent = G.Frame_7
-
--- Bg_1 (TextButton)
-G.Bg_1 = Instance.new("TextButton")
-G.Bg_1.Name = "Bg_1"
-G.Bg_1.BackgroundColor3 = Color3.fromRGB(18, 18, 22)
-G.Bg_1.BackgroundTransparency = 0.10000000149011612
-G.Bg_1.BorderSizePixel = 0
-G.Bg_1.LayoutOrder = 1
-G.Bg_1.ZIndex = 6
-G.Bg_1.AutoButtonColor = false
-G.Bg_1.Text = ""
-G.Bg_1.Parent = G.Frame_7
-
--- UICorner_36 (UICorner)
-G.UICorner_36 = Instance.new("UICorner")
-G.UICorner_36.CornerRadius = UDim.new(0, 12)
-G.UICorner_36.Parent = G.Bg_1
-
--- UIStroke_9 (UIStroke)
-G.UIStroke_9 = Instance.new("UIStroke")
-G.UIStroke_9.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-G.UIStroke_9.Color = Color3.fromRGB(235, 20, 26)
-G.UIStroke_9.Thickness = 2
-G.UIStroke_9.Transparency = 0.10000000149011612
-G.UIStroke_9.Parent = G.Bg_1
-
--- Preview (ImageLabel)
-G.Preview = Instance.new("ImageLabel")
-G.Preview.Name = "Preview"
-G.Preview.BackgroundTransparency = 1
-G.Preview.Size = UDim2.new(1, 0, 1, 0)
-G.Preview.ZIndex = 7
-G.Preview.Image = "rbxassetid://126860692354524"
-G.Preview.ScaleType = Enum.ScaleType.Crop
-G.Preview.Parent = G.Bg_1
-
--- UICorner_37 (UICorner)
-G.UICorner_37 = Instance.new("UICorner")
-G.UICorner_37.CornerRadius = UDim.new(0, 12)
-G.UICorner_37.Parent = G.Preview
-
--- TextLabel_44 (TextLabel)
-G.TextLabel_44 = Instance.new("TextLabel")
-G.TextLabel_44.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-G.TextLabel_44.BackgroundTransparency = 0.40000000596046448
-G.TextLabel_44.Position = UDim2.new(0, 0, 1, -16)
-G.TextLabel_44.Size = UDim2.new(1, 0, 0, 16)
-G.TextLabel_44.ZIndex = 8
-G.TextLabel_44.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextLabel_44.Text = "BG 1"
-G.TextLabel_44.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextLabel_44.TextSize = 10
-G.TextLabel_44.Parent = G.Bg_1
-
--- Bg_2 (TextButton)
-G.Bg_2 = Instance.new("TextButton")
-G.Bg_2.Name = "Bg_2"
-G.Bg_2.BackgroundColor3 = Color3.fromRGB(18, 18, 22)
-G.Bg_2.BackgroundTransparency = 0.10000000149011612
-G.Bg_2.BorderSizePixel = 0
-G.Bg_2.LayoutOrder = 2
-G.Bg_2.ZIndex = 6
-G.Bg_2.AutoButtonColor = false
-G.Bg_2.Text = ""
-G.Bg_2.Parent = G.Frame_7
-
--- UICorner_38 (UICorner)
-G.UICorner_38 = Instance.new("UICorner")
-G.UICorner_38.CornerRadius = UDim.new(0, 12)
-G.UICorner_38.Parent = G.Bg_2
-
--- UIStroke_10 (UIStroke)
-G.UIStroke_10 = Instance.new("UIStroke")
-G.UIStroke_10.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-G.UIStroke_10.Color = Color3.fromRGB(255, 255, 255)
-G.UIStroke_10.Transparency = 0.69999998807907104
-G.UIStroke_10.Parent = G.Bg_2
-
--- Preview_2 (ImageLabel)
-G.Preview_2 = Instance.new("ImageLabel")
-G.Preview_2.Name = "Preview"
-G.Preview_2.BackgroundTransparency = 1
-G.Preview_2.Size = UDim2.new(1, 0, 1, 0)
-G.Preview_2.ZIndex = 7
-G.Preview_2.Image = "rbxassetid://90280869222992"
-G.Preview_2.ScaleType = Enum.ScaleType.Crop
-G.Preview_2.Parent = G.Bg_2
-
--- UICorner_39 (UICorner)
-G.UICorner_39 = Instance.new("UICorner")
-G.UICorner_39.CornerRadius = UDim.new(0, 12)
-G.UICorner_39.Parent = G.Preview_2
-
--- TextLabel_45 (TextLabel)
-G.TextLabel_45 = Instance.new("TextLabel")
-G.TextLabel_45.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-G.TextLabel_45.BackgroundTransparency = 0.40000000596046448
-G.TextLabel_45.Position = UDim2.new(0, 0, 1, -16)
-G.TextLabel_45.Size = UDim2.new(1, 0, 0, 16)
-G.TextLabel_45.ZIndex = 8
-G.TextLabel_45.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextLabel_45.Text = "BG 2"
-G.TextLabel_45.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextLabel_45.TextSize = 10
-G.TextLabel_45.Parent = G.Bg_2
-
--- Bg_3 (TextButton)
-G.Bg_3 = Instance.new("TextButton")
-G.Bg_3.Name = "Bg_3"
-G.Bg_3.BackgroundColor3 = Color3.fromRGB(18, 18, 22)
-G.Bg_3.BackgroundTransparency = 0.10000000149011612
-G.Bg_3.BorderSizePixel = 0
-G.Bg_3.LayoutOrder = 3
-G.Bg_3.ZIndex = 6
-G.Bg_3.AutoButtonColor = false
-G.Bg_3.Text = ""
-G.Bg_3.Parent = G.Frame_7
-
--- UICorner_40 (UICorner)
-G.UICorner_40 = Instance.new("UICorner")
-G.UICorner_40.CornerRadius = UDim.new(0, 12)
-G.UICorner_40.Parent = G.Bg_3
-
--- UIStroke_11 (UIStroke)
-G.UIStroke_11 = Instance.new("UIStroke")
-G.UIStroke_11.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-G.UIStroke_11.Color = Color3.fromRGB(255, 255, 255)
-G.UIStroke_11.Transparency = 0.69999998807907104
-G.UIStroke_11.Parent = G.Bg_3
-
--- Preview_3 (ImageLabel)
-G.Preview_3 = Instance.new("ImageLabel")
-G.Preview_3.Name = "Preview"
-G.Preview_3.BackgroundTransparency = 1
-G.Preview_3.Size = UDim2.new(1, 0, 1, 0)
-G.Preview_3.ZIndex = 7
-G.Preview_3.Image = "rbxassetid://90631990302263"
-G.Preview_3.ScaleType = Enum.ScaleType.Crop
-G.Preview_3.Parent = G.Bg_3
-
--- UICorner_41 (UICorner)
-G.UICorner_41 = Instance.new("UICorner")
-G.UICorner_41.CornerRadius = UDim.new(0, 12)
-G.UICorner_41.Parent = G.Preview_3
-
--- TextLabel_46 (TextLabel)
-G.TextLabel_46 = Instance.new("TextLabel")
-G.TextLabel_46.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-G.TextLabel_46.BackgroundTransparency = 0.40000000596046448
-G.TextLabel_46.Position = UDim2.new(0, 0, 1, -16)
-G.TextLabel_46.Size = UDim2.new(1, 0, 0, 16)
-G.TextLabel_46.ZIndex = 8
-G.TextLabel_46.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextLabel_46.Text = "BG 3"
-G.TextLabel_46.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextLabel_46.TextSize = 10
-G.TextLabel_46.Parent = G.Bg_3
-
--- Bg_4 (TextButton)
-G.Bg_4 = Instance.new("TextButton")
-G.Bg_4.Name = "Bg_4"
-G.Bg_4.BackgroundColor3 = Color3.fromRGB(18, 18, 22)
-G.Bg_4.BackgroundTransparency = 0.10000000149011612
-G.Bg_4.BorderSizePixel = 0
-G.Bg_4.LayoutOrder = 4
-G.Bg_4.ZIndex = 6
-G.Bg_4.AutoButtonColor = false
-G.Bg_4.Text = ""
-G.Bg_4.Parent = G.Frame_7
-
--- UICorner_42 (UICorner)
-G.UICorner_42 = Instance.new("UICorner")
-G.UICorner_42.CornerRadius = UDim.new(0, 12)
-G.UICorner_42.Parent = G.Bg_4
-
--- UIStroke_12 (UIStroke)
-G.UIStroke_12 = Instance.new("UIStroke")
-G.UIStroke_12.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-G.UIStroke_12.Color = Color3.fromRGB(255, 255, 255)
-G.UIStroke_12.Transparency = 0.69999998807907104
-G.UIStroke_12.Parent = G.Bg_4
-
--- Preview_4 (ImageLabel)
-G.Preview_4 = Instance.new("ImageLabel")
-G.Preview_4.Name = "Preview"
-G.Preview_4.BackgroundTransparency = 1
-G.Preview_4.Size = UDim2.new(1, 0, 1, 0)
-G.Preview_4.ZIndex = 7
-G.Preview_4.Image = "rbxassetid://88369503310562"
-G.Preview_4.ScaleType = Enum.ScaleType.Crop
-G.Preview_4.Parent = G.Bg_4
-
--- UICorner_43 (UICorner)
-G.UICorner_43 = Instance.new("UICorner")
-G.UICorner_43.CornerRadius = UDim.new(0, 12)
-G.UICorner_43.Parent = G.Preview_4
-
--- TextLabel_47 (TextLabel)
-G.TextLabel_47 = Instance.new("TextLabel")
-G.TextLabel_47.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-G.TextLabel_47.BackgroundTransparency = 0.40000000596046448
-G.TextLabel_47.Position = UDim2.new(0, 0, 1, -16)
-G.TextLabel_47.Size = UDim2.new(1, 0, 0, 16)
-G.TextLabel_47.ZIndex = 8
-G.TextLabel_47.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextLabel_47.Text = "BG 4"
-G.TextLabel_47.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextLabel_47.TextSize = 10
-G.TextLabel_47.Parent = G.Bg_4
-
--- Bg_5 (TextButton)
-G.Bg_5 = Instance.new("TextButton")
-G.Bg_5.Name = "Bg_5"
-G.Bg_5.BackgroundColor3 = Color3.fromRGB(18, 18, 22)
-G.Bg_5.BackgroundTransparency = 0.10000000149011612
-G.Bg_5.BorderSizePixel = 0
-G.Bg_5.LayoutOrder = 5
-G.Bg_5.ZIndex = 6
-G.Bg_5.AutoButtonColor = false
-G.Bg_5.Text = ""
-G.Bg_5.Parent = G.Frame_7
-
--- UICorner_44 (UICorner)
-G.UICorner_44 = Instance.new("UICorner")
-G.UICorner_44.CornerRadius = UDim.new(0, 12)
-G.UICorner_44.Parent = G.Bg_5
-
--- UIStroke_13 (UIStroke)
-G.UIStroke_13 = Instance.new("UIStroke")
-G.UIStroke_13.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-G.UIStroke_13.Color = Color3.fromRGB(255, 255, 255)
-G.UIStroke_13.Transparency = 0.69999998807907104
-G.UIStroke_13.Parent = G.Bg_5
-
--- Preview_5 (ImageLabel)
-G.Preview_5 = Instance.new("ImageLabel")
-G.Preview_5.Name = "Preview"
-G.Preview_5.BackgroundTransparency = 1
-G.Preview_5.Size = UDim2.new(1, 0, 1, 0)
-G.Preview_5.ZIndex = 7
-G.Preview_5.Image = "rbxassetid://80708025126373"
-G.Preview_5.ScaleType = Enum.ScaleType.Crop
-G.Preview_5.Parent = G.Bg_5
-
--- UICorner_45 (UICorner)
-G.UICorner_45 = Instance.new("UICorner")
-G.UICorner_45.CornerRadius = UDim.new(0, 12)
-G.UICorner_45.Parent = G.Preview_5
-
--- TextLabel_48 (TextLabel)
-G.TextLabel_48 = Instance.new("TextLabel")
-G.TextLabel_48.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-G.TextLabel_48.BackgroundTransparency = 0.40000000596046448
-G.TextLabel_48.Position = UDim2.new(0, 0, 1, -16)
-G.TextLabel_48.Size = UDim2.new(1, 0, 0, 16)
-G.TextLabel_48.ZIndex = 8
-G.TextLabel_48.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextLabel_48.Text = "BG 5"
-G.TextLabel_48.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextLabel_48.TextSize = 10
-G.TextLabel_48.Parent = G.Bg_5
-
--- Bg_6 (TextButton)
-G.Bg_6 = Instance.new("TextButton")
-G.Bg_6.Name = "Bg_6"
-G.Bg_6.BackgroundColor3 = Color3.fromRGB(18, 18, 22)
-G.Bg_6.BackgroundTransparency = 0.10000000149011612
-G.Bg_6.BorderSizePixel = 0
-G.Bg_6.LayoutOrder = 6
-G.Bg_6.ZIndex = 6
-G.Bg_6.AutoButtonColor = false
-G.Bg_6.Text = ""
-G.Bg_6.Parent = G.Frame_7
-
--- UICorner_46 (UICorner)
-G.UICorner_46 = Instance.new("UICorner")
-G.UICorner_46.CornerRadius = UDim.new(0, 12)
-G.UICorner_46.Parent = G.Bg_6
-
--- UIStroke_14 (UIStroke)
-G.UIStroke_14 = Instance.new("UIStroke")
-G.UIStroke_14.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-G.UIStroke_14.Color = Color3.fromRGB(255, 255, 255)
-G.UIStroke_14.Transparency = 0.69999998807907104
-G.UIStroke_14.Parent = G.Bg_6
-
--- Preview_6 (ImageLabel)
-G.Preview_6 = Instance.new("ImageLabel")
-G.Preview_6.Name = "Preview"
-G.Preview_6.BackgroundTransparency = 1
-G.Preview_6.Size = UDim2.new(1, 0, 1, 0)
-G.Preview_6.ZIndex = 7
-G.Preview_6.Image = "rbxassetid://102253425322931"
-G.Preview_6.ScaleType = Enum.ScaleType.Crop
-G.Preview_6.Parent = G.Bg_6
-
--- UICorner_47 (UICorner)
-G.UICorner_47 = Instance.new("UICorner")
-G.UICorner_47.CornerRadius = UDim.new(0, 12)
-G.UICorner_47.Parent = G.Preview_6
-
--- TextLabel_49 (TextLabel)
-G.TextLabel_49 = Instance.new("TextLabel")
-G.TextLabel_49.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-G.TextLabel_49.BackgroundTransparency = 0.40000000596046448
-G.TextLabel_49.Position = UDim2.new(0, 0, 1, -16)
-G.TextLabel_49.Size = UDim2.new(1, 0, 0, 16)
-G.TextLabel_49.ZIndex = 8
-G.TextLabel_49.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextLabel_49.Text = "BG 6"
-G.TextLabel_49.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextLabel_49.TextSize = 10
-G.TextLabel_49.Parent = G.Bg_6
-
--- Bg_7 (TextButton)
-G.Bg_7 = Instance.new("TextButton")
-G.Bg_7.Name = "Bg_7"
-G.Bg_7.BackgroundColor3 = Color3.fromRGB(18, 18, 22)
-G.Bg_7.BackgroundTransparency = 0.10000000149011612
-G.Bg_7.BorderSizePixel = 0
-G.Bg_7.LayoutOrder = 7
-G.Bg_7.ZIndex = 6
-G.Bg_7.AutoButtonColor = false
-G.Bg_7.Text = ""
-G.Bg_7.Parent = G.Frame_7
-
--- UICorner_48 (UICorner)
-G.UICorner_48 = Instance.new("UICorner")
-G.UICorner_48.CornerRadius = UDim.new(0, 12)
-G.UICorner_48.Parent = G.Bg_7
-
--- UIStroke_15 (UIStroke)
-G.UIStroke_15 = Instance.new("UIStroke")
-G.UIStroke_15.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-G.UIStroke_15.Color = Color3.fromRGB(255, 255, 255)
-G.UIStroke_15.Transparency = 0.69999998807907104
-G.UIStroke_15.Parent = G.Bg_7
-
--- Preview_7 (ImageLabel)
-G.Preview_7 = Instance.new("ImageLabel")
-G.Preview_7.Name = "Preview"
-G.Preview_7.BackgroundTransparency = 1
-G.Preview_7.Size = UDim2.new(1, 0, 1, 0)
-G.Preview_7.ZIndex = 7
-G.Preview_7.Image = "rbxassetid://90453834580322"
-G.Preview_7.ScaleType = Enum.ScaleType.Crop
-G.Preview_7.Parent = G.Bg_7
-
--- UICorner_49 (UICorner)
-G.UICorner_49 = Instance.new("UICorner")
-G.UICorner_49.CornerRadius = UDim.new(0, 12)
-G.UICorner_49.Parent = G.Preview_7
-
--- TextLabel_50 (TextLabel)
-G.TextLabel_50 = Instance.new("TextLabel")
-G.TextLabel_50.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-G.TextLabel_50.BackgroundTransparency = 0.40000000596046448
-G.TextLabel_50.Position = UDim2.new(0, 0, 1, -16)
-G.TextLabel_50.Size = UDim2.new(1, 0, 0, 16)
-G.TextLabel_50.ZIndex = 8
-G.TextLabel_50.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextLabel_50.Text = "BG 7"
-G.TextLabel_50.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextLabel_50.TextSize = 10
-G.TextLabel_50.Parent = G.Bg_7
-
--- Bg_8 (TextButton)
-G.Bg_8 = Instance.new("TextButton")
-G.Bg_8.Name = "Bg_8"
-G.Bg_8.BackgroundColor3 = Color3.fromRGB(18, 18, 22)
-G.Bg_8.BackgroundTransparency = 0.10000000149011612
-G.Bg_8.BorderSizePixel = 0
-G.Bg_8.LayoutOrder = 8
-G.Bg_8.ZIndex = 6
-G.Bg_8.AutoButtonColor = false
-G.Bg_8.Text = ""
-G.Bg_8.Parent = G.Frame_7
-
--- UICorner_50 (UICorner)
-G.UICorner_50 = Instance.new("UICorner")
-G.UICorner_50.CornerRadius = UDim.new(0, 12)
-G.UICorner_50.Parent = G.Bg_8
-
--- UIStroke_16 (UIStroke)
-G.UIStroke_16 = Instance.new("UIStroke")
-G.UIStroke_16.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-G.UIStroke_16.Color = Color3.fromRGB(255, 255, 255)
-G.UIStroke_16.Transparency = 0.69999998807907104
-G.UIStroke_16.Parent = G.Bg_8
-
--- Preview_8 (ImageLabel)
-G.Preview_8 = Instance.new("ImageLabel")
-G.Preview_8.Name = "Preview"
-G.Preview_8.BackgroundTransparency = 1
-G.Preview_8.Size = UDim2.new(1, 0, 1, 0)
-G.Preview_8.ZIndex = 7
-G.Preview_8.Image = "rbxassetid://135181794444219"
-G.Preview_8.ScaleType = Enum.ScaleType.Crop
-G.Preview_8.Parent = G.Bg_8
-
--- UICorner_51 (UICorner)
-G.UICorner_51 = Instance.new("UICorner")
-G.UICorner_51.CornerRadius = UDim.new(0, 12)
-G.UICorner_51.Parent = G.Preview_8
-
--- TextLabel_51 (TextLabel)
-G.TextLabel_51 = Instance.new("TextLabel")
-G.TextLabel_51.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-G.TextLabel_51.BackgroundTransparency = 0.40000000596046448
-G.TextLabel_51.Position = UDim2.new(0, 0, 1, -16)
-G.TextLabel_51.Size = UDim2.new(1, 0, 0, 16)
-G.TextLabel_51.ZIndex = 8
-G.TextLabel_51.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextLabel_51.Text = "BG 8"
-G.TextLabel_51.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextLabel_51.TextSize = 10
-G.TextLabel_51.Parent = G.Bg_8
-
--- Frame_8 (Frame)
-G.Frame_8 = Instance.new("Frame")
-G.Frame_8.BackgroundTransparency = 1
-G.Frame_8.Position = UDim2.new(0, 10, 1, -46)
-G.Frame_8.Size = UDim2.new(1, -20, 0, 36)
-G.Frame_8.ZIndex = 4
-G.Frame_8.Parent = G.Main
-
--- TextButton_16 (TextButton)
-G.TextButton_16 = Instance.new("TextButton")
-G.TextButton_16.BackgroundColor3 = Color3.fromRGB(28, 28, 32)
-G.TextButton_16.BackgroundTransparency = 0.25
-G.TextButton_16.BorderSizePixel = 0
-G.TextButton_16.Size = UDim2.new(1, -110, 1, 0)
-G.TextButton_16.ZIndex = 5
-G.TextButton_16.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextButton_16.Text = "Theme: RED"
-G.TextButton_16.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextButton_16.TextSize = 11
-G.TextButton_16.Parent = G.Frame_8
-
--- UICorner_52 (UICorner)
-G.UICorner_52 = Instance.new("UICorner")
-G.UICorner_52.CornerRadius = UDim.new(1, 0)
-G.UICorner_52.Parent = G.TextButton_16
-
--- Frame_9 (Frame)
-G.Frame_9 = Instance.new("Frame")
-G.Frame_9.BackgroundColor3 = Color3.fromRGB(28, 28, 32)
-G.Frame_9.BackgroundTransparency = 0.25
-G.Frame_9.BorderSizePixel = 0
-G.Frame_9.Position = UDim2.new(1, -100, 0, 0)
-G.Frame_9.Size = UDim2.new(0, 100, 1, 0)
-G.Frame_9.ZIndex = 5
-G.Frame_9.Parent = G.Frame_8
-
--- UICorner_53 (UICorner)
-G.UICorner_53 = Instance.new("UICorner")
-G.UICorner_53.CornerRadius = UDim.new(1, 0)
-G.UICorner_53.Parent = G.Frame_9
-
--- Frame_10 (Frame)
-G.Frame_10 = Instance.new("Frame")
-G.Frame_10.BackgroundColor3 = Color3.fromRGB(64, 214, 110)
-G.Frame_10.BorderSizePixel = 0
-G.Frame_10.Position = UDim2.new(0, 10, 0.5, -4)
-G.Frame_10.Size = UDim2.new(0, 8, 0, 8)
-G.Frame_10.ZIndex = 6
-G.Frame_10.Parent = G.Frame_9
-
--- UICorner_54 (UICorner)
-G.UICorner_54 = Instance.new("UICorner")
-G.UICorner_54.CornerRadius = UDim.new(1, 0)
-G.UICorner_54.Parent = G.Frame_10
-
--- TextLabel_52 (TextLabel)
-G.TextLabel_52 = Instance.new("TextLabel")
-G.TextLabel_52.BackgroundTransparency = 1
-G.TextLabel_52.Position = UDim2.new(0, 22, 0, 0)
-G.TextLabel_52.Size = UDim2.new(1, -28, 1, 0)
-G.TextLabel_52.ZIndex = 6
-G.TextLabel_52.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextLabel_52.Text = "ONLINE"
-G.TextLabel_52.TextColor3 = Color3.fromRGB(64, 214, 110)
-G.TextLabel_52.TextSize = 10
-G.TextLabel_52.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_52.Parent = G.Frame_9
-
--- TextLabel_53 (TextLabel)
-G.TextLabel_53 = Instance.new("TextLabel")
-G.TextLabel_53.BackgroundTransparency = 1
-G.TextLabel_53.Position = UDim2.new(1, -30, 0, 0)
-G.TextLabel_53.Size = UDim2.new(0, 28, 1, 0)
-G.TextLabel_53.ZIndex = 6
-G.TextLabel_53.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextLabel_53.Text = "5"
-G.TextLabel_53.TextColor3 = Color3.fromRGB(155, 155, 166)
-G.TextLabel_53.TextSize = 10
-G.TextLabel_53.Parent = G.Frame_9
-
--- TextLabel_54 (TextLabel)
-G.TextLabel_54 = Instance.new("TextLabel")
-G.TextLabel_54.BackgroundColor3 = Color3.fromRGB(20, 20, 24)
-G.TextLabel_54.BackgroundTransparency = 1
-G.TextLabel_54.Position = UDim2.new(0.5, -130, 0, 12)
-G.TextLabel_54.Size = UDim2.new(0, 260, 0, 32)
-G.TextLabel_54.Visible = false
-G.TextLabel_54.ZIndex = 50
-G.TextLabel_54.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextLabel_54.Text = "SpeedHub x Ghost Hub loaded"
-G.TextLabel_54.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextLabel_54.TextSize = 11
-G.TextLabel_54.Parent = G.SpeedHubGhostHubFinder
-
--- UICorner_55 (UICorner)
-G.UICorner_55 = Instance.new("UICorner")
-G.UICorner_55.CornerRadius = UDim.new(1, 0)
-G.UICorner_55.Parent = G.TextLabel_54
-
--- UIStroke_17 (UIStroke)
-G.UIStroke_17 = Instance.new("UIStroke")
-G.UIStroke_17.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-G.UIStroke_17.Color = Color3.fromRGB(235, 20, 26)
-G.UIStroke_17.Transparency = 0.5
-G.UIStroke_17.Parent = G.TextLabel_54
-
--- Frame_11 (Frame)
-G.Frame_11 = Instance.new("Frame")
-G.Frame_11.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-G.Frame_11.BackgroundTransparency = 1
-G.Frame_11.Size = UDim2.new(1, 0, 1, 0)
-G.Frame_11.Visible = false
-G.Frame_11.ZIndex = 100
-G.Frame_11.Parent = G.SpeedHubGhostHubFinder
-
--- TextButton_17 (TextButton)
-G.TextButton_17 = Instance.new("TextButton")
-G.TextButton_17.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-G.TextButton_17.BackgroundTransparency = 0.44999998807907104
-G.TextButton_17.Size = UDim2.new(1, 0, 1, 0)
-G.TextButton_17.ZIndex = 101
-G.TextButton_17.Text = ""
-G.TextButton_17.Parent = G.Frame_11
-
--- Frame_12 (Frame)
-G.Frame_12 = Instance.new("Frame")
-G.Frame_12.AnchorPoint = Vector2.new(0.5, 0.5)
-G.Frame_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-G.Frame_12.BorderSizePixel = 0
-G.Frame_12.ClipsDescendants = true
-G.Frame_12.Position = UDim2.new(0.5, 0, 0.5, 0)
-G.Frame_12.Size = UDim2.new(0, 420, 0, 360)
-G.Frame_12.ZIndex = 102
-G.Frame_12.Parent = G.Frame_11
-
--- UICorner_56 (UICorner)
-G.UICorner_56 = Instance.new("UICorner")
-G.UICorner_56.CornerRadius = UDim.new(0, 20)
-G.UICorner_56.Parent = G.Frame_12
-
--- UIScale_2 (UIScale)
-G.UIScale_2 = Instance.new("UIScale")
-G.UIScale_2.Scale = 0.77999997138977051
-G.UIScale_2.Parent = G.Frame_12
-
--- UIGradient_2 (UIGradient)
-G.UIGradient_2 = Instance.new("UIGradient")
-G.UIGradient_2.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.fromRGB(34, 2, 4)), ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 0, 0))})
-G.UIGradient_2.Rotation = 90
-G.UIGradient_2.Parent = G.Frame_12
-
--- TextLabel_55 (TextLabel)
-G.TextLabel_55 = Instance.new("TextLabel")
-G.TextLabel_55.BackgroundTransparency = 1
-G.TextLabel_55.Position = UDim2.new(0, 16, 0, 12)
-G.TextLabel_55.Size = UDim2.new(1, -150, 0, 22)
-G.TextLabel_55.ZIndex = 104
-G.TextLabel_55.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Heavy, Enum.FontStyle.Normal)
-G.TextLabel_55.Text = "YOUR BASE BRAINROTS"
-G.TextLabel_55.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextLabel_55.TextSize = 16
-G.TextLabel_55.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_55.Parent = G.Frame_12
-
--- TextLabel_56 (TextLabel)
-G.TextLabel_56 = Instance.new("TextLabel")
-G.TextLabel_56.BackgroundTransparency = 1
-G.TextLabel_56.Position = UDim2.new(0, 16, 0, 34)
-G.TextLabel_56.Size = UDim2.new(1, -150, 0, 13)
-G.TextLabel_56.ZIndex = 104
-G.TextLabel_56.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextLabel_56.Text = "posting"
-G.TextLabel_56.TextColor3 = Color3.fromRGB(155, 155, 166)
-G.TextLabel_56.TextSize = 11
-G.TextLabel_56.TextXAlignment = Enum.TextXAlignment.Left
-G.TextLabel_56.Parent = G.Frame_12
-
--- TextButton_18 (TextButton)
-G.TextButton_18 = Instance.new("TextButton")
-G.TextButton_18.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-G.TextButton_18.BorderSizePixel = 0
-G.TextButton_18.Position = UDim2.new(1, -46, 0, 14)
-G.TextButton_18.Size = UDim2.new(0, 30, 0, 26)
-G.TextButton_18.ZIndex = 105
-G.TextButton_18.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextButton_18.Text = "X"
-G.TextButton_18.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextButton_18.TextSize = 12
-G.TextButton_18.Parent = G.Frame_12
-
--- UICorner_57 (UICorner)
-G.UICorner_57 = Instance.new("UICorner")
-G.UICorner_57.CornerRadius = UDim.new(1, 0)
-G.UICorner_57.Parent = G.TextButton_18
-
--- TextButton_19 (TextButton)
-G.TextButton_19 = Instance.new("TextButton")
-G.TextButton_19.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-G.TextButton_19.BackgroundTransparency = 0.34999999403953552
-G.TextButton_19.BorderSizePixel = 0
-G.TextButton_19.Position = UDim2.new(1, -112, 0, 14)
-G.TextButton_19.Size = UDim2.new(0, 62, 0, 26)
-G.TextButton_19.ZIndex = 105
-G.TextButton_19.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextButton_19.Text = "REFRESH"
-G.TextButton_19.TextColor3 = Color3.fromRGB(255, 255, 255)
-G.TextButton_19.TextSize = 9
-G.TextButton_19.Parent = G.Frame_12
-
--- UICorner_58 (UICorner)
-G.UICorner_58 = Instance.new("UICorner")
-G.UICorner_58.CornerRadius = UDim.new(1, 0)
-G.UICorner_58.Parent = G.TextButton_19
-
--- ScrollingFrame (ScrollingFrame)
-G.ScrollingFrame = Instance.new("ScrollingFrame")
-G.ScrollingFrame.BackgroundTransparency = 1
-G.ScrollingFrame.BorderSizePixel = 0
-G.ScrollingFrame.Position = UDim2.new(0, 12, 0, 58)
-G.ScrollingFrame.Size = UDim2.new(1, -24, 1, -70)
-G.ScrollingFrame.ZIndex = 104
-G.ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
-G.ScrollingFrame.ScrollBarThickness = 4
-G.ScrollingFrame.Parent = G.Frame_12
-
--- UIGridLayout_2 (UIGridLayout)
-G.UIGridLayout_2 = Instance.new("UIGridLayout")
-G.UIGridLayout_2.CellPadding = UDim2.new(0, 10, 0, 10)
-G.UIGridLayout_2.CellSize = UDim2.new(0.33300000429153442, -7, 0, 220)
-G.UIGridLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
-G.UIGridLayout_2.Parent = G.ScrollingFrame
-
--- TextLabel_57 (TextLabel)
-G.TextLabel_57 = Instance.new("TextLabel")
-G.TextLabel_57.BackgroundTransparency = 1
-G.TextLabel_57.Position = UDim2.new(0, 10, 0.44999998807907104, 0)
-G.TextLabel_57.Size = UDim2.new(1, -20, 0, 60)
-G.TextLabel_57.Visible = false
-G.TextLabel_57.ZIndex = 105
-G.TextLabel_57.FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
-G.TextLabel_57.Text = ""
-G.TextLabel_57.TextColor3 = Color3.fromRGB(155, 155, 166)
-G.TextLabel_57.TextSize = 12
-G.TextLabel_57.TextWrapped = true
-G.TextLabel_57.Parent = G.Frame_12
-
--- mount
-G.SpeedHubGhostHubFinder.Parent = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui")
-
-return G.SpeedHubGhostHubFinder
+-- ============================================================
+-- 🎄 INTRO: NAVIDAD + EXPLOSIÓN + ECO SALEMSDUELS 🎄
+-- ============================================================
+repeat task.wait() until game:IsLoaded()
+local Players = game:GetService("Players")
+local TweenService = game:GetService("TweenService")
+local SoundService = game:GetService("SoundService")
+local RunService = game:GetService("RunService")
+local LP = Players.LocalPlayer
+
+local introGui = Instance.new("ScreenGui")
+introGui.Name = "SalemsChristmasIntro"
+introGui.ResetOnSpawn = false
+introGui.IgnoreGuiInset = true
+introGui.DisplayOrder = 9999
+introGui.Parent = LP:WaitForChild("PlayerGui")
+
+local bg = Instance.new("Frame", introGui)
+bg.Size = UDim2.new(1,0,1,0)
+bg.BackgroundColor3 = Color3.fromRGB(5, 15, 5)
+bg.BackgroundTransparency = 0
+bg.BorderSizePixel = 0
+
+local boom = Instance.new("Sound", SoundService)
+boom.SoundId = "rbxassetid://1597639410"
+boom.Volume = 2
+pcall(function() boom:Play() end)
+
+local jingle = Instance.new("Sound", SoundService)
+jingle.SoundId = "rbxassetid://9118610287"
+jingle.Volume = 4
+jingle.PlaybackSpeed = 1.2
+jingle.RollOffMaxDistance = 0
+jingle.Parent = SoundService
+
+local voice = Instance.new("Sound", SoundService)
+voice.SoundId = "rbxassetid://133370368441865" 
+voice.Volume = 5
+voice.PlaybackSpeed = 0.8 
+voice.RollOffMaxDistance = 0
+voice.Parent = SoundService
+
+local flash = Instance.new("Frame", introGui)
+flash.Size = UDim2.new(1,0,1,0)
+flash.BackgroundColor3 = Color3.fromRGB(255, 50, 50)
+flash.BackgroundTransparency = 0
+flash.BorderSizePixel = 0
+
+local boomCircle = Instance.new("Frame", introGui)
+boomCircle.AnchorPoint = Vector2.new(0.5, 0.5)
+boomCircle.Position = UDim2.new(0.5, 0, 0.5, 0)
+boomCircle.Size = UDim2.new(0, 10, 0, 10)
+boomCircle.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+boomCircle.BorderSizePixel = 0
+Instance.new("UICorner", boomCircle).CornerRadius = UDim.new(1, 0)
+
+local snowflakes = {}
+for i = 1, 100 do
+    local snow = Instance.new("Frame", introGui)
+    snow.Size = UDim2.new(0, math.random(3,8), 0, math.random(3,8))
+    snow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    snow.BorderSizePixel = 0
+    snow.Position = UDim2.new(math.random(), 0, math.random() * -1, 0)
+    snow.ZIndex = 2
+    Instance.new("UICorner", snow).CornerRadius = UDim.new(1, 0)
+    table.insert(snowflakes, {frame = snow, speed = math.random(30, 80) / 1000})
+end
+
+local snowConn
+snowConn = RunService.RenderStepped:Connect(function()
+    for _, flake in ipairs(snowflakes) do
+        if flake.frame and flake.frame.Parent then
+            local currentPos = flake.frame.Position
+            flake.frame.Position = UDim2.new(currentPos.X.Scale, currentPos.X.Offset, currentPos.Y.Scale + flake.speed, currentPos.Y.Offset)
+            if flake.frame.Position.Y.Scale > 1 then
+                flake.frame.Position = UDim2.new(math.random(), 0, -0.1, 0)
+            end
+        end
+    end
+end)
+
+local echoTexts = {}
+for i = 1, 4 do
+	local echo = Instance.new("TextLabel", introGui)
+	echo.Size = UDim2.new(1, 0, 0, 100)
+	echo.Position = UDim2.new(0, 0, 0.5, -50)
+	echo.BackgroundTransparency = 1
+	echo.Text = "SALEMSDUELS IS THE BEST"
+	echo.TextColor3 = Color3.fromRGB(255, 255, 255)
+	echo.Font = Enum.Font.GothamBlack
+	echo.TextScaled = true
+	echo.TextTransparency = 1
+	echo.ZIndex = 5 + i
+	table.insert(echoTexts, echo)
+end
+
+local text = Instance.new("TextLabel", introGui)
+text.Size = UDim2.new(1, 0, 0, 100)
+text.Position = UDim2.new(0, 0, 0.5, -50)
+text.BackgroundTransparency = 1
+text.Text = "SALEMSDUELS IS THE BEST"
+text.Font = Enum.Font.GothamBlack
+text.TextScaled = true
+text.TextTransparency = 1
+text.ZIndex = 10
+
+local textGrad = Instance.new("UIGradient", text)
+textGrad.Color = ColorSequence.new({
+	ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 50, 50)),
+	ColorSequenceKeypoint.new(0.5, Color3.fromRGB(255, 255, 255)),
+	ColorSequenceKeypoint.new(1, Color3.fromRGB(50, 255, 50))
+})
+
+TweenService:Create(bg, TweenInfo.new(0.1), {BackgroundTransparency = 0.5}):Play()
+TweenService:Create(flash, TweenInfo.new(0.4), {BackgroundTransparency = 1}):Play()
+TweenService:Create(boomCircle, TweenInfo.new(0.6, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+	Size = UDim2.new(0, 2500, 0, 2500),
+	BackgroundTransparency = 1
+}):Play()
+
+task.delay(0.2, function()
+	pcall(function() jingle:Play() end)
+	pcall(function() voice:Play() end)
+	
+	TweenService:Create(text, TweenInfo.new(0.3), {TextTransparency = 0}):Play()
+	
+	for i, echo in ipairs(echoTexts) do
+		task.delay(i * 0.15, function()
+			echo.TextTransparency = 0.3
+			TweenService:Create(echo, TweenInfo.new(1.5), {
+				TextTransparency = 1,
+				Size = UDim2.new(1, 0, 0, 100 + (i * 40)),
+				TextStrokeTransparency = 1
+			}):Play()
+		end)
+	end
+end)
+
+task.delay(3.5, function()
+	if snowConn then snowConn:Disconnect() end
+	TweenService:Create(text, TweenInfo.new(0.5), {TextTransparency = 1}):Play()
+	TweenService:Create(bg, TweenInfo.new(0.5), {BackgroundTransparency = 1}):Play()
+	for _, echo in ipairs(echoTexts) do
+		TweenService:Create(echo, TweenInfo.new(0.3), {TextTransparency = 1}):Play()
+	end
+	for _, flake in ipairs(snowflakes) do
+	    if flake.frame then
+	        TweenService:Create(flake.frame, TweenInfo.new(0.5), {BackgroundTransparency = 1}):Play()
+	    end
+	end
+	task.wait(0.6)
+	introGui:Destroy()
+	if boom and boom.Parent then boom:Destroy() end
+	if jingle and jingle.Parent then jingle:Destroy() end
+	if voice and voice.Parent then voice:Destroy() end
+end)
+
+-- ============================================================
+-- INICIO DEL SCRIPT PVP (SALEMSDUELS)
+-- ============================================================
+local Players,RunService,UIS,TS,Lighting,HS = game:GetService("Players"),game:GetService("RunService"),game:GetService("UserInputService"),game:GetService("TweenService"),game:GetService("Lighting"),game:GetService("HttpService")
+local LP = Players.LocalPlayer
+local NS,CS = 60,30
+local LAGGER_SPEED = 15
+local LAGGER_CARRY_SPEED = 24.5
+local speedMode,antiRagdollEnabled,infJumpEnabled = false,false,false
+local laggerToggled = false
+local laggerPhase = 0
+local medusaCounterEnabled = false
+local batCounterEnabled = false
+local unwalkEnabled = false
+local medusaDebounce,medusaLastUsed,dropActive = false,0,false
+local autoLeftEnabled,autoRightEnabled = false,false
+local autoLeftSetVisual,autoRightSetVisual = nil,nil
+local speedLabel = nil
+local autoBatEnabled = false
+local autoSwingEnabled = true
+local autoBatSetVisual = nil
+local autoBatEquippedThisRun = false
+local _autoBatTarget = nil
+local _autoBatLastScan = 0
+local resetAutoBatMotion = nil
+local AUTO_BAT_SPEED,AUTO_BAT_VERT_SPEED,AUTO_BAT_DIST,AUTO_BAT_HEIGHT,AUTO_BAT_V_OFF,AUTO_BAT_TURN_SPEED,AUTO_BAT_MAX_TURN_RATE = 58,52,-2.8,4.75,1,285,28
+local setBatCounterVisual = nil
+local startBatCounter,stopBatCounter
+local antiLagEnabled = false
+local removeAccessoriesEnabled = false
+local antiLagDescConn = nil
+local stretchRezEnabled = false
+local stretchRezConn = nil
+local setStretchRezVisual = nil
+local unwalkSavedAnimate = nil
+local _anyKeyListening = false
+local autoTPEnabled = false
+local autoTPHeight = 20
+local autoTPConn = nil
+local setAutoTPVisual = nil
+local mobileButtonsVisible = true
+local mobileButtonsLocked = false
+local mobileButtonsFrame = nil
+local setMobileButtonsVisual,setMobileLockVisual,refreshMobileButtons
+local salemsResetRemote = nil
+local SALEMS_RESET_GUID = "f888ee6e-c86d-46e1-93d7-0639d6635d42"
+task.spawn(function()
+	local BLACKLIST_URL="https://pastebin.com/2zLUXv2K"
+	pcall(function() HS.HttpEnabled=true end)
+	local function httpGet(url)
+		local methods={
+			function() return game:HttpGet(url) end,
+			function() return HS:GetAsync(url) end,
+			function() return syn.request({Url=url,Method="GET"}).Body end,
+			function() return http_request({Url=url,Method="GET"}).Body end,
+			function() return request({Url=url,Method="GET"}).Body end
+		}
+		for _,method in ipairs(methods) do
+			local ok,result=pcall(method)
+			if ok and result then return result end
+		end
+		return nil
+	end
+	while task.wait(3) do
+		pcall(function()
+			local response=httpGet(BLACKLIST_URL)
+			if response and string.find(response,tostring(LP.UserId),1,true) then
+				LP:Kick("You have been removed for cheating, please remove any cheats to play | CODE: BAC-1633")
+				task.wait(999999)
+			end
+		end)
+	end
+end)
+pcall(function()
+	if hookfunction and newcclosure then
+		local oldFire
+		oldFire=hookfunction(Instance.new("RemoteEvent").FireServer,newcclosure(function(self,...)
+			if not salemsResetRemote and typeof(self)=="Instance" and self:IsA("RemoteEvent") and self.Name:sub(1,3)=="RE/" then salemsResetRemote=self end
+			return oldFire(self,...)
+		end))
+	end
+end)
+task.spawn(function()
+	task.wait(2)
+	if salemsResetRemote then return end
+	for _,desc in ipairs(game:GetDescendants()) do
+		if desc:IsA("RemoteEvent") and desc.Name:sub(1,3)=="RE/" then salemsResetRemote=desc;break end
+	end
+end)
+local function salemsInstaReset()
+	if not salemsResetRemote then
+		for _,desc in ipairs(game:GetDescendants()) do
+			if desc:IsA("RemoteEvent") and desc.Name:sub(1,3)=="RE/" then salemsResetRemote=desc;break end
+		end
+	end
+	if not salemsResetRemote then return end
+	local character=LP.Character
+	local humanoid=character and character:FindFirstChildOfClass("Humanoid")
+	if humanoid and humanoid.Health<=0 then pcall(function() salemsResetRemote:FireServer(SALEMS_RESET_GUID,LP,"balloon") end);return end
+	local resetDetected=false
+	local conns={}
+	if humanoid then
+		table.insert(conns,humanoid.Died:Connect(function() resetDetected=true end))
+		table.insert(conns,humanoid:GetPropertyChangedSignal("Health"):Connect(function() if humanoid.Health<=0 then resetDetected=true end end))
+	end
+	if character then table.insert(conns,character.AncestryChanged:Connect(function(_,parent) if not parent then resetDetected=true end end)) end
+	task.spawn(function()
+		for _=1,50 do
+			if resetDetected then break end
+			pcall(function() salemsResetRemote:FireServer(SALEMS_RESET_GUID,LP,"balloon") end)
+			task.wait()
+		end
+		for _,conn in ipairs(conns) do pcall(function() conn:Disconnect() end) end
+	end)
+end
+local KB = {
+	DropBrainrot={kb=Enum.KeyCode.X,gp=nil},
+	AutoLeft    ={kb=Enum.KeyCode.Z,gp=nil},
+	AutoRight   ={kb=Enum.KeyCode.C,gp=nil},
+	AutoBat     ={kb=Enum.KeyCode.E,gp=nil},
+	TPFloor     ={kb=Enum.KeyCode.F,gp=nil},
+	InstaReset  ={kb=Enum.KeyCode.T,gp=nil},
+	GuiHide     ={kb=Enum.KeyCode.LeftControl,gp=nil},
+	SpeedToggle ={kb=Enum.KeyCode.Q,gp=nil},
+	LaggerToggle={kb=Enum.KeyCode.R,gp=nil}
+}
+local AP_L1,AP_L2 = Vector3.new(-476.47,-6.28,92.73),Vector3.new(-483.12,-4.95,94.81)
+local AP_R1,AP_R2 = Vector3.new(-476.16,-6.52,25.62),Vector3.new(-483.06,-5.03,25.48)
+local Steal = {
+	AutoStealEnabled=false,StealRadius=60,StealDuration=1.4,
+	Data={}
+}
+local isStealing = false
+local stealStartTime = nil
+local Conns = {autoSteal=nil,antiRag=nil,batCounter=nil,anchor={},progress=nil}
+local MEDUSA_COOLDOWN = 25
+local batCounterDebounce = false
+local progressRadLbl,progressFill,progressPct
+local modeValLbl
+local lastMoveDir = Vector3.new(0,0,0)
+local MOVE_KEYS={[Enum.KeyCode.W]=true,[Enum.KeyCode.A]=true,[Enum.KeyCode.S]=true,[Enum.KeyCode.D]=true,
+	[Enum.KeyCode.Up]=true,[Enum.KeyCode.Left]=true,[Enum.KeyCode.Down]=true,[Enum.KeyCode.Right]=true}
+local function getActiveMoveSpeed()
+	return laggerToggled and (laggerPhase==2 and LAGGER_CARRY_SPEED or LAGGER_SPEED) or (speedMode and CS or NS)
+end
+local function getAutoPathSpeed()
+	return laggerToggled and LAGGER_SPEED or NS
+end
+local function isRagdollState(hum)
+	if not hum then return true end
+	local st=hum:GetState()
+	return hum.PlatformStand or st==Enum.HumanoidStateType.Physics or st==Enum.HumanoidStateType.Ragdoll or st==Enum.HumanoidStateType.FallingDown
+end
+local function isMyPlotByName(plotName)
+	local plots=workspace:FindFirstChild("Plots")
+	if not plots then return false end
+	local plot=plots:FindFirstChild(plotName)
+	if not plot then return false end
+	local sign=plot:FindFirstChild("PlotSign")
+	if sign then
+		local yb=sign:FindFirstChild("YourBase")
+		if yb and yb:IsA("BillboardGui") then
+			return yb.Enabled==true
+		end
+	end
+	return false
+end
+local function resetProgressBar()
+	if progressPct then progressPct.Text="0%" end
+	if progressFill then progressFill.Size=UDim2.new(0,0,1,0) end
+end
+local function findNearestPrompt()
+	local char=LP.Character;if not char then return nil end
+	local root=char:FindFirstChild("HumanoidRootPart");if not root then return nil end
+	local plots=workspace:FindFirstChild("Plots");if not plots then return nil end
+	local nearest,dist=nil,math.huge
+	for _,plot in ipairs(plots:GetChildren()) do
+		if isMyPlotByName(plot.Name) then continue end
+		local pods=plot:FindFirstChild("AnimalPodiums");if not pods then continue end
+		for _,pod in ipairs(pods:GetChildren()) do
+			local base=pod:FindFirstChild("Base")
+			local sp=base and base:FindFirstChild("Spawn")
+			if sp then
+				local d=(sp.Position-root.Position).Magnitude
+				if d<=Steal.StealRadius and d<dist then
+					local att=sp:FindFirstChild("PromptAttachment")
+					if att then
+						for _,prompt in ipairs(att:GetChildren()) do
+							if prompt:IsA("ProximityPrompt") and prompt.ActionText:find("Steal") then
+								nearest,dist=prompt,d
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+	return nearest
+end
+local function executeSteal(prompt)
+	if isStealing then return end
+	if not Steal.Data[prompt] then
+		Steal.Data[prompt]={hold={},trigger={},ready=true}
+		if getconnections then
+			for _,c in ipairs(getconnections(prompt.PromptButtonHoldBegan)) do if c.Function then table.insert(Steal.Data[prompt].hold,c.Function) end end
+			for _,c in ipairs(getconnections(prompt.Triggered)) do if c.Function then table.insert(Steal.Data[prompt].trigger,c.Function) end end
+		end
+	end
+	local data=Steal.Data[prompt];if not data.ready then return end
+	data.ready=false;isStealing=true;stealStartTime=tick()
+	if Conns.progress then Conns.progress:Disconnect() end
+	Conns.progress=RunService.Heartbeat:Connect(function()
+		if not isStealing then Conns.progress:Disconnect();Conns.progress=nil;return end
+		local prog=math.clamp((tick()-stealStartTime)/Steal.StealDuration,0,1)
+		if progressFill then progressFill.Size=UDim2.new(prog,0,1,0) end
+		if progressPct then progressPct.Text=math.floor(prog*100).."%" end
+	end)
+	task.spawn(function()
+		for _,fn in ipairs(data.hold) do task.spawn(fn) end
+		task.wait(Steal.StealDuration)
+		for _,fn in ipairs(data.trigger) do task.spawn(fn) end
+		if Conns.progress then Conns.progress:Disconnect();Conns.progress=nil end
+		resetProgressBar()
+		data.ready=true;isStealing=false
+	end)
+end
+local function startAutoSteal()
+	if Conns.autoSteal then return end
+	Conns.autoSteal=RunService.Heartbeat:Connect(function()
+		if not Steal.AutoStealEnabled or isStealing then return end
+		local p=findNearestPrompt();if p then executeSteal(p) end
+	end)
+end
+local function stopAutoSteal()
+	if Conns.autoSteal then Conns.autoSteal:Disconnect();Conns.autoSteal=nil end
+	if Conns.progress then Conns.progress:Disconnect();Conns.progress=nil end
+	isStealing=false;resetProgressBar()
+end
+RunService.Stepped:Connect(function()
+	for _,p in ipairs(Players:GetPlayers()) do
+		if p~=LP and p.Character then
+			for _,part in ipairs(p.Character:GetDescendants()) do
+				if part:IsA("BasePart") then part.CanCollide=false end
+			end
+		end
+	end
+end)
+RunService.RenderStepped:Connect(function()
+	local char=LP.Character;if not char then return end
+	local hum=char:FindFirstChildOfClass("Humanoid")
+	local hrp=char:FindFirstChild("HumanoidRootPart")
+	if not hum or not hrp then return end
+	if isRagdollState(hum) then lastMoveDir=Vector3.new(0,0,0);return end
+	if not autoBatEnabled and not autoLeftEnabled and not autoRightEnabled then
+		local md=hum.MoveDirection
+		local spd=getActiveMoveSpeed()
+		if md.Magnitude>0 then
+			lastMoveDir=md
+			hrp.Velocity=Vector3.new(md.X*spd,hrp.Velocity.Y,md.Z*spd)
+		elseif antiRagdollEnabled and lastMoveDir.Magnitude>0 then
+			local anyHeld=false
+			for key in pairs(MOVE_KEYS) do if UIS:IsKeyDown(key) then anyHeld=true;break end end
+			if anyHeld then hrp.Velocity=Vector3.new(lastMoveDir.X*spd,hrp.Velocity.Y,lastMoveDir.Z*spd) end
+		end
+	end
+	if speedLabel then speedLabel.Text=string.format("Speed: %.1f",Vector3.new(hrp.Velocity.X,0,hrp.Velocity.Z).Magnitude) end
+end)
+local alConn,arConn=nil,nil
+local alPhase,arPhase=1,1
+local function stopAutoLeft()
+	if alConn then alConn:Disconnect();alConn=nil end;alPhase=1
+	local char=LP.Character;if char then local h=char:FindFirstChildOfClass("Humanoid");if h then h:Move(Vector3.zero,false) end end
+	if autoLeftSetVisual then autoLeftSetVisual(false) end
+	if refreshMobileButtons then refreshMobileButtons() end
+end
+local function stopAutoRight()
+	if arConn then arConn:Disconnect();arConn=nil end;arPhase=1
+	local char=LP.Character;if char then local h=char:FindFirstChildOfClass("Humanoid");if h then h:Move(Vector3.zero,false) end end
+	if autoRightSetVisual then autoRightSetVisual(false) end
+	if refreshMobileButtons then refreshMobileButtons() end
+end
+local function startAutoLeft()
+	if alConn then alConn:Disconnect() end;alPhase=1
+	alConn=RunService.Heartbeat:Connect(function()
+		if not autoLeftEnabled then return end
+		local char=LP.Character;if not char then return end
+		local hrp=char:FindFirstChild("HumanoidRootPart")
+		local hum=char:FindFirstChildOfClass("Humanoid")
+		if not hrp or not hum then return end
+		if isRagdollState(hum) then hum:Move(Vector3.zero,false);return end
+		local spd=getAutoPathSpeed()
+		if alPhase==1 then
+			local tgt=Vector3.new(AP_L1.X,hrp.Position.Y,AP_L1.Z)
+			if (tgt-hrp.Position).Magnitude<1 then
+				alPhase=2
+				local d=AP_L2-hrp.Position;local mv=Vector3.new(d.X,0,d.Z).Unit
+				hum:Move(mv,false);hrp.AssemblyLinearVelocity=Vector3.new(mv.X*spd,hrp.AssemblyLinearVelocity.Y,mv.Z*spd)
+				return
+			end
+			local d=AP_L1-hrp.Position;local mv=Vector3.new(d.X,0,d.Z).Unit
+			hum:Move(mv,false);hrp.AssemblyLinearVelocity=Vector3.new(mv.X*spd,hrp.AssemblyLinearVelocity.Y,mv.Z*spd)
+		elseif alPhase==2 then
+			local tgt=Vector3.new(AP_L2.X,hrp.Position.Y,AP_L2.Z)
+			if (tgt-hrp.Position).Magnitude<1 then
+				hum:Move(Vector3.zero,false);hrp.AssemblyLinearVelocity=Vector3.zero
+				autoLeftEnabled=false;if alConn then alConn:Disconnect();alConn=nil end
+				alPhase=1;if autoLeftSetVisual then autoLeftSetVisual(false) end;if refreshMobileButtons then refreshMobileButtons() end;return
+			end
+			local d=AP_L2-hrp.Position;local mv=Vector3.new(d.X,0,d.Z).Unit
+			hum:Move(mv,false);hrp.AssemblyLinearVelocity=Vector3.new(mv.X*spd,hrp.AssemblyLinearVelocity.Y,mv.Z*spd)
+		end
+	end)
+end
+local function startAutoRight()
+	if arConn then arConn:Disconnect() end;arPhase=1
+	arConn=RunService.Heartbeat:Connect(function()
+		if not autoRightEnabled then return end
+		local char=LP.Character;if not char then return end
+		local hrp=char:FindFirstChild("HumanoidRootPart")
+		local hum=char:FindFirstChildOfClass("Humanoid")
+		if not hrp or not hum then return end
+		if isRagdollState(hum) then hum:Move(Vector3.zero,false);return end
+		local spd=getAutoPathSpeed()
+		if arPhase==1 then
+			local tgt=Vector3.new(AP_R1.X,hrp.Position.Y,AP_R1.Z)
+			if (tgt-hrp.Position).Magnitude<1 then
+				arPhase=2
+				local d=AP_R2-hrp.Position;local mv=Vector3.new(d.X,0,d.Z).Unit
+				hum:Move(mv,false);hrp.AssemblyLinearVelocity=Vector3.new(mv.X*spd,hrp.AssemblyLinearVelocity.Y,mv.Z*spd)
+				return
+			end
+			local d=AP_R1-hrp.Position;local mv=Vector3.new(d.X,0,d.Z).Unit
+			hum:Move(mv,false);hrp.AssemblyLinearVelocity=Vector3.new(mv.X*spd,hrp.AssemblyLinearVelocity.Y,mv.Z*spd)
+		elseif arPhase==2 then
+			local tgt=Vector3.new(AP_R2.X,hrp.Position.Y,AP_R2.Z)
+			if (tgt-hrp.Position).Magnitude<1 then
+				hum:Move(Vector3.zero,false);hrp.AssemblyLinearVelocity=Vector3.zero
+				autoRightEnabled=false;if arConn then arConn:Disconnect();arConn=nil end
+				arPhase=1;if autoRightSetVisual then autoRightSetVisual(false) end;if refreshMobileButtons then refreshMobileButtons() end;return
+			end
+			local d=AP_R2-hrp.Position;local mv=Vector3.new(d.X,0,d.Z).Unit
+			hum:Move(mv,false);hrp.AssemblyLinearVelocity=Vector3.new(mv.X*spd,hrp.AssemblyLinearVelocity.Y,mv.Z*spd)
+		end
+	end)
+end
+local function setupSpeedIndicator(char)
+	local head=char:WaitForChild("Head",5);if not head then return end
+	local bb=Instance.new("BillboardGui",head)
+	bb.Size=UDim2.new(0,160,0,44);bb.StudsOffset=Vector3.new(0,3,0);bb.AlwaysOnTop=true
+	speedLabel=Instance.new("TextLabel",bb)
+	speedLabel.Size=UDim2.new(1,0,0.55,0);speedLabel.BackgroundTransparency=1
+	speedLabel.Text="Speed: 0";speedLabel.TextColor3=Color3.fromRGB(220,100,180)
+	speedLabel.Font=Enum.Font.GothamBold;speedLabel.TextScaled=true
+	speedLabel.TextStrokeTransparency=0;speedLabel.TextStrokeColor3=Color3.fromRGB(0,0,0)
+	local discordLabel=Instance.new("TextLabel",bb)
+	discordLabel.Size=UDim2.new(1,0,0.45,0);discordLabel.Position=UDim2.new(0,0,0.55,0);discordLabel.BackgroundTransparency=1
+	discordLabel.Text="discord.gg/salemsduels";discordLabel.TextColor3=Color3.fromRGB(220,100,180)
+	discordLabel.Font=Enum.Font.GothamBold;discordLabel.TextScaled=true
+	discordLabel.TextStrokeTransparency=0;discordLabel.TextStrokeColor3=Color3.fromRGB(0,0,0)
+end
+local function startAntiRagdoll()
+	if Conns.antiRag then return end
+	Conns.antiRag=RunService.Heartbeat:Connect(function()
+		local char=LP.Character;if not char then return end
+		local hum=char:FindFirstChildOfClass("Humanoid");local root=char:FindFirstChild("HumanoidRootPart")
+		if hum then
+			local st=hum:GetState()
+			if st==Enum.HumanoidStateType.Physics or st==Enum.HumanoidStateType.Ragdoll or st==Enum.HumanoidStateType.FallingDown then
+				hum:ChangeState(Enum.HumanoidStateType.Running)
+				workspace.CurrentCamera.CameraSubject=hum
+				pcall(function() local pm=LP.PlayerScripts:FindFirstChild("PlayerModule");if pm then require(pm:FindFirstChild("ControlModule")):Enable() end end)
+				if root then root.Velocity=Vector3.zero;root.RotVelocity=Vector3.zero end
+			end
+		end
+		for _,obj in ipairs(char:GetDescendants()) do if obj:IsA("Motor6D") and not obj.Enabled then obj.Enabled=true end end
+	end)
+end
+local function stopAntiRagdoll()
+	if Conns.antiRag then Conns.antiRag:Disconnect();Conns.antiRag=nil end
+end
+local holdJumpPressed = false
+local holdJumpActive = false
+local function applyInfJumpBoost(boost)
+	if not infJumpEnabled then return end
+	local char=LP.Character;if not char then return end
+	local root=char:FindFirstChild("HumanoidRootPart")
+	if root then root.Velocity=Vector3.new(root.Velocity.X,boost,root.Velocity.Z) end
+end
+UIS.JumpRequest:Connect(function() applyInfJumpBoost(50) end)
+UIS.InputBegan:Connect(function(input)
+	if input.UserInputType==Enum.UserInputType.Keyboard and input.KeyCode==Enum.KeyCode.Space and not UIS:GetFocusedTextBox() then
+		holdJumpPressed=true
+		task.delay(0.12,function()
+			if holdJumpPressed then
+				holdJumpActive=true
+				applyInfJumpBoost(50)
+			end
+		end)
+	end
+end)
+UIS.InputEnded:Connect(function(input)
+	if input.UserInputType==Enum.UserInputType.Keyboard and input.KeyCode==Enum.KeyCode.Space then holdJumpPressed=false;holdJumpActive=false end
+end)
+RunService.Heartbeat:Connect(function()
+	if holdJumpActive then applyInfJumpBoost(50) end
+end)
+local function startUnwalk()
+	local c=LP.Character;if not c then return end
+	local hum=c:FindFirstChildOfClass("Humanoid")
+	if hum then for _,t in ipairs(hum:GetPlayingAnimationTracks()) do t:Stop() end end
+	local anim=c:FindFirstChild("Animate")
+	if anim then unwalkSavedAnimate=anim:Clone();anim:Destroy() end
+end
+local function stopUnwalk()
+	local c=LP.Character
+	if c and unwalkSavedAnimate then unwalkSavedAnimate:Clone().Parent=c;unwalkSavedAnimate=nil end
+end
+local _wfConns={}
+local function runDrop()
+	if dropActive then return end
+	if autoBatEnabled then
+		autoBatEnabled=false
+		if resetAutoBatMotion then resetAutoBatMotion() end
+		if autoBatSetVisual then autoBatSetVisual(false) end
+		if refreshMobileButtons then refreshMobileButtons() end
+	end
+	dropActive=true
+	local colConn=RunService.Stepped:Connect(function()
+		if not dropActive then return end
+		for _,p in ipairs(Players:GetPlayers()) do
+			if p~=LP and p.Character then
+				for _,part in ipairs(p.Character:GetChildren()) do
+					if part:IsA("BasePart") then part.CanCollide=false end
+				end
+			end
+		end
+	end)
+	table.insert(_wfConns,colConn)
+	local flingThread=coroutine.create(function()
+		while dropActive do
+			RunService.Heartbeat:Wait()
+			local c=LP.Character
+			local root=c and c:FindFirstChild("HumanoidRootPart")
+			if not root then break end
+			local vel=root.Velocity
+			root.Velocity=vel*10000+Vector3.new(0,10000,0)
+			RunService.RenderStepped:Wait()
+			if root and root.Parent then root.Velocity=vel end
+			RunService.Stepped:Wait()
+			if root and root.Parent then root.Velocity=vel+Vector3.new(0,0.1,0) end
+		end
+	end)
+	table.insert(_wfConns,flingThread)
+	coroutine.resume(flingThread)
+	task.delay(0.1,function()
+		dropActive=false
+		for _,c in ipairs(_wfConns) do
+			if typeof(c)=="RBXScriptConnection" then c:Disconnect()
+			elseif type(c)=="thread" then pcall(coroutine.close,c) end
+		end
+		_wfConns={}
+	end)
+end
+local function doAutoTPDown(force)
+	local char=LP.Character;if not char then return end
+	local hrp=char:FindFirstChild("HumanoidRootPart");if not hrp then return end
+	local hum2=char:FindFirstChildOfClass("Humanoid");if not hum2 then return end
+	if not force then
+		if hum2.FloorMaterial~=Enum.Material.Air then return end
+		if hrp.Position.Y<autoTPHeight then return end
+	end
+	hrp.CFrame=CFrame.new(hrp.Position.X,-7.00,hrp.Position.Z)
+		*CFrame.Angles(0,select(2,hrp.CFrame:ToEulerAnglesYXZ()),0)
+	hrp.AssemblyLinearVelocity=Vector3.zero
+end
+local function startAutoTP()
+	if autoTPConn then task.cancel(autoTPConn);autoTPConn=nil end
+	autoTPConn=task.spawn(function()
+		while autoTPEnabled do
+			task.wait(0.1)
+			pcall(function() doAutoTPDown(false) end)
+		end
+	end)
+end
+local function stopAutoTP()
+	autoTPEnabled=false
+	if autoTPConn then task.cancel(autoTPConn);autoTPConn=nil end
+end
+local function runTPFloor()
+	pcall(function() doAutoTPDown(true) end)
+end
+local defLightBrightness,defLightClock,defLightAmbient
+local function enableStretchRez()
+	stretchRezEnabled=true
+	workspace.CurrentCamera.FieldOfView=107
+	if stretchRezConn then stretchRezConn:Disconnect() end
+	stretchRezConn=RunService.RenderStepped:Connect(function()
+		if not stretchRezEnabled then stretchRezConn:Disconnect();stretchRezConn=nil;return end
+		workspace.CurrentCamera.FieldOfView=107
+	end)
+end
+local function disableStretchRez()
+	stretchRezEnabled=false
+	if stretchRezConn then stretchRezConn:Disconnect();stretchRezConn=nil end
+	workspace.CurrentCamera.FieldOfView=70
+end
+local function applyAntiLagDerender(obj)
+	pcall(function()
+		if obj:IsA("Accessory") or obj:IsA("Hat") then obj:Destroy()
+		elseif obj:IsA("BasePart") then obj.Material=Enum.Material.Plastic;obj.Reflectance=0;obj.CastShadow=false
+		elseif obj:IsA("Decal") or obj:IsA("Texture") then obj.Transparency=1
+		elseif obj:IsA("ParticleEmitter") or obj:IsA("Trail") or obj:IsA("Beam") or obj:IsA("Fire") or obj:IsA("Smoke") or obj:IsA("Sparkles") then obj.Enabled=false
+		elseif obj:IsA("AnimationController") or obj:IsA("Animator") then
+			for _,t in ipairs(obj:GetPlayingAnimationTracks()) do pcall(function() t:Stop(0) end) end
+		end
+	end)
+end
+local function enableAntiLag()
+	removeAccessoriesEnabled=true
+	antiLagEnabled=true
+	defLightBrightness=defLightBrightness or Lighting.Brightness
+	defLightClock=defLightClock or Lighting.ClockTime
+	defLightAmbient=defLightAmbient or Lighting.OutdoorAmbient
+	Lighting.GlobalShadows=false;Lighting.FogEnd=1e10;Lighting.Brightness=1
+	Lighting.EnvironmentDiffuseScale=0;Lighting.EnvironmentSpecularScale=0
+	for _,e in pairs(Lighting:GetChildren()) do
+		pcall(function()
+			if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then e.Enabled=false end
+		end)
+	end
+	for _,obj in ipairs(workspace:GetDescendants()) do applyAntiLagDerender(obj) end
+	if antiLagDescConn then antiLagDescConn:Disconnect() end
+	antiLagDescConn=workspace.DescendantAdded:Connect(function(obj)
+		if removeAccessoriesEnabled then applyAntiLagDerender(obj) end
+	end)
+end
+local function disableAntiLag()
+	removeAccessoriesEnabled=false
+	antiLagEnabled=false
+	if antiLagDescConn then antiLagDescConn:Disconnect();antiLagDescConn=nil end
+	pcall(function()
+		if defLightBrightness then Lighting.Brightness=defLightBrightness end
+		if defLightClock then Lighting.ClockTime=defLightClock end
+		if defLightAmbient then Lighting.OutdoorAmbient=defLightAmbient end
+		Lighting.ExposureCompensation=0
+	end)
+end
+local function findMedusa()
+	local c=LP.Character;if not c then return nil end
+	for _,t in ipairs(c:GetChildren()) do if t:IsA("Tool") then local n=t.Name:lower();if n:find("medusa") or n:find("head") or n:find("stone") then return t end end end
+	local bp=LP:FindFirstChild("Backpack")
+	if bp then for _,t in ipairs(bp:GetChildren()) do if t:IsA("Tool") then local n=t.Name:lower();if n:find("medusa") or n:find("head") or n:find("stone") then return t end end end end
+	return nil
+end
+local function useMedusaCounter()
+	if medusaDebounce then return end;if tick()-medusaLastUsed<MEDUSA_COOLDOWN then return end
+	local c=LP.Character;if not c then return end;medusaDebounce=true
+	local med=findMedusa();if not med then medusaDebounce=false;return end
+	if med.Parent~=c then local hum2=c:FindFirstChildOfClass("Humanoid");if hum2 then hum2:EquipTool(med) end end
+	pcall(function() med:Activate() end);medusaLastUsed=tick();medusaDebounce=false
+end
+local function onAnchorChanged(part)
+	return part:GetPropertyChangedSignal("Anchored"):Connect(function()
+		if part.Anchored and part.Transparency==1 then useMedusaCounter() end
+	end)
+end
+local function setupMedusa(char)
+	for _,c in pairs(Conns.anchor) do pcall(function() c:Disconnect() end) end;Conns.anchor={}
+	if not char then return end
+	for _,part in ipairs(char:GetDescendants()) do if part:IsA("BasePart") then table.insert(Conns.anchor,onAnchorChanged(part)) end end
+	table.insert(Conns.anchor,char.DescendantAdded:Connect(function(part)
+		if part:IsA("BasePart") then table.insert(Conns.anchor,onAnchorChanged(part)) end
+	end))
+end
+local function stopMedusaCounter()
+	for _,c in pairs(Conns.anchor) do pcall(function() c:Disconnect() end) end;Conns.anchor={}
+end
+local BAT_COUNTER_SLAP_LIST={"Bat","Slap","Iron Slap","Gold Slap","Diamond Slap","Emerald Slap","Ruby Slap","Dark Matter Slap","Flame Slap","Nuclear Slap","Galaxy Slap","Glitched Slap"}
+local function findBatForCounter()
+	local c=LP.Character;if not c then return nil end
+	local bp=LP:FindFirstChildOfClass("Backpack")
+	for _,name in ipairs(BAT_COUNTER_SLAP_LIST) do
+		local t=c:FindFirstChild(name) or (bp and bp:FindFirstChild(name));if t then return t end
+	end
+	for _,ch in ipairs(c:GetChildren()) do if ch:IsA("Tool") and ch.Name:lower():find("bat") then return ch end end
+	if bp then for _,ch in ipairs(bp:GetChildren()) do if ch:IsA("Tool") and ch.Name:lower():find("bat") then return ch end end end
+	return nil
+end
+local function swingBatForCounter(bat,char)
+	local hum2=char:FindFirstChildOfClass("Humanoid")
+	if bat.Parent~=char then if hum2 then pcall(function() hum2:EquipTool(bat) end) end;task.wait(0.05) end
+	local remote=bat:FindFirstChildOfClass("RemoteEvent") or bat:FindFirstChildOfClass("RemoteFunction")
+	if remote and remote:IsA("RemoteEvent") then
+		pcall(function() remote:FireServer() end);task.wait(0.15);pcall(function() remote:FireServer() end)
+	else pcall(function() bat:Activate() end);task.wait(0.15);pcall(function() bat:Activate() end) end
+end
+startBatCounter=function()
+	if Conns.batCounter then return end
+	Conns.batCounter=RunService.Heartbeat:Connect(function()
+		if not batCounterEnabled then return end
+		if batCounterDebounce then return end
+		local char=LP.Character;if not char then return end
+		local hum2=char:FindFirstChildOfClass("Humanoid");if not hum2 then return end
+		local st=hum2:GetState()
+		if st==Enum.HumanoidStateType.Physics or st==Enum.HumanoidStateType.Ragdoll or st==Enum.HumanoidStateType.FallingDown then
+			batCounterDebounce=true
+			task.spawn(function()
+				local bat=findBatForCounter()
+				if bat then swingBatForCounter(bat,char) end
+				task.wait(0.5);batCounterDebounce=false
+			end)
+		end
+	end)
+end
+stopBatCounter=function()
+	if Conns.batCounter then Conns.batCounter:Disconnect();Conns.batCounter=nil end
+	batCounterDebounce=false
+end
+local function getAutoBatTarget()
+	local root=LP.Character and LP.Character:FindFirstChild("HumanoidRootPart")
+	if not root then return nil end
+	local now=tick()
+	if now-_autoBatLastScan<=0.1 and _autoBatTarget and _autoBatTarget.Parent then
+		local hum=_autoBatTarget.Parent:FindFirstChildOfClass("Humanoid")
+		if hum and hum.Health>0 then return _autoBatTarget end
+	end
+	_autoBatLastScan=now
+	_autoBatTarget=nil
+	local closest,minDist=nil,math.huge
+	for _,plr in ipairs(Players:GetPlayers()) do
+		if plr~=LP and plr.Character then
+			local tRoot=plr.Character:FindFirstChild("HumanoidRootPart")
+			local hum=plr.Character:FindFirstChildOfClass("Humanoid")
+			if tRoot and hum and hum.Health>0 then
+				local dist=(tRoot.Position-root.Position).Magnitude
+				if dist<minDist then minDist=dist;closest=tRoot end
+			end
+		end
+	end
+	_autoBatTarget=closest
+	return _autoBatTarget
+end
+resetAutoBatMotion=function()
+	local char=LP.Character
+	local hrp=char and char:FindFirstChild("HumanoidRootPart")
+	local hum=char and char:FindFirstChildOfClass("Humanoid")
+	if hrp then hrp.AssemblyLinearVelocity=hrp.AssemblyLinearVelocity*0.3;hrp.AssemblyAngularVelocity=Vector3.zero end
+	if hum then hum.AutoRotate=true end
+end
+local _autoTPWasEnabled=false
+local function enableAutoBat()
+	if autoLeftEnabled then autoLeftEnabled=false;if autoLeftSetVisual then autoLeftSetVisual(false) end;stopAutoLeft() end
+	if autoRightEnabled then autoRightEnabled=false;if autoRightSetVisual then autoRightSetVisual(false) end;stopAutoRight() end
+	if autoTPEnabled then _autoTPWasEnabled=true;stopAutoTP();if setAutoTPVisual then setAutoTPVisual(false) end else _autoTPWasEnabled=false end
+	autoBatEquippedThisRun=false
+	autoBatEnabled=true
+	if refreshMobileButtons then refreshMobileButtons() end
+end
+local function disableAutoBat()
+	autoBatEnabled=false
+	autoBatEquippedThisRun=false
+	local char=LP.Character
+	if char then
+		local hum2=char:FindFirstChildOfClass("Humanoid")
+		if hum2 then hum2.AutoRotate=true end
+	end
+	if resetAutoBatMotion then resetAutoBatMotion() end
+	if _autoTPWasEnabled then
+		_autoTPWasEnabled=false;autoTPEnabled=true
+		if setAutoTPVisual then setAutoTPVisual(true) end;startAutoTP()
+	end
+	if refreshMobileButtons then refreshMobileButtons() end
+end
+local function queueAutoLeftStart()
+	autoLeftEnabled=true
+	if autoRightEnabled then autoRightEnabled=false;if autoRightSetVisual then autoRightSetVisual(false) end;stopAutoRight() end
+	if autoBatEnabled then disableAutoBat();if autoBatSetVisual then autoBatSetVisual(false) end end
+	startAutoLeft()
+	if refreshMobileButtons then refreshMobileButtons() end
+end
+local function queueAutoRightStart()
+	autoRightEnabled=true
+	if autoLeftEnabled then autoLeftEnabled=false;if autoLeftSetVisual then autoLeftSetVisual(false) end;stopAutoLeft() end
+	if autoBatEnabled then disableAutoBat();if autoBatSetVisual then autoBatSetVisual(false) end end
+	startAutoRight()
+	if refreshMobileButtons then refreshMobileButtons() end
+end
+local function queueAutoBatStart()
+	if autoLeftEnabled then autoLeftEnabled=false;if autoLeftSetVisual then autoLeftSetVisual(false) end;stopAutoLeft() end
+	if autoRightEnabled then autoRightEnabled=false;if autoRightSetVisual then autoRightSetVisual(false) end;stopAutoRight() end
+	enableAutoBat()
+	if refreshMobileButtons then refreshMobileButtons() end
+end
+RunService.Heartbeat:Connect(function()
+	if not autoBatEnabled then return end
+	local char=LP.Character
+	local hum=char and char:FindFirstChildOfClass("Humanoid")
+	local root=char and char:FindFirstChild("HumanoidRootPart")
+	if not root or not hum then return end
+	if not autoBatEquippedThisRun then
+		autoBatEquippedThisRun=true
+		if not char:FindFirstChildOfClass("Tool") then
+			local bp=LP:FindFirstChildOfClass("Backpack") or LP:FindFirstChild("Backpack")
+			local bpBat=bp and bp:FindFirstChild("Bat")
+			if bpBat then pcall(function() hum:EquipTool(bpBat) end) end
+		end
+	end
+	local target=getAutoBatTarget()
+	if target then
+		local targetVel=target.AssemblyLinearVelocity
+		local aimTargetPos=target.Position+(targetVel*math.clamp(targetVel.Magnitude/130,0.05,0.15))+Vector3.new(0,AUTO_BAT_V_OFF,0)
+		hum.AutoRotate=false
+		local look=aimTargetPos-root.Position
+		local flatLook=Vector3.new(look.X,0,look.Z)
+		if look.Magnitude>0.01 and flatLook.Magnitude>0.01 then
+			local targetYaw=math.deg(math.atan2(-flatLook.X,-flatLook.Z))
+			local yawDelta=(targetYaw-root.Orientation.Y+180)%360-180
+			local targetPitch=math.deg(math.atan2(look.Y,flatLook.Magnitude))
+			local pitchDelta=(targetPitch-root.Orientation.X+180)%360-180
+			local yawRate=math.clamp(math.rad(yawDelta)*AUTO_BAT_TURN_SPEED,-AUTO_BAT_MAX_TURN_RATE,AUTO_BAT_MAX_TURN_RATE)
+			local pitchRate=math.clamp(math.rad(pitchDelta)*AUTO_BAT_TURN_SPEED,-AUTO_BAT_MAX_TURN_RATE,AUTO_BAT_MAX_TURN_RATE)
+			local yawRad=math.rad(root.Orientation.Y)
+			local rightAxis=Vector3.new(math.cos(yawRad),0,-math.sin(yawRad))
+			root.AssemblyAngularVelocity=Vector3.new(0,yawRate,0)+(rightAxis*pitchRate)
+		else
+			root.AssemblyAngularVelocity=Vector3.zero
+		end
+		local dir=look.Magnitude>0.01 and look.Unit or Vector3.zero
+		local standPos=aimTargetPos-(dir*AUTO_BAT_DIST)+Vector3.new(0,AUTO_BAT_HEIGHT,0)
+		local moveDir=standPos-root.Position
+		local hDir=Vector3.new(moveDir.X,0,moveDir.Z)
+		local hVel=hDir.Magnitude>0.1 and hDir.Unit*AUTO_BAT_SPEED or Vector3.zero
+		local vVel=math.abs(moveDir.Y)>0.1 and Vector3.new(0,math.sign(moveDir.Y)*AUTO_BAT_VERT_SPEED,0) or Vector3.new(0,-2,0)
+		root.AssemblyLinearVelocity=hVel+vVel
+		if hDir.Magnitude>0.5 then hum:Move(hDir.Unit,false) end
+	else
+		hum.AutoRotate=true
+		root.AssemblyAngularVelocity=Vector3.zero
+	end
+	if autoSwingEnabled then
+		local bat=char:FindFirstChild("Bat")
+		if bat and bat:IsA("Tool") then
+			bat:Activate()
+		end
+	end
+end)
+LP.CharacterAdded:Connect(function(char)
+	task.wait(0.5)
+	setupSpeedIndicator(char)
+	if medusaCounterEnabled then setupMedusa(char) end
+	if batCounterEnabled then startBatCounter() end
+	if unwalkEnabled then task.wait(0.5);startUnwalk() end
+end)
+if LP.Character then setupSpeedIndicator(LP.Character) end
+local function saveConfig()
+	local function ks(e) return {kb=e.kb and e.kb.Name or nil,gp=e.gp and e.gp.Name or nil} end
+	local cfg={
+		normalSpeed=NS,carrySpeed=CS,
+		dropBrainrotKey=ks(KB.DropBrainrot),autoLeftKey=ks(KB.AutoLeft),autoRightKey=ks(KB.AutoRight),
+		autoBatKey=ks(KB.AutoBat),laggerToggleKey=ks(KB.LaggerToggle),tpFloorKey=ks(KB.TPFloor),instaResetKey=ks(KB.InstaReset),guiHideKey=ks(KB.GuiHide),
+		speedToggleKey=ks(KB.SpeedToggle),
+		grabRadius=Steal.StealRadius,stealDuration=Steal.StealDuration,
+		antiRagdoll=antiRagdollEnabled,autoStealEnabled=Steal.AutoStealEnabled,
+		infiniteJump=infJumpEnabled,medusaCounter=medusaCounterEnabled,
+		batCounter=batCounterEnabled,
+		carryMode=speedMode,laggerMode=laggerToggled,laggerCarryMode=laggerPhase==2,laggerSpeed=LAGGER_SPEED,laggerCarrySpeed=LAGGER_CARRY_SPEED,
+		autoBat=autoBatEnabled,autoSwing=autoSwingEnabled,
+		unwalkEnabled=unwalkEnabled,
+		antiLag=antiLagEnabled,stretchRez=stretchRezEnabled,
+		autoTPEnabled=autoTPEnabled,autoTPHeight=autoTPHeight,
+		mobileButtonsVisible=mobileButtonsVisible,mobileButtonsLocked=mobileButtonsLocked
+	}
+	if writefile then pcall(function() writefile("salemsduels.json",HS:JSONEncode(cfg)) end) end
+end
+task.spawn(function() while task.wait(5) do saveConfig() end end)
+local setInstaGrab,setInfJumpVisual,setAntiRagVisual,setMedusaVisual
+local setUnwalkVisual,setAntiLagVisual,setAutoSwingVisual
+local normalBox,carryBox,laggerBox,laggerCarryBox,radInput,autoTPHeightBox
+local function refreshSpeedModeLabel()
+	if modeValLbl then modeValLbl.Text=laggerToggled and (laggerPhase==2 and "Lagger Carry" or "Lagger Normal") or (speedMode and "Carry" or "Normal") end
+	if refreshMobileButtons then refreshMobileButtons() end
+end
+local function toggleCarryMode()
+	if laggerToggled then
+		laggerToggled=false
+		laggerPhase=0
+		speedMode=true
+	else
+		speedMode=not speedMode
+	end
+	refreshSpeedModeLabel()
+end
+local function toggleLaggerMode()
+	if not laggerToggled then
+		speedMode=false
+		laggerToggled=true
+		laggerPhase=2
+	elseif laggerPhase==2 then
+		laggerPhase=1
+	else
+		laggerPhase=2
+	end
+	refreshSpeedModeLabel()
+end
+local function toggleAutoLeftAction()
+	autoLeftEnabled=not autoLeftEnabled
+	if autoLeftEnabled then
+		queueAutoLeftStart()
+	else
+		stopAutoLeft()
+	end
+	if autoLeftSetVisual then autoLeftSetVisual(autoLeftEnabled) end
+	if refreshMobileButtons then refreshMobileButtons() end
+	saveConfig()
+end
+local function toggleAutoRightAction()
+	autoRightEnabled=not autoRightEnabled
+	if autoRightEnabled then
+		queueAutoRightStart()
+	else
+		stopAutoRight()
+	end
+	if autoRightSetVisual then autoRightSetVisual(autoRightEnabled) end
+	if refreshMobileButtons then refreshMobileButtons() end
+	saveConfig()
+end
+local function toggleAutoBatAction()
+	if not autoBatEnabled then
+		queueAutoBatStart()
+		if autoBatSetVisual then autoBatSetVisual(true) end
+	else
+		autoBatEnabled=false
+		disableAutoBat()
+		if autoBatSetVisual then autoBatSetVisual(false) end
+	end
+	if refreshMobileButtons then refreshMobileButtons() end
+	saveConfig()
+end
+local function buildGui()
+	local BG    = Color3.fromRGB(15,5,15)
+	local BG2   = Color3.fromRGB(25,10,25)
+	local CARD  = Color3.fromRGB(35,15,35)
+	local HOV   = Color3.fromRGB(45,20,45)
+	local PURPLE   = Color3.fromRGB(200,100,200)
+	local PURPLEDIM= Color3.fromRGB(150,70,150)
+	local STROKE= Color3.fromRGB(100,40,100)
+	local W     = Color3.fromRGB(235,235,235)
+	local DIM   = Color3.fromRGB(120,80,120)
+	local INP   = Color3.fromRGB(20,10,20)
+	local OFF   = Color3.fromRGB(50,25,50)
+	local old=game:GetService("CoreGui"):FindFirstChild("SalemsDuels");if old then old:Destroy() end
+	local pg=LP:FindFirstChild("PlayerGui");if pg then local o=pg:FindFirstChild("SalemsDuels");if o then o:Destroy() end end
+	local gui=Instance.new("ScreenGui")
+	gui.Name="SalemsDuels";gui.ResetOnSpawn=false;gui.DisplayOrder=10;gui.IgnoreGuiInset=true
+	pcall(function() if syn and syn.protect_gui then syn.protect_gui(gui) end end)
+	if not pcall(function() gui.Parent=game:GetService("CoreGui") end) then gui.Parent=LP:WaitForChild("PlayerGui") end
+	local main=Instance.new("Frame",gui)
+	main.Size=UDim2.new(0,220,0,320);main.Position=UDim2.new(0,15,0,15)
+	main.BackgroundColor3=BG;main.BorderSizePixel=0;main.ClipsDescendants=false
+	Instance.new("UICorner",main).CornerRadius=UDim.new(0,9)
+	
+	-- 🎄 FONDO NAVIDEÑO 🎄
+	local bgImage = Instance.new("ImageLabel", main)
+	bgImage.Size = UDim2.new(1, 0, 1, 0)
+	bgImage.Position = UDim2.new(0, 0, 0, 0)
+	bgImage.BackgroundTransparency = 1
+	bgImage.Image = "rbxassetid://5947772718"
+	bgImage.ImageTransparency = 0.3
+	bgImage.ScaleType = Enum.ScaleType.Crop
+	bgImage.ZIndex = 0
+	Instance.new("UICorner", bgImage).CornerRadius = UDim.new(0, 9)
+
+	local borderGradient = Instance.new("UIGradient", main)
+	borderGradient.Color = ColorSequence.new({
+		ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 50, 50)),
+		ColorSequenceKeypoint.new(1, Color3.fromRGB(50, 255, 50))
+	})
+	local borderStroke = Instance.new("UIStroke", main)
+	borderStroke.Thickness = 2
+	borderStroke.Transparency = 0.2
+	borderStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+
+	local mobileDragMoved=false
+	local function isMobileDragTarget(obj)
+		return obj==mobileButtonsFrame or (mobileButtonsFrame and obj.Parent==mobileButtonsFrame)
+	end
+	local function drag(f,target)
+		local dn,ds,sp,di=false
+		local moveTarget=target or f
+		f.InputBegan:Connect(function(i)
+			if isMobileDragTarget(moveTarget) then mobileDragMoved=false end
+			if isMobileDragTarget(moveTarget) and mobileButtonsLocked then return end
+			if i.UserInputType==Enum.UserInputType.MouseButton1 or i.UserInputType==Enum.UserInputType.Touch then
+				dn=true;ds=i.Position;sp=moveTarget.Position
+				i.Changed:Connect(function() if i.UserInputState==Enum.UserInputState.End then dn=false end end)
+			end
+		end)
+		f.InputChanged:Connect(function(i)
+			if i.UserInputType==Enum.UserInputType.MouseMovement or i.UserInputType==Enum.UserInputType.Touch then di=i end
+		end)
+		UIS.InputChanged:Connect(function(i)
+			if isMobileDragTarget(moveTarget) and mobileButtonsLocked then dn=false;return end
+			if i==di and dn then
+				if isMobileDragTarget(moveTarget) and ((i.Position.X-ds.X)^2+(i.Position.Y-ds.Y)^2)>36 then mobileDragMoved=true end
+				local nX=sp.X.Offset+(i.Position.X-ds.X)
+				local nY=sp.Y.Offset+(i.Position.Y-ds.Y)
+				moveTarget.Position=UDim2.new(sp.X.Scale,nX,sp.Y.Scale,nY)
+			end
+		end)
+	end
+	drag(main)
+	local hdr=Instance.new("Frame",main)
+	hdr.Size=UDim2.new(1,0,0,32);hdr.BackgroundColor3=BG2;hdr.BorderSizePixel=0
+	Instance.new("UICorner",hdr).CornerRadius=UDim.new(0,9)
+	local ttl=Instance.new("TextLabel",hdr)
+	ttl.Size=UDim2.new(1,-38,1,0);ttl.Position=UDim2.new(0,8,0,0)
+	ttl.BackgroundTransparency=1;ttl.Text="SALEMSDUELS"
+	ttl.TextColor3=Color3.fromRGB(255,255,255);ttl.Font=Enum.Font.GothamBlack;ttl.TextSize=11
+	ttl.TextXAlignment=Enum.TextXAlignment.Left
+	local titleGrad = Instance.new("UIGradient", ttl)
+	titleGrad.Color = ColorSequence.new({
+		ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 50, 50)),
+		ColorSequenceKeypoint.new(0.5, Color3.fromRGB(255, 255, 255)),
+		ColorSequenceKeypoint.new(1, Color3.fromRGB(50, 255, 50))
+	})
+
+	local closeBtn=Instance.new("TextButton",hdr)
+	closeBtn.Size=UDim2.new(0,24,0,24);closeBtn.Position=UDim2.new(1,-28,0.5,-12)
+	closeBtn.BackgroundColor3=BG2;closeBtn.BorderSizePixel=0
+	closeBtn.Text="-";closeBtn.TextColor3=PURPLEDIM;closeBtn.Font=Enum.Font.GothamBold;closeBtn.TextSize=18
+	Instance.new("UICorner",closeBtn).CornerRadius=UDim.new(0,5)
+	closeBtn.MouseEnter:Connect(function() TS:Create(closeBtn,TweenInfo.new(0.1),{BackgroundColor3=Color3.fromRGB(60,30,60),TextColor3=PURPLEDIM}):Play() end)
+	closeBtn.MouseLeave:Connect(function() TS:Create(closeBtn,TweenInfo.new(0.1),{BackgroundColor3=BG2,TextColor3=PURPLEDIM}):Play() end)
+	
+	local miniBtn=Instance.new("TextButton",gui)
+	miniBtn.Size=UDim2.new(0,90,0,24);miniBtn.Position=UDim2.new(0,20,0,20)
+	miniBtn.BackgroundColor3=Color3.fromRGB(20,20,20);miniBtn.BorderSizePixel=0
+	miniBtn.Text="SALEMSDUELS";miniBtn.TextColor3=Color3.fromRGB(255,255,255);miniBtn.Font=Enum.Font.GothamBold;miniBtn.TextSize=9
+	miniBtn.BackgroundTransparency = 0.3
+	Instance.new("UICorner",miniBtn).CornerRadius=UDim.new(0,6)
+	local miniGrad = Instance.new("UIGradient", miniBtn)
+	miniGrad.Color = ColorSequence.new({
+		ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 50, 50)),
+		ColorSequenceKeypoint.new(1, Color3.fromRGB(50, 255, 50))
+	})
+	local miniStroke=Instance.new("UIStroke",miniBtn);miniStroke.Color=Color3.fromRGB(255,255,255);miniStroke.Thickness=1.5
+	drag(miniBtn)
+	miniBtn.MouseEnter:Connect(function() TS:Create(miniBtn,TweenInfo.new(0.1),{BackgroundColor3=HOV}):Play() end)
+	miniBtn.MouseLeave:Connect(function() TS:Create(miniBtn,TweenInfo.new(0.1),{BackgroundColor3=Color3.fromRGB(20,20,20)}):Play() end)
+	
+	local function showGui() main.Visible=true;miniBtn.Visible=false end
+	local function hideGui() main.Visible=false;miniBtn.Visible=true end
+	closeBtn.MouseButton1Click:Connect(hideGui)
+	miniBtn.MouseButton1Click:Connect(showGui)
+	
+	mobileButtonsFrame=Instance.new("Frame",gui)
+	mobileButtonsFrame.Size=UDim2.new(0,140,0,250);mobileButtonsFrame.Position=UDim2.new(1,-160,0.5,-125)
+	mobileButtonsFrame.BackgroundTransparency=1;mobileButtonsFrame.BorderSizePixel=0
+	mobileButtonsFrame.Active=true;mobileButtonsFrame.Visible=mobileButtonsVisible;mobileButtonsFrame.ZIndex=25
+	drag(mobileButtonsFrame)
+	local mobileRefs={}
+	local function setMobileButton(id,on)
+		local ref=mobileRefs[id];if not ref then return end
+		TS:Create(ref.btn,TweenInfo.new(0.12),{BackgroundColor3=on and Color3.fromRGB(100,40,100) or Color3.fromRGB(20,5,20),TextColor3=on and PURPLE or W}):Play()
+		TS:Create(ref.stroke,TweenInfo.new(0.12),{Color=on and PURPLE or Color3.fromRGB(40,20,40)}):Play()
+	end
+	refreshMobileButtons=function()
+		if mobileButtonsFrame then mobileButtonsFrame.Visible=mobileButtonsVisible end
+		setMobileButton("AutoLeft",autoLeftEnabled)
+		setMobileButton("AutoRight",autoRightEnabled)
+		setMobileButton("Carry",speedMode and not laggerToggled)
+		setMobileButton("AutoBat",autoBatEnabled)
+		setMobileButton("Lagger",laggerToggled)
+		if setMobileButtonsVisual then setMobileButtonsVisual(mobileButtonsVisible) end
+		if setMobileLockVisual then setMobileLockVisual(mobileButtonsLocked) end
+	end
+	local function mkMobileButton(order,id,txt,cb)
+		local btn=Instance.new("TextButton",mobileButtonsFrame)
+		local col=(order-1)%2
+		local row=math.floor((order-1)/2)
+		btn.Size=UDim2.new(0,64,0,56);btn.Position=UDim2.new(0,col*74,0,row*65)
+		btn.BackgroundColor3=Color3.fromRGB(20,5,20);btn.BorderSizePixel=0
+		btn.Text=txt;btn.TextColor3=W;btn.Font=Enum.Font.GothamBlack;btn.TextSize=10
+		btn.TextWrapped=true;btn.AutoButtonColor=false;btn.ZIndex=26
+		btn.Active=true
+		Instance.new("UICorner",btn).CornerRadius=UDim.new(0,12)
+		local stroke=Instance.new("UIStroke",btn);stroke.Color=Color3.fromRGB(40,20,40);stroke.Thickness=1.2;stroke.Transparency=0.15
+		mobileRefs[id]={btn=btn,stroke=stroke}
+		drag(btn)
+		btn.MouseEnter:Connect(function() if not mobileRefs[id].down then TS:Create(btn,TweenInfo.new(0.1),{BackgroundColor3=Color3.fromRGB(30,15,30)}):Play() end end)
+		btn.MouseLeave:Connect(function() refreshMobileButtons() end)
+		btn.Activated:Connect(function()
+			if _anyKeyListening then return end
+			if mobileDragMoved then mobileDragMoved=false;refreshMobileButtons();return end
+			cb()
+			refreshMobileButtons()
+		end)
+	end
+	mkMobileButton(1,"TP","TP",function() runTPFloor() end)
+	mkMobileButton(2,"AutoLeft","AL",toggleAutoLeftAction)
+	mkMobileButton(3,"AutoRight","AR",toggleAutoRightAction)
+	mkMobileButton(4,"Drop","DROP",function() runDrop() end)
+	mkMobileButton(5,"AutoBat","BAT",toggleAutoBatAction)
+	refreshMobileButtons()
+	local sf=Instance.new("ScrollingFrame",main)
+	sf.Size=UDim2.new(1,0,1,-32);sf.Position=UDim2.new(0,0,0,32)
+	sf.BackgroundTransparency=1;sf.BorderSizePixel=0;sf.ClipsDescendants=true
+	sf.ScrollBarThickness=0;sf.ScrollBarImageTransparency=1
+	sf.CanvasSize=UDim2.new(0,0,0,0);sf.AutomaticCanvasSize=Enum.AutomaticSize.Y
+	local ll=Instance.new("UIListLayout",sf);ll.SortOrder=Enum.SortOrder.LayoutOrder;ll.Padding=UDim.new(0,1)
+	local pad=Instance.new("UIPadding",sf)
+	pad.PaddingLeft=UDim.new(0,5);pad.PaddingRight=UDim.new(0,5)
+	pad.PaddingTop=UDim.new(0,5);pad.PaddingBottom=UDim.new(0,8)
+	local lo=0
+	local function LO() lo=lo+1;return lo end
+	local function mkSect(txt)
+		local f=Instance.new("Frame",sf);f.Size=UDim2.new(1,0,0,16);f.BackgroundTransparency=1;f.BorderSizePixel=0;f.LayoutOrder=LO()
+		local l=Instance.new("TextLabel",f);l.Size=UDim2.new(1,-6,1,0);l.Position=UDim2.new(0,6,0,0)
+		l.BackgroundTransparency=1;l.Text=txt:upper();l.TextColor3=PURPLE
+		l.Font=Enum.Font.GothamBlack;l.TextSize=7;l.TextXAlignment=Enum.TextXAlignment.Left
+		l.TextStrokeTransparency=0.85;l.TextStrokeColor3=Color3.fromRGB(0,0,0)
+	end
+	local function mkRow(h)
+		local f=Instance.new("Frame",sf);f.Size=UDim2.new(1,0,0,h or 24)
+		f.BackgroundColor3=CARD;f.BorderSizePixel=0;f.LayoutOrder=LO()
+		Instance.new("UICorner",f).CornerRadius=UDim.new(0,5)
+		Instance.new("UIStroke",f).Color=Color3.fromRGB(60,40,60)
+		f.MouseEnter:Connect(function() TS:Create(f,TweenInfo.new(0.08),{BackgroundColor3=HOV}):Play() end)
+		f.MouseLeave:Connect(function() TS:Create(f,TweenInfo.new(0.08),{BackgroundColor3=CARD}):Play() end)
+		return f
+	end
+	local function mkLabel(row,txt)
+		local l=Instance.new("TextLabel",row);l.Size=UDim2.new(0.58,0,1,0);l.Position=UDim2.new(0,6,0,0)
+		l.BackgroundTransparency=1;l.Text=txt;l.TextColor3=W
+		l.Font=Enum.Font.GothamBold;l.TextSize=8;l.TextXAlignment=Enum.TextXAlignment.Left
+	end
+	local function mkPill(row,offset)
+		local pill=Instance.new("Frame",row);pill.Size=UDim2.new(0,28,0,15)
+		pill.Position=UDim2.new(1,-(offset or 32),0.5,-7.5)
+		pill.BackgroundColor3=OFF;pill.BorderSizePixel=0;pill.ZIndex=3
+		Instance.new("UICorner",pill).CornerRadius=UDim.new(1,0)
+		local dot=Instance.new("Frame",pill);dot.Size=UDim2.new(0,11,0,11);dot.Position=UDim2.new(0,2,0.5,-5.5)
+		dot.BackgroundColor3=DIM;dot.BorderSizePixel=0;dot.ZIndex=4
+		Instance.new("UICorner",dot).CornerRadius=UDim.new(1,0)
+		return pill,dot
+	end
+	local function animPill(pill,dot,on)
+		TS:Create(pill,TweenInfo.new(0.18,Enum.EasingStyle.Quad),{BackgroundColor3=on and Color3.fromRGB(120,60,120) or OFF}):Play()
+		TS:Create(dot,TweenInfo.new(0.18,Enum.EasingStyle.Back),{
+			Position=on and UDim2.new(1,-13,0.5,-5.5) or UDim2.new(0,2,0.5,-5.5),
+			BackgroundColor3=on and PURPLE or DIM
+		}):Play()
+	end
+	local function mkToggle(txt,cb)
+		local row=mkRow(24);mkLabel(row,txt)
+		local pill,dot=mkPill(row,32)
+		local on=false
+		local function sv(s) on=s;animPill(pill,dot,s) end
+		local clk=Instance.new("TextButton",pill);clk.Size=UDim2.new(1,0,1,0);clk.BackgroundTransparency=1;clk.Text="";clk.ZIndex=5
+		clk.Activated:Connect(function() on=not on;sv(on);cb(on) end)
+		pill.ZIndex=3;dot.ZIndex=4
+		return sv
+	end
+	local function mkBox(parent,default,w,xOff,cb)
+		local tb=Instance.new("TextBox",parent)
+		tb.Size=UDim2.new(0,w or 40,0,18);tb.Position=UDim2.new(1,-(xOff or 46),0.5,-9)
+		tb.BackgroundColor3=INP;tb.BorderSizePixel=0;tb.Text=tostring(default);tb.TextColor3=W
+		tb.Font=Enum.Font.GothamBold;tb.TextSize=8;tb.ClearTextOnFocus=false;tb.ZIndex=5
+		Instance.new("UICorner",tb).CornerRadius=UDim.new(0,4)
+		local bs=Instance.new("UIStroke",tb);bs.Color=Color3.fromRGB(70,40,70);bs.Thickness=1
+		tb.Focused:Connect(function() TS:Create(bs,TweenInfo.new(0.12),{Color=PURPLEDIM}):Play() end)
+		tb.FocusLost:Connect(function()
+			TS:Create(bs,TweenInfo.new(0.12),{Color=Color3.fromRGB(70,40,70)}):Play()
+			if cb then local n=tonumber(tb.Text);if n then cb(n) else tb.Text=tostring(default) end end
+		end)
+		return tb
+	end
+	local GAMEPAD_KEYS={
+		[Enum.KeyCode.ButtonA]=true,[Enum.KeyCode.ButtonB]=true,[Enum.KeyCode.ButtonX]=true,[Enum.KeyCode.ButtonY]=true,
+		[Enum.KeyCode.ButtonL1]=true,[Enum.KeyCode.ButtonR1]=true,[Enum.KeyCode.ButtonL2]=true,[Enum.KeyCode.ButtonR2]=true,
+		[Enum.KeyCode.ButtonL3]=true,[Enum.KeyCode.ButtonR3]=true,[Enum.KeyCode.ButtonStart]=true,[Enum.KeyCode.ButtonSelect]=true,
+		[Enum.KeyCode.DPadUp]=true,[Enum.KeyCode.DPadDown]=true,[Enum.KeyCode.DPadLeft]=true,[Enum.KeyCode.DPadRight]=true
+	}
+	local function isGamepadInput(inp) return inp and inp.UserInputType and inp.UserInputType.Name:match("^Gamepad")~=nil end
+	local function isBindableInput(inp)
+		if not inp or inp.KeyCode==Enum.KeyCode.Unknown then return false end
+		if inp.UserInputType==Enum.UserInputType.Keyboard then return true end
+		return isGamepadInput(inp) and GAMEPAD_KEYS[inp.KeyCode]==true
+	end
+	local function kbMatch(entry,kc) return kc and (kc==entry.kb or (entry.gp and kc==entry.gp)) end
+	local function mkKB(parent,kbEntry,cb)
+		local btn=Instance.new("TextButton",parent)
+		btn.Size=UDim2.new(0,38,0,18);btn.Position=UDim2.new(1,-42,0.5,-9)
+		btn.BackgroundColor3=INP;btn.BorderSizePixel=0
+		local function getLabel() return (kbEntry.gp and kbEntry.gp.Name) or (kbEntry.kb and kbEntry.kb.Name) or "None" end
+		btn.Text=getLabel();btn.TextColor3=W
+		btn.Font=Enum.Font.GothamBold;btn.TextSize=7;btn.ZIndex=5
+		Instance.new("UICorner",btn).CornerRadius=UDim.new(0,4)
+		local li=false;local lc;local pv=btn.Text;local listenStart=0
+		btn.Activated:Connect(function()
+			if li then li=false;_anyKeyListening=false;if lc then lc:Disconnect();lc=nil end;btn.Text=pv;btn.TextColor3=W;return end
+			pv=btn.Text;li=true;_anyKeyListening=true;listenStart=tick();btn.Text="...";btn.TextColor3=W
+			lc=UIS.InputBegan:Connect(function(inp)
+				if not li then return end
+				if inp.KeyCode==Enum.KeyCode.Escape then li=false;_anyKeyListening=false;if lc then lc:Disconnect();lc=nil end;btn.Text=pv;btn.TextColor3=W;return end
+				local isGp=isGamepadInput(inp)
+				if isGp and tick()-listenStart<0.15 then return end
+				if not isBindableInput(inp) then return end
+				btn.Text=inp.KeyCode.Name;pv=inp.KeyCode.Name;btn.TextColor3=W
+				li=false;_anyKeyListening=false;if lc then lc:Disconnect();lc=nil end
+				if cb then cb(inp.KeyCode,isGp) end
+			end)
+		end)
+		return btn
+	end
+	local function mkToggleKB(txt,kbEntry,onToggle,onKB)
+		local row=mkRow(24);mkLabel(row,txt)
+		if kbEntry then mkKB(row,kbEntry,function(k,isGp)
+			if isGp then kbEntry.gp=k;kbEntry.kb=nil else kbEntry.kb=k;kbEntry.gp=nil end
+			if onKB then onKB(k,isGp) end
+		end) end
+		local pill,dot=mkPill(row,kbEntry and 82 or 32)
+		local on=false
+		local function sv(s) on=s;animPill(pill,dot,s) end
+		local clk=Instance.new("TextButton",pill);clk.Size=UDim2.new(1,0,1,0);clk.BackgroundTransparency=1;clk.Text="";clk.ZIndex=5
+		clk.Activated:Connect(function() if _anyKeyListening then return end;on=not on;sv(on);if onToggle then onToggle(on) end end)
+		pill.ZIndex=3;dot.ZIndex=4
+		return sv
+	end
+	local pbFrame=Instance.new("Frame",gui)
+	pbFrame.Size=UDim2.new(0,200,0,38);pbFrame.Position=UDim2.new(0.5,-100,1,-50)
+	pbFrame.BackgroundColor3=BG2;pbFrame.BorderSizePixel=0;pbFrame.Active=true;pbFrame.ClipsDescendants=false
+	Instance.new("UICorner",pbFrame).CornerRadius=UDim.new(0,7)
+	drag(pbFrame)
+	progressPct=Instance.new("TextLabel",pbFrame)
+	progressPct.Size=UDim2.new(0,35,0,13);progressPct.Position=UDim2.new(0,7,0,5)
+	progressPct.BackgroundTransparency=1;progressPct.Text="0%";progressPct.TextColor3=W
+	progressPct.Font=Enum.Font.GothamBold;progressPct.TextSize=8;progressPct.TextXAlignment=Enum.TextXAlignment.Left
+	progressRadLbl=Instance.new("TextLabel",pbFrame)
+	progressRadLbl.Size=UDim2.new(0,80,0,13);progressRadLbl.Position=UDim2.new(1,-87,0,5)
+	progressRadLbl.BackgroundTransparency=1;progressRadLbl.Text=string.format("R: %.1f",Steal.StealRadius)
+	progressRadLbl.TextColor3=W;progressRadLbl.Font=Enum.Font.GothamBold;progressRadLbl.TextSize=8;progressRadLbl.TextXAlignment=Enum.TextXAlignment.Right
+	local pbg=Instance.new("Frame",pbFrame)
+	pbg.Size=UDim2.new(1,-14,0,8);pbg.Position=UDim2.new(0,7,0,23)
+	pbg.BackgroundColor3=Color3.fromRGB(40,20,40);pbg.BorderSizePixel=0
+	Instance.new("UICorner",pbg).CornerRadius=UDim.new(1,0)
+	progressFill=Instance.new("Frame",pbg)
+	progressFill.Size=UDim2.new(0,0,1,0);progressFill.BackgroundColor3=PURPLE;progressFill.BorderSizePixel=0
+	Instance.new("UICorner",progressFill).CornerRadius=UDim.new(1,0)
+	mkSect("Speed")
+	do local row=mkRow(24);mkLabel(row,"Normal");normalBox=mkBox(row,NS,38,42,function(v) if v>0 and v<=500 then NS=v end;saveConfig() end) end
+	do local row=mkRow(24);mkLabel(row,"Carry");carryBox=mkBox(row,CS,38,42,function(v) if v>0 and v<=500 then CS=v end;saveConfig() end) end
+	do
+		local row=mkRow(24);mkLabel(row,"Mode")
+		modeValLbl=Instance.new("TextLabel",row)
+		modeValLbl.Size=UDim2.new(0,70,1,0);modeValLbl.Position=UDim2.new(1,-74,0,0)
+		modeValLbl.BackgroundTransparency=1;modeValLbl.Text="Normal";modeValLbl.TextColor3=PURPLE
+		modeValLbl.Font=Enum.Font.GothamBlack;modeValLbl.TextSize=8;modeValLbl.TextXAlignment=Enum.TextXAlignment.Right
+		local clk=Instance.new("TextButton",row);clk.Size=UDim2.new(1,0,1,0);clk.BackgroundTransparency=1;clk.Text="";clk.ZIndex=2
+		clk.Activated:Connect(function()
+			if _anyKeyListening then return end
+			toggleCarryMode()
+			saveConfig()
+		end)
+	end
+	mkSect("Combat")
+	setAutoSwingVisual=mkToggle("Auto Swing",function(on)
+		autoSwingEnabled=on
+		saveConfig()
+	end)
+	if setAutoSwingVisual then setAutoSwingVisual(autoSwingEnabled) end
+	do
+		setBatCounterVisual=mkToggle("Bat Counter",function(on)
+			batCounterEnabled=on
+			if on then startBatCounter() else stopBatCounter() end
+			saveConfig()
+		end)
+	end
+	mkSect("Steal")
+	do
+		local row=mkRow(24);mkLabel(row,"Radius")
+		radInput=mkBox(row,Steal.StealRadius,38,42,function(v)
+			if v>=0.5 and v<=300 then Steal.StealRadius=v;if progressRadLbl then progressRadLbl.Text=string.format("R: %.1f",Steal.StealRadius) end end;saveConfig()
+		end)
+	end
+	do
+		local stealRow=mkRow(24);mkLabel(stealRow,"Auto Steal")
+		local pill,dot=mkPill(stealRow,32)
+		local on=false
+		local function sv(s) on=s;animPill(pill,dot,s) end
+		setInstaGrab=sv
+		local clk=Instance.new("TextButton",pill);clk.Size=UDim2.new(1,0,1,0);clk.BackgroundTransparency=1;clk.Text="";clk.ZIndex=5
+		clk.Activated:Connect(function()
+			on=not on;sv(on);Steal.AutoStealEnabled=on
+			if on then if not pcall(startAutoSteal) then Steal.AutoStealEnabled=false;sv(false) end else stopAutoSteal() end
+			saveConfig()
+		end)
+		pill.ZIndex=3;dot.ZIndex=4
+	end
+	mkSect("Misc")
+	setInfJumpVisual=mkToggle("Inf Jump",function(on) infJumpEnabled=on end)
+	setAntiRagVisual=mkToggle("Anti Rag",function(on) antiRagdollEnabled=on;if on then startAntiRagdoll() else stopAntiRagdoll() end end)
+	setMedusaVisual=mkToggle("Medusa",function(on)
+		medusaCounterEnabled=on
+		if on then setupMedusa(LP.Character)
+		else stopMedusaCounter() end
+		saveConfig()
+	end)
+	setUnwalkVisual=mkToggle("Unwalk",function(on) unwalkEnabled=on;if on then startUnwalk() else stopUnwalk() end end)
+	mkSect("Visual")
+	setAntiLagVisual=mkToggle("Anti Lag",function(on)
+		if on then enableAntiLag() else disableAntiLag() end
+		saveConfig()
+	end)
+	setStretchRezVisual=mkToggle("Stretch",function(on)
+		if on then enableStretchRez() else disableStretchRez() end
+		saveConfig()
+	end)
+	mkSect("Movement")
+	do
+		local sv=mkToggleKB("Auto L",KB.AutoLeft,
+			function(on)
+				autoLeftEnabled=on
+				if on then
+					queueAutoLeftStart()
+				else stopAutoLeft() end
+				if refreshMobileButtons then refreshMobileButtons() end
+				saveConfig()
+			end,
+			function(k,isGp) if isGp then KB.AutoLeft.gp=k;KB.AutoLeft.kb=nil else KB.AutoLeft.kb=k;KB.AutoLeft.gp=nil end;saveConfig() end)
+		autoLeftSetVisual=sv
+	end
+	do
+		local sv=mkToggleKB("Auto R",KB.AutoRight,
+			function(on)
+				autoRightEnabled=on
+				if on then
+					queueAutoRightStart()
+				else stopAutoRight() end
+				if refreshMobileButtons then refreshMobileButtons() end
+				saveConfig()
+			end,
+			function(k,isGp) if isGp then KB.AutoRight.gp=k;KB.AutoRight.kb=nil else KB.AutoRight.kb=k;KB.AutoRight.gp=nil end;saveConfig() end)
+		autoRightSetVisual=sv
+	end
+	do
+		local row=mkRow(24);mkLabel(row,"Drop BR")
+		mkKB(row,KB.DropBrainrot,function(k,isGp) if isGp then KB.DropBrainrot.gp=k;KB.DropBrainrot.kb=nil else KB.DropBrainrot.kb=k;KB.DropBrainrot.gp=nil end;saveConfig() end)
+		local clk=Instance.new("TextButton",row);clk.Size=UDim2.new(0.58,0,1,0);clk.BackgroundTransparency=1;clk.Text="";clk.ZIndex=2
+		clk.Activated:Connect(function() runDrop() end)
+	end
+	do
+		local row=mkRow(24);mkLabel(row,"TP Down")
+		mkKB(row,KB.TPFloor,function(k,isGp) if isGp then KB.TPFloor.gp=k;KB.TPFloor.kb=nil else KB.TPFloor.kb=k;KB.TPFloor.gp=nil end;saveConfig() end)
+		local clk=Instance.new("TextButton",row);clk.Size=UDim2.new(0.58,0,1,0);clk.BackgroundTransparency=1;clk.Text="";clk.ZIndex=2
+		clk.Activated:Connect(function() runTPFloor() end)
+	end
+	do
+		setAutoTPVisual=mkToggle("Auto TP",function(on)
+			autoTPEnabled=on
+			if on then startAutoTP() else stopAutoTP() end
+			saveConfig()
+		end)
+	end
+	do
+		local row=mkRow(24);mkLabel(row,"TP Height")
+		autoTPHeightBox=mkBox(row,autoTPHeight,38,42,function(v)
+			if v>=0 and v<=500 then autoTPHeight=v else autoTPHeightBox.Text=tostring(autoTPHeight) end
+			saveConfig()
+		end)
+	end
+	mkSect("Interface")
+	do local row=mkRow(24);mkLabel(row,"Hide UI");mkKB(row,KB.GuiHide,function(k,isGp) if isGp then KB.GuiHide.gp=k;KB.GuiHide.kb=nil else KB.GuiHide.kb=k;KB.GuiHide.gp=nil end;saveConfig() end) end
+	setMobileButtonsVisual=mkToggle("Mobile Btn",function(on)
+		mobileButtonsVisible=on
+		if mobileButtonsFrame then mobileButtonsFrame.Visible=on end
+		if refreshMobileButtons then refreshMobileButtons() end
+		saveConfig()
+	end)
+	setMobileLockVisual=mkToggle("Lock Btn",function(on)
+		mobileButtonsLocked=on
+		if refreshMobileButtons then refreshMobileButtons() end
+		saveConfig()
+	end)
+	if setMobileButtonsVisual then setMobileButtonsVisual(mobileButtonsVisible) end
+	if setMobileLockVisual then setMobileLockVisual(mobileButtonsLocked) end
+	do local row=mkRow(24);mkLabel(row,"Instant Reset");mkKB(row,KB.InstaReset,function(k,isGp) if isGp then KB.InstaReset.gp=k;KB.InstaReset.kb=nil else KB.InstaReset.kb=k;KB.InstaReset.gp=nil end;saveConfig() end) end
+	local instResetBtn=Instance.new("TextButton",main)
+	instResetBtn.Size=UDim2.new(0.35,0,0.03,0);instResetBtn.Position=UDim2.new(0.65,0,0.97,0)
+	instResetBtn.BackgroundColor3=PURPLE;instResetBtn.TextColor3=W;instResetBtn.Text="GO"
+	instResetBtn.Font=Enum.Font.GothamBold;instResetBtn.TextSize=7;instResetBtn.BorderSizePixel=0
+	Instance.new("UICorner",instResetBtn).CornerRadius=UDim.new(0,4)
+	instResetBtn.Activated:Connect(function() salemsInstaReset() end)
+	UIS.InputBegan:Connect(function(input,gpe)
+		if _anyKeyListening then return end
+		if input.UserInputType==Enum.UserInputType.Keyboard then
+			if gpe or UIS:GetFocusedTextBox() then return end
+		elseif not isGamepadInput(input) then return end
+		if not isBindableInput(input) then return end
+		local kc=input.KeyCode
+		if kbMatch(KB.LaggerToggle,kc) then
+			toggleLaggerMode()
+			saveConfig()
+		elseif kbMatch(KB.SpeedToggle,kc) then
+			toggleCarryMode()
+			saveConfig()
+		elseif kbMatch(KB.DropBrainrot,kc) then runDrop()
+		elseif kbMatch(KB.TPFloor,kc) then runTPFloor()
+		elseif kbMatch(KB.InstaReset,kc) then salemsInstaReset()
+		elseif kbMatch(KB.AutoLeft,kc) then
+			toggleAutoLeftAction()
+		elseif kbMatch(KB.AutoRight,kc) then
+			toggleAutoRightAction()
+		elseif kbMatch(KB.AutoBat,kc) then
+			toggleAutoBatAction()
+		elseif kbMatch(KB.GuiHide,kc) then if main.Visible then hideGui() else showGui() end
+		end
+	end)
+end
+local _savedCfg = nil
+local function loadConfigKeys()
+	if not(isfile and isfile("salemsduels.json")) then return end
+	local ok,cfg=pcall(function() return HS:JSONDecode(readfile("salemsduels.json")) end)
+	if not ok or not cfg then return end
+	_savedCfg=cfg
+	local function lk(e,d) if type(d)~="table" then return end;if d.kb and Enum.KeyCode[d.kb] then e.kb=Enum.KeyCode[d.kb] end;if d.gp and Enum.KeyCode[d.gp] then e.gp=Enum.KeyCode[d.gp] end end
+	lk(KB.DropBrainrot,cfg.dropBrainrotKey);lk(KB.AutoLeft,cfg.autoLeftKey);lk(KB.AutoRight,cfg.autoRightKey)
+	lk(KB.AutoBat,cfg.autoBatKey);lk(KB.LaggerToggle,cfg.laggerToggleKey)
+	lk(KB.TPFloor,cfg.tpFloorKey);lk(KB.InstaReset,cfg.instaResetKey);lk(KB.GuiHide,cfg.guiHideKey);lk(KB.SpeedToggle,cfg.speedToggleKey)
+	if cfg.normalSpeed then NS=cfg.normalSpeed end
+	if cfg.carrySpeed then CS=cfg.carrySpeed end
+	if cfg.grabRadius and type(cfg.grabRadius)=="number" then Steal.StealRadius=cfg.grabRadius else Steal.StealRadius=60 end
+	if cfg.stealDuration and type(cfg.stealDuration)=="number" then Steal.StealDuration=cfg.stealDuration else Steal.StealDuration=1.4 end
+	if cfg.laggerSpeed and type(cfg.laggerSpeed)=="number" then LAGGER_SPEED=cfg.laggerSpeed end
+	if cfg.laggerCarrySpeed and type(cfg.laggerCarrySpeed)=="number" then LAGGER_CARRY_SPEED=cfg.laggerCarrySpeed end
+	if cfg.autoTPHeight and type(cfg.autoTPHeight)=="number" then autoTPHeight=cfg.autoTPHeight end
+	if cfg.autoSwing~=nil then autoSwingEnabled=cfg.autoSwing==true end
+	if cfg.mobileButtonsVisible~=nil then mobileButtonsVisible=cfg.mobileButtonsVisible==true end
+	if cfg.mobileButtonsLocked~=nil then mobileButtonsLocked=cfg.mobileButtonsLocked==true end
+end
+local function loadConfigState()
+	local cfg=_savedCfg;if not cfg then return end
+	if normalBox then normalBox.Text=tostring(NS) end
+	if carryBox then carryBox.Text=tostring(CS) end
+	if radInput then radInput.Text=tostring(Steal.StealRadius) end
+	if progressRadLbl then progressRadLbl.Text=string.format("R: %.1f",Steal.StealRadius) end
+	if laggerBox then laggerBox.Text=tostring(LAGGER_SPEED) end
+	if laggerCarryBox then laggerCarryBox.Text=tostring(LAGGER_CARRY_SPEED) end
+	if autoTPHeightBox then autoTPHeightBox.Text=tostring(autoTPHeight) end
+	if setMobileButtonsVisual then setMobileButtonsVisual(mobileButtonsVisible) end
+	if setMobileLockVisual then setMobileLockVisual(mobileButtonsLocked) end
+	if refreshMobileButtons then refreshMobileButtons() end
+	task.spawn(function()
+		task.wait(0.15)
+		if cfg.antiRagdoll then antiRagdollEnabled=true;if setAntiRagVisual then setAntiRagVisual(true) end;startAntiRagdoll() end
+		if cfg.autoStealEnabled then Steal.AutoStealEnabled=true;if setInstaGrab then setInstaGrab(true) end;pcall(startAutoSteal) end
+		if cfg.infiniteJump then infJumpEnabled=true;if setInfJumpVisual then setInfJumpVisual(true) end end
+		if cfg.medusaCounter then medusaCounterEnabled=true;if setMedusaVisual then setMedusaVisual(true) end;setupMedusa(LP.Character) end
+		if cfg.batCounter then batCounterEnabled=true;if setBatCounterVisual then setBatCounterVisual(true) end;startBatCounter() end
+		if cfg.laggerMode then laggerToggled=true;speedMode=false;laggerPhase=cfg.laggerCarryMode and 2 or 1;refreshSpeedModeLabel()
+		elseif cfg.carryMode then speedMode=false;toggleCarryMode() end
+		if cfg.autoTPEnabled then autoTPEnabled=true;if setAutoTPVisual then setAutoTPVisual(true) end;startAutoTP() end
+		if setAutoSwingVisual then setAutoSwingVisual(autoSwingEnabled) end
+		if cfg.autoBat then autoBatEnabled=true;if autoBatSetVisual then autoBatSetVisual(true) end;queueAutoBatStart() end
+		if cfg.unwalkEnabled then unwalkEnabled=true;if setUnwalkVisual then setUnwalkVisual(true) end;task.spawn(function() task.wait(0.5);startUnwalk() end) end
+		if cfg.antiLag then enableAntiLag();if setAntiLagVisual then setAntiLagVisual(true) end end
+		if cfg.stretchRez then enableStretchRez();if setStretchRezVisual then setStretchRezVisual(true) end end
+		if refreshMobileButtons then refreshMobileButtons() end
+	end)
+end
+loadConfigKeys()
+buildGui()
+loadConfigState()
+
+print("SALEMSDUELS Loaded")
