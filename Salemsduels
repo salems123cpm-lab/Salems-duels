@@ -1011,9 +1011,10 @@ local function buildGui()
 	gui.Name="SalemsDuels";gui.ResetOnSpawn=false;gui.DisplayOrder=10;gui.IgnoreGuiInset=true
 	pcall(function() if syn and syn.protect_gui then syn.protect_gui(gui) end end)
 	if not pcall(function() gui.Parent=game:GetService("CoreGui") end) then gui.Parent=LP:WaitForChild("PlayerGui") end
+	
 	local main=Instance.new("Frame",gui)
 	main.Size=UDim2.new(0,220,0,320);main.Position=UDim2.new(0,15,0,15)
-	main.BackgroundColor3=BG;main.BorderSizePixel=0;main.ClipsDescendants=false
+	main.BackgroundColor3=BG;main.BackgroundTransparency=0.3;main.BorderSizePixel=0;main.ClipsDescendants=false
 	Instance.new("UICorner",main).CornerRadius=UDim.new(0,9)
 	
 	-- 🎄 FONDO NAVIDEÑO 🎄
@@ -1072,14 +1073,8 @@ local function buildGui()
 	local ttl=Instance.new("TextLabel",hdr)
 	ttl.Size=UDim2.new(1,-38,1,0);ttl.Position=UDim2.new(0,8,0,0)
 	ttl.BackgroundTransparency=1;ttl.Text="SALEMSDUELS"
-	ttl.TextColor3=Color3.fromRGB(255,255,255);ttl.Font=Enum.Font.GothamBlack;ttl.TextSize=11
+	ttl.TextColor3=PURPLE;ttl.Font=Enum.Font.GothamBlack;ttl.TextSize=11
 	ttl.TextXAlignment=Enum.TextXAlignment.Left
-	local titleGrad = Instance.new("UIGradient", ttl)
-	titleGrad.Color = ColorSequence.new({
-		ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 50, 50)),
-		ColorSequenceKeypoint.new(0.5, Color3.fromRGB(255, 255, 255)),
-		ColorSequenceKeypoint.new(1, Color3.fromRGB(50, 255, 50))
-	})
 
 	local closeBtn=Instance.new("TextButton",hdr)
 	closeBtn.Size=UDim2.new(0,24,0,24);closeBtn.Position=UDim2.new(1,-28,0.5,-12)
@@ -1091,20 +1086,14 @@ local function buildGui()
 	
 	local miniBtn=Instance.new("TextButton",gui)
 	miniBtn.Size=UDim2.new(0,90,0,24);miniBtn.Position=UDim2.new(0,20,0,20)
-	miniBtn.BackgroundColor3=Color3.fromRGB(20,20,20);miniBtn.BorderSizePixel=0
-	miniBtn.Text="SALEMSDUELS";miniBtn.TextColor3=Color3.fromRGB(255,255,255);miniBtn.Font=Enum.Font.GothamBold;miniBtn.TextSize=9
-	miniBtn.BackgroundTransparency = 0.3
+	miniBtn.BackgroundColor3=BG2;miniBtn.BorderSizePixel=0
+	miniBtn.Text="SALEMSDUELS";miniBtn.TextColor3=PURPLE;miniBtn.Font=Enum.Font.GothamBold;miniBtn.TextSize=9
+	miniBtn.ZIndex=20;miniBtn.Visible=false
 	Instance.new("UICorner",miniBtn).CornerRadius=UDim.new(0,6)
-	local miniGrad = Instance.new("UIGradient", miniBtn)
-	miniGrad.Color = ColorSequence.new({
-		ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 50, 50)),
-		ColorSequenceKeypoint.new(1, Color3.fromRGB(50, 255, 50))
-	})
-	local miniStroke=Instance.new("UIStroke",miniBtn);miniStroke.Color=Color3.fromRGB(255,255,255);miniStroke.Thickness=1.5
+	local miniStroke=Instance.new("UIStroke",miniBtn);miniStroke.Color=STROKE;miniStroke.Thickness=1
 	drag(miniBtn)
 	miniBtn.MouseEnter:Connect(function() TS:Create(miniBtn,TweenInfo.new(0.1),{BackgroundColor3=HOV}):Play() end)
-	miniBtn.MouseLeave:Connect(function() TS:Create(miniBtn,TweenInfo.new(0.1),{BackgroundColor3=Color3.fromRGB(20,20,20)}):Play() end)
-	
+	miniBtn.MouseLeave:Connect(function() TS:Create(miniBtn,TweenInfo.new(0.1),{BackgroundColor3=BG2}):Play() end)
 	local function showGui() main.Visible=true;miniBtn.Visible=false end
 	local function hideGui() main.Visible=false;miniBtn.Visible=true end
 	closeBtn.MouseButton1Click:Connect(hideGui)
